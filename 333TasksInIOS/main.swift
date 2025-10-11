@@ -102,3 +102,127 @@
 //let rectangle:Rectangle = (10, 20)
 //let area = rectangle.width * rectangle.height
 //print("area -> \(area)")
+
+
+
+
+// task 13 coordinates
+
+//typealias Coordinates = (latitude: Double, longitude: Double)
+//
+//let width:Coordinates = (45.67867867, 67.5454575)
+//let longitude:Coordinates = (24.3788678, 45.24354356476)
+//
+//print("Ширина и долгота географической точки: \(width) и \(longitude)")
+//
+//
+//
+//// task 14
+//
+//let numOne = 3
+//let numTwo = 3
+//let multOneAndTwo = numOne * numTwo
+//print("multOneAndTwo -> \(multOneAndTwo)")
+//
+//
+//// task 15
+//
+//let sideA = 10
+//let sideB = 30
+//
+//let square = sideA * sideB
+//print("square -> \(square)")
+//
+//
+//// task 16
+//
+//let radius = 31.3
+//
+//let lenghtCircle = 2 * Double.pi * radius
+//
+//print((format: "Длина окружности: %.2f", lenghtCircle))
+//
+//
+//// task 17
+//
+//let numerOne = 10
+//let numerTwo = 2
+//
+//if numerOne % numerTwo == 0 {
+//    print("Да, это число делится без остатка")
+//} else {
+//    print("Нет, это число делится с остатком")
+//}
+//
+//
+//// task 18
+//
+//let rootNumber = 10
+//let squareNumber = rootNumber * rootNumber
+//print("squareNumber -> \(squareNumber)")
+//
+//
+//// task 19
+//
+//let numberOne = 10
+//let numberTwo = 10
+//
+//if numberOne == numberTwo {
+//    print("Да эти числы равны")
+//} else {
+//    print("Нет эти числы не равны")
+//}
+//
+//
+//// task 20
+//
+//let a:Int
+//a = 4
+//
+//if a < 0 {
+//    print("Это число отрицательное")
+//} else if a > 0 {
+//    print("Это число положительное")
+//} else {
+//    print("Это число \(a) равное нулю")
+//}
+//
+//
+//
+//// task 21
+//
+//let a1 = 10
+//let b2 = 20
+//let c3 = 30
+//
+//
+//let resPrint = max(a1, b2, c3)
+//print("Тут наибольшее число это \(resPrint)")
+//
+//
+//
+//// task 22
+//
+//let resMaksim = 5
+//let resLarisa = 4
+//let resAndrey = 4
+//let resBogdan = 5
+//
+//let resultEkz = Double(resMaksim + resLarisa + resAndrey + resBogdan) / 4
+//print(resultEkz)
+//
+//
+//// task 23
+//
+//let variable = 110
+//let isEvenNumber:Bool
+//
+//if variable % 2 == 0 {
+//    isEvenNumber = true
+//    print(isEvenNumber)
+//} else {
+//    isEvenNumber = false
+//    print(isEvenNumber)
+//}
+
+
