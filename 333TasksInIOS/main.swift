@@ -331,3 +331,86 @@
 //
 //let resultGrade = grade >= 3 ? "Вы сдали экзамен" : "Нет, вы не сдали экзамен"
 //print(resultGrade)
+
+
+// task 31
+
+//let name = "Ivan"
+//let diagnosis:String? = "headache"
+//
+//print("Имя человека \(name) и у него диагноз \(diagnosis ?? "Unknown")")
+//
+//
+//// task 32
+//
+//let minAge:Int? = nil
+//
+//print("Вы разместили на нашем видеохостинге ресурс и мы присвоили возрастное значение равному \(minAge ?? 18) лет!")
+//
+//
+//// task 33
+//
+//let text = """
+//Я влюблена, шептала снова
+//Старушке с гордостью она.
+//- Сердечный друг, ты нездорова. -
+//Оставь меня: я влюблена.
+//"""
+//
+//print("text", text)
+//
+//
+//// task 34
+//
+//let oneWord = "Hi"
+//let twoWord = "Mary"
+//let spaceSign = " "
+//
+//let greeting = oneWord + spaceSign + twoWord
+//print("greeting -> \(greeting)")
+//
+//
+//// task 35
+//
+//let friendBook = "Моё любимое время года — это осень. Деревья надевают яркие наряды из жёлтых и красных листьев. Воздух становится свежим и прозрачным. Я люблю гулять по парку и слушать шуршание листвы под ногами. Осень — это время спокойствия и размышлений, когда природа готовится к долгому зимнему сну. Это невероятно красиво и немного грустно."
+//
+//print("В вашем сочинении \(friendBook.count) букв!")
+//
+//
+//
+//// task 36
+//
+//// task 36
+//let login: String = "MacBook Air"
+//let password: String = "26081983"
+//
+//if login == "" {
+//    print("Логин не может быть пустым")
+//}
+//
+//if password.count < 6 {
+//    print("Пароль должен содержать не менее 6 символов")
+//}
+//
+//
+//// task 37
+//
+//var text1 = "оля, привет"
+//text1 += "!"
+//
+//// Заменяем первую букву "о" на "О"
+//if let firstIndex = text1.firstIndex(of: "о") {
+//    text1.replaceSubrange(firstIndex...firstIndex, with: "О")
+//}
+//
+//// Заменяем запятую на "!"
+//if let commaIndex = text1.firstIndex(of: ",") {
+//    text1.replaceSubrange(commaIndex...commaIndex, with: "!")
+//}
+//
+//print(text1) // Результат: "Оля! пока!"
+
+
+// task 38
+
+
