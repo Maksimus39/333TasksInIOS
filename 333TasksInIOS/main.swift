@@ -226,3 +226,108 @@
 //}
 
 
+
+// task 24
+
+//let manCount:Double = 5000
+//let oneStageCount:Double = 4685
+//let twoStageCount:Double = 1648
+//let threeStageCount:Double = 526
+//
+//// 1 этап
+//let oneStage = (oneStageCount / manCount) * 100
+//print("Таков процент дошедших до финиша в первом этапе \(oneStage)")
+//
+//let twoStage = (twoStageCount / manCount) * 100
+//print("Таков процент дошедших до финиша во втором этапе \(twoStage)")
+//
+//let threeStage = (threeStageCount / manCount) * 100
+//print("Таков процент дошедших до финиша в третьем этапе \(threeStage)")
+//
+//
+//
+//// task 25
+//
+//let product = (name: "MacBook Air", price: 54_000, count: 12)
+//
+//let totalPrice = Double(product.price * product.count)
+//print("Этот товар ноутбук марки \(product.name), их количество на складе \(product.count) штук, стоимость одного ноутбука составляет \(product.price) рублей, а общая стоимость составляет \(totalPrice) рублей")
+//
+//
+//// task 26
+//
+//let isItSnowing = true
+//let temperature:Int = -2
+//
+//
+//if isItSnowing && temperature < 0 {
+//    print("Да, Маша одень шапку!")
+//} else {
+//    print("Нет, можно идти на улицу без шапки!")
+//}
+//
+//
+//// task 27
+//
+//let countMan:Double = 9
+//let priceSoda = 0.45
+//let oneMan = Double(175 + 175) / 1000
+//print("Столько пьёт один гость \(oneMan) литра")
+//
+//// решение
+//let resMan:Double = countMan - 2
+//// это количество человек
+//print("resMan -> \(resMan) количество человек кто пьёт лимонад")
+//
+//// А теперь количество человек умножим на количество лимонада для одного
+//let resCountLimonad = oneMan * resMan
+//let res = resCountLimonad.rounded(.up)
+//print("Столько нужно лимонада \(res) в литрах")
+//
+//// стоимость напитков составит
+//let resultPrice = priceSoda * res
+//print("Общая стоимость напитков составит \(resultPrice) доллара")
+//
+//
+//// task 28
+//
+//let totalCandies = 567
+//let boxCapacity = 24
+//
+//// Расчет количества полных коробок
+//let fullBoxes = totalCandies / boxCapacity
+//
+//// Расчет остатка конфет (которые можно съесть)
+//let leftoverCandies = totalCandies % boxCapacity
+//
+//print("=== Результаты фасовки конфет ===")
+//print("Всего конфет: \(totalCandies)")
+//print("Вместимость одной коробки: \(boxCapacity) конфет")
+//print("Полных коробок: \(fullBoxes)")
+//print("Осталось лишних конфет: \(leftoverCandies)")
+//
+//print("\n🎁 ИТОГО:")
+//print("Вы сможете упаковать: \(fullBoxes) коробок")
+//print("Вы сможете съесть: \(leftoverCandies) конфет(ы)")
+//
+//// Проверка
+//let totalInBoxes = fullBoxes * boxCapacity
+//let check = totalInBoxes + leftoverCandies
+//print("\n✅ Проверка: \(fullBoxes) × \(boxCapacity) + \(leftoverCandies) = \(check) конфет")
+//
+//
+//
+//// task 29
+//
+//let age = 42
+//
+//let resultOpen = age >= 18 ? "Да, можно!" : "Нет, нельзя"
+//print("resultOpen -> \(resultOpen)")
+//
+//
+//// task 29
+//
+//let grade = 4
+//
+//let resultGrade = grade >= 3 ? "Вы сдали экзамен" : "Нет, вы не сдали экзамен"
+//print(resultGrade)
