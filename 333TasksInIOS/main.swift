@@ -414,3 +414,24 @@
 // task 38
 
 
+let login = "maksim.minakov.83"
+let password = 26081983
+
+if login == "maksim.minakov.83" , password == 26081983 {
+    print("Пользователь в системе")
+} else {
+    print("Введите корректные данные")
+}
+
+
+// task_39
+
+let inputText = "Если это получилось у других, получится и у вас"
+
+// uppercased
+print(inputText.uppercased())
+
+// lowercased
+print(inputText.lowercased())
+
+
