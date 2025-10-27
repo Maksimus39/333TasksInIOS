@@ -435,3 +435,36 @@ print(inputText.uppercased())
 print(inputText.lowercased())
 
 
+
+// task_41
+
+var variables = "Если бы люди поняли что страхи не имеют никакой связи с реальностью всем жилось бы куда лучше"
+
+let item = "*"
+
+let vowels: [Character] = ["а", "е", "ё", "и", "о", "у", "ы", "э", "ю", "я",
+                           "А", "Е", "Ё", "И", "О", "У", "Ы", "Э", "Ю", "Я"]
+
+var result = ""
+for char in variables {
+    if vowels.contains(char) {
+        result.append(item)
+    } else {
+        result.append(char)
+    }
+}
+
+print(result)
+
+
+// task_43
+
+var city: String? = nil
+var cityName = city ?? "Unknown"
+print("cityName -> \(cityName)")
+
+
+// task_44
+
+var user = "example@example.com"
+
