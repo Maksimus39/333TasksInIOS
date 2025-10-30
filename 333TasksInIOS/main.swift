@@ -414,57 +414,143 @@
 // task 38
 
 
-let login = "maksim.minakov.83"
-let password = 26081983
-
-if login == "maksim.minakov.83" , password == 26081983 {
-    print("Пользователь в системе")
-} else {
-    print("Введите корректные данные")
-}
+//let login = "maksim.minakov.83"
+//let password = 26081983
+//
+//if login == "maksim.minakov.83" , password == 26081983 {
+//    print("Пользователь в системе")
+//} else {
+//    print("Введите корректные данные")
+//}
 
 
 // task_39
 
-let inputText = "Если это получилось у других, получится и у вас"
+//let inputText = "Если это получилось у других, получится и у вас"
 
 // uppercased
-print(inputText.uppercased())
+//print(inputText.uppercased())
 
 // lowercased
-print(inputText.lowercased())
+//print(inputText.lowercased())
 
 
 
 // task_41
 
-var variables = "Если бы люди поняли что страхи не имеют никакой связи с реальностью всем жилось бы куда лучше"
-
-let item = "*"
-
-let vowels: [Character] = ["а", "е", "ё", "и", "о", "у", "ы", "э", "ю", "я",
-                           "А", "Е", "Ё", "И", "О", "У", "Ы", "Э", "Ю", "Я"]
-
-var result = ""
-for char in variables {
-    if vowels.contains(char) {
-        result.append(item)
-    } else {
-        result.append(char)
-    }
-}
-
-print(result)
+//var variables = "Если бы люди поняли что страхи не имеют никакой связи с реальностью всем жилось бы куда лучше"
+//
+//let item = "*"
+//
+//let vowels: [Character] = ["а", "е", "ё", "и", "о", "у", "ы", "э", "ю", "я",
+//                           "А", "Е", "Ё", "И", "О", "У", "Ы", "Э", "Ю", "Я"]
+//
+//var result = ""
+//for char in variables {
+//    if vowels.contains(char) {
+//        result.append(item)
+//    } else {
+//        result.append(char)
+//    }
+//}
+//
+//print(result)
 
 
 // task_43
 
-var city: String? = nil
-var cityName = city ?? "Unknown"
-print("cityName -> \(cityName)")
+//var city: String? = nil
+//var cityName = city ?? "Unknown"
+//print("cityName -> \(cityName)")
 
 
 // task_44
 
-var user = "example@example.com"
+//var user = "example@example.com"
 
+
+
+// task_45
+
+let textMessage = "Я изучаю программирование под IOS"
+var maximumLenghtText = 25
+let resultText = String(textMessage.prefix(maximumLenghtText))
+print("resultText -> \(resultText)")
+
+
+// task_46
+
+let numberOne: String = "10"
+let numberTwo: String = "20"
+
+if let numberOneInt = Int(numberOne), let numberTwoInt = Int(numberTwo) {
+    let resultNumberInt = numberOneInt + numberTwoInt
+    print(resultNumberInt)
+} else {
+    print("Ошибка подсчёта")
+}
+
+
+// task_47
+
+let dayNumber = 4
+
+switch dayNumber {
+case 1: print("Понедельник")
+case 2: print("Вторник")
+case 3: print("Среда")
+case 4: print("Четверг")
+case 6: print("Суббота")
+case 7: print("Воскресенье")
+default: print("Неверный день дня")
+}
+
+
+// task_48
+
+let matematicaGrade: Int = 5
+let physicsGradeOne: Double = 4.5
+let physicsGradeTwo: Double = 4.5
+
+let matematicaGradeDouble: Double = Double(matematicaGrade)
+
+let resultGrade = (matematicaGradeDouble + physicsGradeOne + physicsGradeTwo) / 3
+print(resultGrade)
+
+
+
+// task_49
+
+let dollars: Double = 100.0
+let exchangeRate: Double = 0.8575
+
+let euros = dollars * exchangeRate
+let roundedEuros = (euros * 100).rounded() / 100
+print("\(dollars) долларов, это примерно \(roundedEuros) евро")
+
+
+// task_50
+
+let arrayOne: [String] = []
+let arrayTwo = [Int]()
+let arrayThree = Array("Hello")
+
+
+// task_51
+
+var letters = Set<String>()
+var words: Set<String> = ["Maksim", "Larisa", "Andrey", "Bogdan"]
+print(words)
+print(type(of: words))
+
+
+letters.insert("MacBook Air")
+print(letters)
+print(type(of: letters))
+
+
+// task_52
+
+var namesInteger: [Int: String] = [:]
+var namesString = [String: Int]()
+var intandString = Dictionary<String, String>()
