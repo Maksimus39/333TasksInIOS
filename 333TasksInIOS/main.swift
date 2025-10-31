@@ -472,85 +472,196 @@
 
 // task_45
 
-let textMessage = "Я изучаю программирование под IOS"
-var maximumLenghtText = 25
-let resultText = String(textMessage.prefix(maximumLenghtText))
-print("resultText -> \(resultText)")
+//let textMessage = "Я изучаю программирование под IOS"
+//var maximumLenghtText = 25
+//let resultText = String(textMessage.prefix(maximumLenghtText))
+//print("resultText -> \(resultText)")
 
 
 // task_46
 
-let numberOne: String = "10"
-let numberTwo: String = "20"
-
-if let numberOneInt = Int(numberOne), let numberTwoInt = Int(numberTwo) {
-    let resultNumberInt = numberOneInt + numberTwoInt
-    print(resultNumberInt)
-} else {
-    print("Ошибка подсчёта")
-}
+//let numberOne: String = "10"
+//let numberTwo: String = "20"
+//
+//if let numberOneInt = Int(numberOne), let numberTwoInt = Int(numberTwo) {
+//    let resultNumberInt = numberOneInt + numberTwoInt
+//    print(resultNumberInt)
+//} else {
+//    print("Ошибка подсчёта")
+//}
 
 
 // task_47
 
-let dayNumber = 4
-
-switch dayNumber {
-case 1: print("Понедельник")
-case 2: print("Вторник")
-case 3: print("Среда")
-case 4: print("Четверг")
-case 6: print("Суббота")
-case 7: print("Воскресенье")
-default: print("Неверный день дня")
-}
+//let dayNumber = 4
+//
+//switch dayNumber {
+//case 1: print("Понедельник")
+//case 2: print("Вторник")
+//case 3: print("Среда")
+//case 4: print("Четверг")
+//case 6: print("Суббота")
+//case 7: print("Воскресенье")
+//default: print("Неверный день дня")
+//}
 
 
 // task_48
 
-let matematicaGrade: Int = 5
-let physicsGradeOne: Double = 4.5
-let physicsGradeTwo: Double = 4.5
-
-let matematicaGradeDouble: Double = Double(matematicaGrade)
-
-let resultGrade = (matematicaGradeDouble + physicsGradeOne + physicsGradeTwo) / 3
-print(resultGrade)
+//let matematicaGrade: Int = 5
+//let physicsGradeOne: Double = 4.5
+//let physicsGradeTwo: Double = 4.5
+//
+//let matematicaGradeDouble: Double = Double(matematicaGrade)
+//
+//let resultGrade = (matematicaGradeDouble + physicsGradeOne + physicsGradeTwo) / 3
+//print(resultGrade)
 
 
 
 // task_49
 
-let dollars: Double = 100.0
-let exchangeRate: Double = 0.8575
-
-let euros = dollars * exchangeRate
-let roundedEuros = (euros * 100).rounded() / 100
-print("\(dollars) долларов, это примерно \(roundedEuros) евро")
+//let dollars: Double = 100.0
+//let exchangeRate: Double = 0.8575
+//
+//let euros = dollars * exchangeRate
+//let roundedEuros = (euros * 100).rounded() / 100
+//print("\(dollars) долларов, это примерно \(roundedEuros) евро")
 
 
 // task_50
 
-let arrayOne: [String] = []
-let arrayTwo = [Int]()
-let arrayThree = Array("Hello")
+//let arrayOne: [String] = []
+//let arrayTwo = [Int]()
+//let arrayThree = Array("Hello")
 
 
 // task_51
 
-var letters = Set<String>()
-var words: Set<String> = ["Maksim", "Larisa", "Andrey", "Bogdan"]
-print(words)
-print(type(of: words))
+//var letters = Set<String>()
+//var words: Set<String> = ["Maksim", "Larisa", "Andrey", "Bogdan"]
+//print(words)
+//print(type(of: words))
 
 
-letters.insert("MacBook Air")
-print(letters)
-print(type(of: letters))
+//letters.insert("MacBook Air")
+//print(letters)
+//print(type(of: letters))
 
 
 // task_52
 
-var namesInteger: [Int: String] = [:]
-var namesString = [String: Int]()
-var intandString = Dictionary<String, String>()
+//var namesInteger: [Int: String] = [:]
+//var namesString = [String: Int]()
+//var intandString = Dictionary<String, String>()
+
+
+// task_53
+
+// v1
+let basket: [String] = ["Телефон", "Часы", "Планшет", "Ноутбук"]
+
+if basket.count > 0 {
+    print("В корзине \(basket.count) товаров")
+} else {
+    print("Ваша козина пуста")
+}
+
+
+// v2
+let countBasket = basket.count > 0
+?("В корзине \(basket.count) товаров")
+: "Ваша козина пуста"
+print("countBasket -> \(countBasket)")
+
+
+
+
+// task_54
+
+var numberOfArray: [Int] = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+print("numberOfArray -> \(numberOfArray)")
+numberOfArray.append(11)
+print("numberOfArray -> \(numberOfArray)")
+numberOfArray.remove(at: 0)
+print("numberOfArray -> \(numberOfArray)")
+
+for num in numberOfArray {
+    print("num -> \(num)")
+}
+
+
+
+// task_55
+
+numberOfArray.reverse()
+print(numberOfArray)
+
+
+// task_56
+
+
+let userNames = ["Maksim", "Larisa", "Andrey", "Bogdan", "Larisa", "Andrey", "Bogdan"]
+print("Список имён в массиве \(userNames)")
+
+let uniqueNames = Set(userNames)
+print("Я вывел уникальные значения массива с помощью коллекции Set: \(uniqueNames)")
+
+
+
+// task_57
+
+var scoolGrade:[String: Int] = [:]
+print("scoolGrade -> \(scoolGrade)")
+print("scoolGrade -> \(type(of: scoolGrade))")
+scoolGrade["Максим"] = 5
+scoolGrade["Лариса"] = 5
+scoolGrade["Андрей"] = 5
+scoolGrade["Богдан"] = 5
+
+for (key, value) in scoolGrade {
+    print("Имя ученика \(key) и его оценка \(value)")
+}
+
+
+// task_58
+
+var response: [String: Bool] = [
+    "https://www.google.com": true,
+    "https://www.github.com": true,
+    "https://www.stackoverflow.com": true,
+    "https://www.medium.com": false,
+    "https://www.reddit.com": true,
+    "https://www.twitter.com": false,
+    "https://www.linkedin.com": true,
+    "https://www.instagram.com": true,
+    "https://www.netflix.com": false,
+    "https://www.amazon.com": true
+]
+
+let filterTrueResponse = response.filter{ $0.value == true }
+print("Элементы, у которых значение true: \(filterTrueResponse)")
+
+for (key, value) in filterTrueResponse {
+    print("Ключ словаря \(key), значение словаря \(value)")
+}
+
+
+// task_59
+
+var photo: [String] = ["photo1.jpeg", "photo2.mov", "video1.mp4", "video2.png"]
+
+let filterVideo = photo.filter{ $0.hasSuffix(".mp4") || $0.hasSuffix(".png") }
+let filterImage = photo.filter{ $0.hasSuffix(".jpeg") || $0.hasSuffix(".mov") }
+
+print("Элементы, которые заканчиваются на .mp4 или .png: \(filterVideo)")
+print("Элементы, которые заканчиваются на .jpeg или .mov: \(filterImage)")
+
+
+// task_60
+
+let randomNumber = 42
+
+for i in 1...randomNumber {
+    print("Числовая последовательность: \(i)")
+}
