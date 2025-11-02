@@ -559,109 +559,205 @@
 // task_53
 
 // v1
-let basket: [String] = ["Телефон", "Часы", "Планшет", "Ноутбук"]
-
-if basket.count > 0 {
-    print("В корзине \(basket.count) товаров")
-} else {
-    print("Ваша козина пуста")
-}
+//let basket: [String] = ["Телефон", "Часы", "Планшет", "Ноутбук"]
+//
+//if basket.count > 0 {
+//    print("В корзине \(basket.count) товаров")
+//} else {
+//    print("Ваша козина пуста")
+//}
 
 
 // v2
-let countBasket = basket.count > 0
-?("В корзине \(basket.count) товаров")
-: "Ваша козина пуста"
-print("countBasket -> \(countBasket)")
+//let countBasket = basket.count > 0
+//?("В корзине \(basket.count) товаров")
+//: "Ваша козина пуста"
+//print("countBasket -> \(countBasket)")
 
 
 
 
 // task_54
 
-var numberOfArray: [Int] = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-print("numberOfArray -> \(numberOfArray)")
-numberOfArray.append(11)
-print("numberOfArray -> \(numberOfArray)")
-numberOfArray.remove(at: 0)
-print("numberOfArray -> \(numberOfArray)")
-
-for num in numberOfArray {
-    print("num -> \(num)")
-}
+//var numberOfArray: [Int] = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+//print("numberOfArray -> \(numberOfArray)")
+//numberOfArray.append(11)
+//print("numberOfArray -> \(numberOfArray)")
+//numberOfArray.remove(at: 0)
+//print("numberOfArray -> \(numberOfArray)")
+//
+//for num in numberOfArray {
+//    print("num -> \(num)")
+//}
 
 
 
 // task_55
 
-numberOfArray.reverse()
-print(numberOfArray)
+//numberOfArray.reverse()
+//print(numberOfArray)
 
 
 // task_56
 
 
-let userNames = ["Maksim", "Larisa", "Andrey", "Bogdan", "Larisa", "Andrey", "Bogdan"]
-print("Список имён в массиве \(userNames)")
-
-let uniqueNames = Set(userNames)
-print("Я вывел уникальные значения массива с помощью коллекции Set: \(uniqueNames)")
+//let userNames = ["Maksim", "Larisa", "Andrey", "Bogdan", "Larisa", "Andrey", "Bogdan"]
+//print("Список имён в массиве \(userNames)")
+//
+//let uniqueNames = Set(userNames)
+//print("Я вывел уникальные значения массива с помощью коллекции Set: \(uniqueNames)")
 
 
 
 // task_57
 
-var scoolGrade:[String: Int] = [:]
-print("scoolGrade -> \(scoolGrade)")
-print("scoolGrade -> \(type(of: scoolGrade))")
-scoolGrade["Максим"] = 5
-scoolGrade["Лариса"] = 5
-scoolGrade["Андрей"] = 5
-scoolGrade["Богдан"] = 5
-
-for (key, value) in scoolGrade {
-    print("Имя ученика \(key) и его оценка \(value)")
-}
+//var scoolGrade:[String: Int] = [:]
+//print("scoolGrade -> \(scoolGrade)")
+//print("scoolGrade -> \(type(of: scoolGrade))")
+//scoolGrade["Максим"] = 5
+//scoolGrade["Лариса"] = 5
+//scoolGrade["Андрей"] = 5
+//scoolGrade["Богдан"] = 5
+//
+//for (key, value) in scoolGrade {
+//    print("Имя ученика \(key) и его оценка \(value)")
+//}
 
 
 // task_58
 
-var response: [String: Bool] = [
-    "https://www.google.com": true,
-    "https://www.github.com": true,
-    "https://www.stackoverflow.com": true,
-    "https://www.medium.com": false,
-    "https://www.reddit.com": true,
-    "https://www.twitter.com": false,
-    "https://www.linkedin.com": true,
-    "https://www.instagram.com": true,
-    "https://www.netflix.com": false,
-    "https://www.amazon.com": true
-]
+//var response: [String: Bool] = [
+//    "https://www.google.com": true,
+//    "https://www.github.com": true,
+//    "https://www.stackoverflow.com": true,
+//    "https://www.medium.com": false,
+//    "https://www.reddit.com": true,
+//    "https://www.twitter.com": false,
+//    "https://www.linkedin.com": true,
+//    "https://www.instagram.com": true,
+//    "https://www.netflix.com": false,
+//    "https://www.amazon.com": true
+//]
 
-let filterTrueResponse = response.filter{ $0.value == true }
-print("Элементы, у которых значение true: \(filterTrueResponse)")
-
-for (key, value) in filterTrueResponse {
-    print("Ключ словаря \(key), значение словаря \(value)")
-}
+//let filterTrueResponse = response.filter{ $0.value == true }
+//print("Элементы, у которых значение true: \(filterTrueResponse)")
+//
+//for (key, value) in filterTrueResponse {
+//    print("Ключ словаря \(key), значение словаря \(value)")
+//}
 
 
 // task_59
 
-var photo: [String] = ["photo1.jpeg", "photo2.mov", "video1.mp4", "video2.png"]
-
-let filterVideo = photo.filter{ $0.hasSuffix(".mp4") || $0.hasSuffix(".png") }
-let filterImage = photo.filter{ $0.hasSuffix(".jpeg") || $0.hasSuffix(".mov") }
-
-print("Элементы, которые заканчиваются на .mp4 или .png: \(filterVideo)")
-print("Элементы, которые заканчиваются на .jpeg или .mov: \(filterImage)")
+//var photo: [String] = ["photo1.jpeg", "photo2.mov", "video1.mp4", "video2.png"]
+//
+//let filterVideo = photo.filter{ $0.hasSuffix(".mp4") || $0.hasSuffix(".png") }
+//let filterImage = photo.filter{ $0.hasSuffix(".jpeg") || $0.hasSuffix(".mov") }
+//
+//print("Элементы, которые заканчиваются на .mp4 или .png: \(filterVideo)")
+//print("Элементы, которые заканчиваются на .jpeg или .mov: \(filterImage)")
 
 
 // task_60
 
-let randomNumber = 42
+//let randomNumber = 42
+//
+//for i in 1...randomNumber {
+//    print("Числовая последовательность: \(i)")
+//}
 
-for i in 1...randomNumber {
-    print("Числовая последовательность: \(i)")
+
+// task_61
+
+let numArr: [Int] = [1, 2, 3, 4, 5]
+print(numArr[0...4])
+
+
+// task_62
+
+var numArrReverse = [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
+numArrReverse.reverse()
+print(numArrReverse)
+
+
+// task_63
+
+var multipleArr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+for i in multipleArr {
+    print("Результат умножения \(i) на 5 равен \(i * 5)")
 }
+
+
+// task_64
+
+var sum = 0
+let count = 10
+var currentNumber = 1
+
+while currentNumber <= count {
+    sum += currentNumber
+    currentNumber += 1
+}
+
+print("Сумма чисел от 1 до \(count) равна \(sum)")
+
+
+//// task_65
+//
+//let text = "hello world hello swift world programming"
+//let words = text.components(separatedBy: .whitespacesAndNewlines)
+//let uniqueWords = Set(words)
+//
+//print("Все слова: \(words)")
+//print("Уникальные слова: \(uniqueWords)")
+//print("Количество уникальных слов: \(uniqueWords.count)")
+
+
+// task_66
+
+var stringOne = "Hello"
+var stringTwo = "World"
+
+let currentSetOne = Set(stringOne)
+let currentSetTwo = Set(stringTwo)
+
+let resultSet = currentSetOne.intersection(currentSetTwo)
+
+print("Первое слово: \(stringOne)")
+print("Второе слово: \(stringTwo)")
+print("Общие буквы: \(resultSet)")
+
+
+
+// task_67
+
+let temperature:Int = 24
+
+switch temperature {
+case  ..<0:
+    print("Лёд, можно добавить в холодные напитки")
+case 0...15:
+    print("Холодная вода и напитки")
+case 15...37:
+    print("Вода и напитки комнатной температуры")
+case 70...85:
+    print("Можно заварить зелёный чай")
+case 85...95:
+    print("Можно заварить чёрный чай")
+case 95...100:
+    print("Кипяток можно заварить кофе")
+default:
+    print("Такой температуры нет")
+}
+
+
+// task_68
+
+let text = "hello world"
+let uniqueCharacters = Set(text)
+
+print("Текст: '\(text)'")
+print("Уникальные символы: \(uniqueCharacters)")
+print("Количество уникальных символов: \(uniqueCharacters.count)")
+
