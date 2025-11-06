@@ -669,38 +669,38 @@
 
 // task_61
 
-let numArr: [Int] = [1, 2, 3, 4, 5]
-print(numArr[0...4])
+//let numArr: [Int] = [1, 2, 3, 4, 5]
+//print(numArr[0...4])
 
 
 // task_62
 
-var numArrReverse = [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
-numArrReverse.reverse()
-print(numArrReverse)
+//var numArrReverse = [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
+//numArrReverse.reverse()
+//print(numArrReverse)
 
 
 // task_63
 
-var multipleArr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-
-for i in multipleArr {
-    print("Результат умножения \(i) на 5 равен \(i * 5)")
-}
+//var multipleArr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+//
+//for i in multipleArr {
+//    print("Результат умножения \(i) на 5 равен \(i * 5)")
+//}
 
 
 // task_64
 
-var sum = 0
-let count = 10
-var currentNumber = 1
-
-while currentNumber <= count {
-    sum += currentNumber
-    currentNumber += 1
-}
-
-print("Сумма чисел от 1 до \(count) равна \(sum)")
+//var sum = 0
+//let count = 10
+//var currentNumber = 1
+//
+//while currentNumber <= count {
+//    sum += currentNumber
+//    currentNumber += 1
+//}
+//
+//print("Сумма чисел от 1 до \(count) равна \(sum)")
 
 
 //// task_65
@@ -716,48 +716,172 @@ print("Сумма чисел от 1 до \(count) равна \(sum)")
 
 // task_66
 
-var stringOne = "Hello"
-var stringTwo = "World"
-
-let currentSetOne = Set(stringOne)
-let currentSetTwo = Set(stringTwo)
-
-let resultSet = currentSetOne.intersection(currentSetTwo)
-
-print("Первое слово: \(stringOne)")
-print("Второе слово: \(stringTwo)")
-print("Общие буквы: \(resultSet)")
+//var stringOne = "Hello"
+//var stringTwo = "World"
+//
+//let currentSetOne = Set(stringOne)
+//let currentSetTwo = Set(stringTwo)
+//
+//let resultSet = currentSetOne.intersection(currentSetTwo)
+//
+//print("Первое слово: \(stringOne)")
+//print("Второе слово: \(stringTwo)")
+//print("Общие буквы: \(resultSet)")
 
 
 
 // task_67
 
-let temperature:Int = 24
-
-switch temperature {
-case  ..<0:
-    print("Лёд, можно добавить в холодные напитки")
-case 0...15:
-    print("Холодная вода и напитки")
-case 15...37:
-    print("Вода и напитки комнатной температуры")
-case 70...85:
-    print("Можно заварить зелёный чай")
-case 85...95:
-    print("Можно заварить чёрный чай")
-case 95...100:
-    print("Кипяток можно заварить кофе")
-default:
-    print("Такой температуры нет")
-}
+//let temperature:Int = 24
+//
+//switch temperature {
+//case  ..<0:
+//    print("Лёд, можно добавить в холодные напитки")
+//case 0...15:
+//    print("Холодная вода и напитки")
+//case 15...37:
+//    print("Вода и напитки комнатной температуры")
+//case 70...85:
+//    print("Можно заварить зелёный чай")
+//case 85...95:
+//    print("Можно заварить чёрный чай")
+//case 95...100:
+//    print("Кипяток можно заварить кофе")
+//default:
+//    print("Такой температуры нет")
+//}
 
 
 // task_68
 
-let text = "hello world"
-let uniqueCharacters = Set(text)
+//let text = "hello world"
+//let uniqueCharacters = Set(text)
+//
+//print("Текст: '\(text)'")
+//print("Уникальные символы: \(uniqueCharacters)")
+//print("Количество уникальных символов: \(uniqueCharacters.count)")
 
-print("Текст: '\(text)'")
-print("Уникальные символы: \(uniqueCharacters)")
-print("Количество уникальных символов: \(uniqueCharacters.count)")
 
+// task_69
+
+//var registration: [String: String] = ["Maksim": "maksim@mail.ru",
+//                                      "Larisa": "larisa@mail.ru",
+//                                      "Andrey": "andrey@mail.ru",
+//                                      "Bogdan": "bogdan@mail.ru"
+//]
+//
+//registration["Svetlana"] = "sveta@mail.ru"
+//registration["Olga"] = "olga@mail.ru"
+//
+//registration["Olga"] = "olga@mail.ru"
+//print("registration -> \(registration)")
+
+
+// task_70
+
+//var name: String? = "John"
+//
+//print(name!)
+// 
+//if let nameJohn = name {
+//    print(nameJohn)
+//}
+//
+//print(name ?? "Нет имени")
+
+
+
+// task_71
+
+//var age: Int? = 30
+//
+//if let ageValue = age {
+//    print("Возраст: \(ageValue)")
+//} else {
+//    print("Возраст не указан")
+//}
+
+
+
+// task_72
+
+//var score: Int? = 90
+//
+//func showScore(_ score: Int?) {
+//    guard let actualScore = score else {
+//        print("Очки не заданы")
+//        return
+//    }
+//    print("Очки: \(actualScore) баллов")
+//}
+//
+//showScore(90)  // → Очки: 90 баллов
+//showScore(nil) // → Очки не заданы
+
+
+
+// task_73
+
+//var person: [String: String] = ["Maksim": "Программист",
+//                                "Larisa": "Домохозяйка",
+//                                "Andrey": "Школьник",
+//                                "Bogdan": "Школьник"]
+//
+//print("Сейчас мы выведем все навыки сотрудников \(person.values)")
+//let actualJob = Set(person.values)
+//
+//let filterSetJob = ["Школьник"]
+//
+//let mathes = actualJob.intersection(filterSetJob)              // 1. .intersection → Пересечение ✅
+//let mathes2 = actualJob.union(filterSetJob)                   //  2. .union → Объединение ➕
+//let mathes3 = actualJob.symmetricDifference(filterSetJob)     //  3. .symmetricDifference → Симметричная разность ↔️
+//
+//print("В нашем списке повторяющаяся профессия это \(mathes)")
+//print("В нашем списке повторяющаяся профессия это \(mathes2)")
+//print("В нашем списке повторяющаяся профессия это \(mathes3)")
+
+
+
+// task_74
+
+//var yourItems: [Int: String] = [
+//    1: "шлёпки",
+//    2: "чемодан",
+//    3: "зубная щётка",
+//    4: "паспорт",
+//    5: "наушники",
+//    6: "футболка",
+//    7: "дождевик",
+//    8: "книга",
+//    9: "power bank",
+//    10: "очки"
+//]
+//
+//var friendItems: [Int: String] = [
+//    1: "кроссовки",
+//    2: "рюкзак",
+//    3: "телефон",
+//    4: "вода",
+//    5: "солнцезащитные очки",
+//    6: "наушники",
+//    7: "ветровка",
+//    8: "книга",
+//    9: "шоколадка",
+//    10: "ключ от машины"
+//]
+//
+//let yourThings = Set(yourItems.values)
+//let friendThings = Set(friendItems.values)
+//
+//let areAllYourItemsWithFriend = yourThings.isSubset(of: friendThings)
+//print(areAllYourItemsWithFriend) // false
+//
+//let areYourItemsWithFriend = yourThings.isSuperset(of: friendThings)
+//print(areYourItemsWithFriend)
+
+
+//let res = yourThings.isStrictSubset(of: friendThings)
+//print(res)
+//
+//let res2 = yourThings.isStrictSuperset(of: friendThings)
+//print(res2)
