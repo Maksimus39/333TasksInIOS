@@ -885,3 +885,107 @@
 //
 //let res2 = yourThings.isStrictSuperset(of: friendThings)
 //print(res2)
+
+
+
+// task_75
+
+var distanceTraveled = 0
+var batteryLevel = 100
+
+while batteryLevel > 0 {
+    batteryLevel -= 10
+    distanceTraveled += 20
+    
+    if batteryLevel <= 0 {
+           print("Заряд батареи исчерпан. Остановка.")
+           break // Прерываем цикл, если заряд исчерпан
+       }
+}
+
+print("Мы проехали \(distanceTraveled) км, а заряд батареи остался \(batteryLevel)%")
+
+
+// task_76
+
+let range = 10...50
+
+for num in range {
+    if num < 2 {
+        continue // Пропускаем числа меньше 2
+    }
+
+    var isPrime = true
+
+    // Проверяем, делится ли num на какие-либо числа от 2 до sqrt(num)
+    for i in 2...Int(Double(num).squareRoot()) {
+        if num % i == 0 {
+            isPrime = false
+            break // Если делится, дальше не проверяем
+        }
+    }
+
+    if isPrime {
+        print("Первое простое число в диапазоне: \(num)")
+        break // Прерываем внешний цикл
+    }
+}
+
+
+// task_80
+
+import Foundation
+
+let age = 25 // Пример возраста
+
+var greetingMessage = ""
+
+switch age {
+case 0..<13:
+    greetingMessage += "Привет, малыш! "
+    fallthrough
+case 13..<20:
+    greetingMessage += "Ты подросток. "
+    fallthrough
+case 20..<30:
+    greetingMessage += "Ты молод и полон сил! "
+    fallthrough
+case 30..<50:
+    greetingMessage += "Ты в расцвете сил. "
+    fallthrough
+case 50..<70:
+    greetingMessage += "Ты мудр и опытен. "
+    fallthrough
+default:
+    greetingMessage += "Ты накопил за плечами богатый жизненный опыт."
+}
+
+print(greetingMessage)
+
+
+// task_82
+
+func printSmile(){
+    print("I`m smile!")
+}
+printSmile()
+
+
+// task_83
+
+func multiply(a: Int, b: Int) -> Int {
+  return a * b
+}
+
+print(multiply(a: 2, b: 4))
+
+
+// task_84
+
+func greet(name: String){
+    print("Привет \(name) я рад тебя снова видеть!")
+}
+
+greet(name: "Maksim")
+
+
