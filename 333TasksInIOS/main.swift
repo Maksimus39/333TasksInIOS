@@ -782,7 +782,7 @@
 //var name: String? = "John"
 //
 //print(name!)
-// 
+//
 //if let nameJohn = name {
 //    print(nameJohn)
 //}
@@ -898,9 +898,9 @@ while batteryLevel > 0 {
     distanceTraveled += 20
     
     if batteryLevel <= 0 {
-           print("Заряд батареи исчерпан. Остановка.")
-           break // Прерываем цикл, если заряд исчерпан
-       }
+        print("Заряд батареи исчерпан. Остановка.")
+        break // Прерываем цикл, если заряд исчерпан
+    }
 }
 
 print("Мы проехали \(distanceTraveled) км, а заряд батареи остался \(batteryLevel)%")
@@ -914,9 +914,9 @@ for num in range {
     if num < 2 {
         continue // Пропускаем числа меньше 2
     }
-
+    
     var isPrime = true
-
+    
     // Проверяем, делится ли num на какие-либо числа от 2 до sqrt(num)
     for i in 2...Int(Double(num).squareRoot()) {
         if num % i == 0 {
@@ -924,7 +924,7 @@ for num in range {
             break // Если делится, дальше не проверяем
         }
     }
-
+    
     if isPrime {
         print("Первое простое число в диапазоне: \(num)")
         break // Прерываем внешний цикл
@@ -974,7 +974,7 @@ printSmile()
 // task_83
 
 func multiply(a: Int, b: Int) -> Int {
-  return a * b
+    return a * b
 }
 
 print(multiply(a: 2, b: 4))
@@ -987,5 +987,93 @@ func greet(name: String){
 }
 
 greet(name: "Maksim")
+
+
+// task_85
+
+func manAge(ageNumber: Int) -> String {
+    switch ageNumber {
+    case  (12...18):
+        return "Возраст допустим"
+    case (0...12):
+        return "Возраст не допустим"
+    default:
+        return "Укажите возраст"
+    }
+}
+
+let ageMan = manAge(ageNumber: 14)
+print("ageMan -> \(ageMan)")
+
+
+// task_86
+
+func factorial(_ n: Int) -> Int {
+    if n <= 1 {
+        return 1
+    }
+    return n * factorial(n - 1)
+}
+
+let result = factorial(10)
+print("Факториал 10: \(result)") // Вывод: Факториал 5: 120
+
+
+// task_87
+
+func stringInNumber(arg: String){
+    let stringNumber = arg
+    let invertNum = Int(stringNumber)
+    
+    if let n = invertNum {
+        print("n -> \(n)")
+    } else {
+        print("Не удалось преобразовать в строку")
+    }
+}
+
+stringInNumber(arg: "1234sdf")
+
+
+
+// task_89
+
+func isValidate(arg: String) -> Bool {
+    let hasAt = arg.contains("@")
+    let hasDot = arg.contains(".")
+    return hasAt && hasDot
+}
+
+let searchResult = isValidate(arg: "test@gmail.com")
+print(searchResult) // true
+
+
+// task_90
+
+func calculateTotal(total: [Int]) -> Int {
+    var totalPriceInt: Int = 0
+    
+    for i in total {
+        totalPriceInt += i
+    }
+    return totalPriceInt
+}
+
+let totalPrice = calculateTotal(total: [10, 10, 10])
+print("Общая стоимость покупок составила \(totalPrice) руб.")
+
+
+
+// task_91
+
+func checkNumber(productPrice: Double, quantityGoods: Int = 1) -> Double {
+    productPrice *  Double(quantityGoods)
+}
+
+let totalPriceProduct = checkNumber(productPrice: 887.9, quantityGoods: 23)
+print("Общая стоимость товара составляет \(totalPriceProduct) рублей")
+
+let totalPriceProducOneArgument = checkNumber(productPrice: 87.9)
+print("Общая стоимость товара составляет \(totalPriceProducOneArgument) рублей")
 
 
