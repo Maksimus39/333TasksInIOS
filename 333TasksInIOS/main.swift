@@ -890,190 +890,315 @@
 
 // task_75
 
-var distanceTraveled = 0
-var batteryLevel = 100
-
-while batteryLevel > 0 {
-    batteryLevel -= 10
-    distanceTraveled += 20
-    
-    if batteryLevel <= 0 {
-        print("Заряд батареи исчерпан. Остановка.")
-        break // Прерываем цикл, если заряд исчерпан
-    }
-}
-
-print("Мы проехали \(distanceTraveled) км, а заряд батареи остался \(batteryLevel)%")
+//var distanceTraveled = 0
+//var batteryLevel = 100
+//
+//while batteryLevel > 0 {
+//    batteryLevel -= 10
+//    distanceTraveled += 20
+//
+//    if batteryLevel <= 0 {
+//        print("Заряд батареи исчерпан. Остановка.")
+//        break // Прерываем цикл, если заряд исчерпан
+//    }
+//}
+//
+//print("Мы проехали \(distanceTraveled) км, а заряд батареи остался \(batteryLevel)%")
 
 
 // task_76
 
-let range = 10...50
-
-for num in range {
-    if num < 2 {
-        continue // Пропускаем числа меньше 2
-    }
-    
-    var isPrime = true
-    
-    // Проверяем, делится ли num на какие-либо числа от 2 до sqrt(num)
-    for i in 2...Int(Double(num).squareRoot()) {
-        if num % i == 0 {
-            isPrime = false
-            break // Если делится, дальше не проверяем
-        }
-    }
-    
-    if isPrime {
-        print("Первое простое число в диапазоне: \(num)")
-        break // Прерываем внешний цикл
-    }
-}
+//let range = 10...50
+//
+//for num in range {
+//    if num < 2 {
+//        continue // Пропускаем числа меньше 2
+//    }
+//
+//    var isPrime = true
+//
+//    // Проверяем, делится ли num на какие-либо числа от 2 до sqrt(num)
+//    for i in 2...Int(Double(num).squareRoot()) {
+//        if num % i == 0 {
+//            isPrime = false
+//            break // Если делится, дальше не проверяем
+//        }
+//    }
+//
+//    if isPrime {
+//        print("Первое простое число в диапазоне: \(num)")
+//        break // Прерываем внешний цикл
+//    }
+//}
 
 
 // task_80
 
-import Foundation
-
-let age = 25 // Пример возраста
-
-var greetingMessage = ""
-
-switch age {
-case 0..<13:
-    greetingMessage += "Привет, малыш! "
-    fallthrough
-case 13..<20:
-    greetingMessage += "Ты подросток. "
-    fallthrough
-case 20..<30:
-    greetingMessage += "Ты молод и полон сил! "
-    fallthrough
-case 30..<50:
-    greetingMessage += "Ты в расцвете сил. "
-    fallthrough
-case 50..<70:
-    greetingMessage += "Ты мудр и опытен. "
-    fallthrough
-default:
-    greetingMessage += "Ты накопил за плечами богатый жизненный опыт."
-}
-
-print(greetingMessage)
+//import Foundation
+//
+//let age = 25 // Пример возраста
+//
+//var greetingMessage = ""
+//
+//switch age {
+//case 0..<13:
+//    greetingMessage += "Привет, малыш! "
+//    fallthrough
+//case 13..<20:
+//    greetingMessage += "Ты подросток. "
+//    fallthrough
+//case 20..<30:
+//    greetingMessage += "Ты молод и полон сил! "
+//    fallthrough
+//case 30..<50:
+//    greetingMessage += "Ты в расцвете сил. "
+//    fallthrough
+//case 50..<70:
+//    greetingMessage += "Ты мудр и опытен. "
+//    fallthrough
+//default:
+//    greetingMessage += "Ты накопил за плечами богатый жизненный опыт."
+//}
+//
+//print(greetingMessage)
 
 
 // task_82
 
-func printSmile(){
-    print("I`m smile!")
-}
-printSmile()
+//func printSmile(){
+//    print("I`m smile!")
+//}
+//printSmile()
 
 
 // task_83
 
-func multiply(a: Int, b: Int) -> Int {
-    return a * b
-}
-
-print(multiply(a: 2, b: 4))
+//func multiply(a: Int, b: Int) -> Int {
+//    return a * b
+//}
+//
+//print(multiply(a: 2, b: 4))
 
 
 // task_84
 
-func greet(name: String){
-    print("Привет \(name) я рад тебя снова видеть!")
-}
-
-greet(name: "Maksim")
+//func greet(name: String){
+//    print("Привет \(name) я рад тебя снова видеть!")
+//}
+//
+//greet(name: "Maksim")
 
 
 // task_85
 
-func manAge(ageNumber: Int) -> String {
-    switch ageNumber {
-    case  (12...18):
-        return "Возраст допустим"
-    case (0...12):
-        return "Возраст не допустим"
-    default:
-        return "Укажите возраст"
-    }
-}
-
-let ageMan = manAge(ageNumber: 14)
-print("ageMan -> \(ageMan)")
+//func manAge(ageNumber: Int) -> String {
+//    switch ageNumber {
+//    case  (12...18):
+//        return "Возраст допустим"
+//    case (0...12):
+//        return "Возраст не допустим"
+//    default:
+//        return "Укажите возраст"
+//    }
+//}
+//
+//let ageMan = manAge(ageNumber: 14)
+//print("ageMan -> \(ageMan)")
 
 
 // task_86
 
-func factorial(_ n: Int) -> Int {
-    if n <= 1 {
-        return 1
-    }
-    return n * factorial(n - 1)
-}
-
-let result = factorial(10)
-print("Факториал 10: \(result)") // Вывод: Факториал 5: 120
+//func factorial(_ n: Int) -> Int {
+//    if n <= 1 {
+//        return 1
+//    }
+//    return n * factorial(n - 1)
+//}
+//
+//let result = factorial(10)
+//print("Факториал 10: \(result)") // Вывод: Факториал 5: 120
 
 
 // task_87
 
-func stringInNumber(arg: String){
-    let stringNumber = arg
-    let invertNum = Int(stringNumber)
-    
-    if let n = invertNum {
-        print("n -> \(n)")
-    } else {
-        print("Не удалось преобразовать в строку")
-    }
-}
-
-stringInNumber(arg: "1234sdf")
+//func stringInNumber(arg: String){
+//    let stringNumber = arg
+//    let invertNum = Int(stringNumber)
+//
+//    if let n = invertNum {
+//        print("n -> \(n)")
+//    } else {
+//        print("Не удалось преобразовать в строку")
+//    }
+//}
+//
+//stringInNumber(arg: "1234sdf")
 
 
 
 // task_89
 
-func isValidate(arg: String) -> Bool {
-    let hasAt = arg.contains("@")
-    let hasDot = arg.contains(".")
-    return hasAt && hasDot
-}
-
-let searchResult = isValidate(arg: "test@gmail.com")
-print(searchResult) // true
+//func isValidate(arg: String) -> Bool {
+//    let hasAt = arg.contains("@")
+//    let hasDot = arg.contains(".")
+//    return hasAt && hasDot
+//}
+//
+//let searchResult = isValidate(arg: "test@gmail.com")
+//print(searchResult) // true
 
 
 // task_90
 
-func calculateTotal(total: [Int]) -> Int {
-    var totalPriceInt: Int = 0
-    
-    for i in total {
-        totalPriceInt += i
-    }
-    return totalPriceInt
-}
-
-let totalPrice = calculateTotal(total: [10, 10, 10])
-print("Общая стоимость покупок составила \(totalPrice) руб.")
+//func calculateTotal(total: [Int]) -> Int {
+//    var totalPriceInt: Int = 0
+//
+//    for i in total {
+//        totalPriceInt += i
+//    }
+//    return totalPriceInt
+//}
+//
+//let totalPrice = calculateTotal(total: [10, 10, 10])
+//print("Общая стоимость покупок составила \(totalPrice) руб.")
 
 
 
 // task_91
 
-func checkNumber(productPrice: Double, quantityGoods: Int = 1) -> Double {
-    productPrice *  Double(quantityGoods)
+//func checkNumber(productPrice: Double, quantityGoods: Int = 1) -> Double {
+//    productPrice *  Double(quantityGoods)
+//}
+//
+//let totalPriceProduct = checkNumber(productPrice: 887.9, quantityGoods: 23)
+//print("Общая стоимость товара составляет \(totalPriceProduct) рублей")
+//
+//let totalPriceProducOneArgument = checkNumber(productPrice: 87.9)
+//print("Общая стоимость товара составляет \(totalPriceProducOneArgument) рублей")
+
+
+
+// task_92
+
+func calculateTripCost(distance: Double, fuelPrice: Double, fuelEfficiency: Double) -> Double {
+    let fuelNeeded = (distance / 100) * fuelEfficiency
+    return fuelNeeded * fuelPrice
 }
 
-let totalPriceProduct = checkNumber(productPrice: 887.9, quantityGoods: 23)
-print("Общая стоимость товара составляет \(totalPriceProduct) рублей")
-
-let totalPriceProducOneArgument = checkNumber(productPrice: 87.9)
-print("Общая стоимость товара составляет \(totalPriceProducOneArgument) рублей")
+let result = calculateTripCost(distance: 50.9, fuelPrice: 60.0, fuelEfficiency: 100)
+print(result)
 
 
+// task_93
+
+func calculateInterest(depositAmount: Double, annualInterest: Double, depositTern: Double) -> Double {
+    let rate = annualInterest / 100  // Переводим проценты в доли
+    let total = depositAmount * (1 + rate * depositTern)
+    return total
+}
+
+let sum = calculateInterest(depositAmount: 100_000, annualInterest: 8.2, depositTern: 5)
+print(sum)
+
+
+
+// task_96
+
+func calculateExpression(_ expression: String) -> Double? {
+    let parts = expression.split(separator: " ").map { String($0) }
+
+    // Проверяем, что ровно 3 части: "число", "оператор", "число"
+    guard parts.count == 3 else {
+        return nil
+    }
+
+    let leftStr = parts[0]
+    let op = parts[1]
+    let rightStr = parts[2]
+
+    // Преобразуем строки в Double
+    guard let left = Double(leftStr), let right = Double(rightStr) else {
+        return nil
+    }
+
+    // Выполняем операцию
+    switch op {
+    case "+":
+        return left + right
+    case "-":
+        return left - right
+    case "*":
+        return left * right
+    case "/":
+        if right == 0 {
+            return nil // деление на ноль
+        }
+        return left / right
+    default:
+        return nil // неизвестный оператор
+    }
+}
+
+// Примеры:
+print(calculateExpression("2 + 3") ?? 0)      // 5.0
+print(calculateExpression("10 - 5.5") ?? 0)  // 4.5
+print(calculateExpression("7 * 2") ?? 0)     // 14.0
+print(calculateExpression("15 / 3") ?? 0)    // 5.0
+print(calculateExpression("15 / 0") ?? 0)    // nil
+print(calculateExpression("abc + 2") ?? 0)   // nil
+
+
+// task_97
+
+import Foundation
+
+func generateRandomPassword(length: Int) -> String {
+    let letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()"
+    var password = ""
+    for _ in 0..<length {
+        let randomIndex = Int.random(in: 0..<letters.count)
+        let randomChar = letters[letters.index(letters.startIndex, offsetBy: randomIndex)]
+        password += String(randomChar)
+    }
+    return password
+}
+
+// Пример:
+let newPassword = generateRandomPassword(length: 8)
+print(newPassword) // например: "K9#mP2$vX!aZ"
+
+
+// task_98
+
+func isPrime(_ n: Int) -> Bool {
+    if n <= 1 { return false }
+       if n == 2 { return true }
+       if n % 2 == 0 { return false }
+
+       let limit = Int(Double(n).squareRoot())
+       for i in stride(from: 3, through: limit, by: 2) {
+           if n % i == 0 { return false }
+       }
+       return true
+}
+
+print(isPrime(17)) // true
+print(isPrime(25)) // false
+
+
+// task_99
+
+func gcd(_ a: Int, _ b: Int) -> Int {
+    var a = a
+    var b = b
+    while b != 0 {
+        let temp = b
+        b = a % b
+        a = temp
+    }
+    return abs(a)
+}
+
+// Пример:
+print(gcd(12, 18)) // 6
+print(gcd(56, 42)) // 14
