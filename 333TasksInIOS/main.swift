@@ -1080,125 +1080,164 @@
 
 // task_92
 
-func calculateTripCost(distance: Double, fuelPrice: Double, fuelEfficiency: Double) -> Double {
-    let fuelNeeded = (distance / 100) * fuelEfficiency
-    return fuelNeeded * fuelPrice
-}
-
-let result = calculateTripCost(distance: 50.9, fuelPrice: 60.0, fuelEfficiency: 100)
-print(result)
+//func calculateTripCost(distance: Double, fuelPrice: Double, fuelEfficiency: Double) -> Double {
+//    let fuelNeeded = (distance / 100) * fuelEfficiency
+//    return fuelNeeded * fuelPrice
+//}
+//
+//let result = calculateTripCost(distance: 50.9, fuelPrice: 60.0, fuelEfficiency: 100)
+//print(result)
 
 
 // task_93
 
-func calculateInterest(depositAmount: Double, annualInterest: Double, depositTern: Double) -> Double {
-    let rate = annualInterest / 100  // Переводим проценты в доли
-    let total = depositAmount * (1 + rate * depositTern)
-    return total
-}
-
-let sum = calculateInterest(depositAmount: 100_000, annualInterest: 8.2, depositTern: 5)
-print(sum)
+//func calculateInterest(depositAmount: Double, annualInterest: Double, depositTern: Double) -> Double {
+//    let rate = annualInterest / 100  // Переводим проценты в доли
+//    let total = depositAmount * (1 + rate * depositTern)
+//    return total
+//}
+//
+//let sum = calculateInterest(depositAmount: 100_000, annualInterest: 8.2, depositTern: 5)
+//print(sum)
 
 
 
 // task_96
 
-func calculateExpression(_ expression: String) -> Double? {
-    let parts = expression.split(separator: " ").map { String($0) }
-
-    // Проверяем, что ровно 3 части: "число", "оператор", "число"
-    guard parts.count == 3 else {
-        return nil
-    }
-
-    let leftStr = parts[0]
-    let op = parts[1]
-    let rightStr = parts[2]
-
-    // Преобразуем строки в Double
-    guard let left = Double(leftStr), let right = Double(rightStr) else {
-        return nil
-    }
-
+//func calculateExpression(_ expression: String) -> Double? {
+//    let parts = expression.split(separator: " ").map { String($0) }
+//    
+//    // Проверяем, что ровно 3 части: "число", "оператор", "число"
+//    guard parts.count == 3 else {
+//        return nil
+//    }
+//    
+//    let leftStr = parts[0]
+//    let op = parts[1]
+//    let rightStr = parts[2]
+//    
+//    // Преобразуем строки в Double
+//    guard let left = Double(leftStr), let right = Double(rightStr) else {
+//        return nil
+//    }
+    
     // Выполняем операцию
-    switch op {
-    case "+":
-        return left + right
-    case "-":
-        return left - right
-    case "*":
-        return left * right
-    case "/":
-        if right == 0 {
-            return nil // деление на ноль
-        }
-        return left / right
-    default:
-        return nil // неизвестный оператор
-    }
-}
-
-// Примеры:
-print(calculateExpression("2 + 3") ?? 0)      // 5.0
-print(calculateExpression("10 - 5.5") ?? 0)  // 4.5
-print(calculateExpression("7 * 2") ?? 0)     // 14.0
-print(calculateExpression("15 / 3") ?? 0)    // 5.0
-print(calculateExpression("15 / 0") ?? 0)    // nil
-print(calculateExpression("abc + 2") ?? 0)   // nil
+//    switch op {
+//    case "+":
+//        return left + right
+//    case "-":
+//        return left - right
+//    case "*":
+//        return left * right
+//    case "/":
+//        if right == 0 {
+//            return nil // деление на ноль
+//        }
+//        return left / right
+//    default:
+//        return nil // неизвестный оператор
+//    }
+//}
+//
+//// Примеры:
+//print(calculateExpression("2 + 3") ?? 0)      // 5.0
+//print(calculateExpression("10 - 5.5") ?? 0)  // 4.5
+//print(calculateExpression("7 * 2") ?? 0)     // 14.0
+//print(calculateExpression("15 / 3") ?? 0)    // 5.0
+//print(calculateExpression("15 / 0") ?? 0)    // nil
+//print(calculateExpression("abc + 2") ?? 0)   // nil
 
 
 // task_97
 
-import Foundation
+//import Foundation
 
-func generateRandomPassword(length: Int) -> String {
-    let letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()"
-    var password = ""
-    for _ in 0..<length {
-        let randomIndex = Int.random(in: 0..<letters.count)
-        let randomChar = letters[letters.index(letters.startIndex, offsetBy: randomIndex)]
-        password += String(randomChar)
-    }
-    return password
-}
-
-// Пример:
-let newPassword = generateRandomPassword(length: 8)
-print(newPassword) // например: "K9#mP2$vX!aZ"
+//func generateRandomPassword(length: Int) -> String {
+//    let letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()"
+//    var password = ""
+//    for _ in 0..<length {
+//        let randomIndex = Int.random(in: 0..<letters.count)
+//        let randomChar = letters[letters.index(letters.startIndex, offsetBy: randomIndex)]
+//        password += String(randomChar)
+//    }
+//    return password
+//}
+//
+//// Пример:
+//let newPassword = generateRandomPassword(length: 8)
+//print(newPassword) // например: "K9#mP2$vX!aZ"
 
 
 // task_98
 
-func isPrime(_ n: Int) -> Bool {
-    if n <= 1 { return false }
-       if n == 2 { return true }
-       if n % 2 == 0 { return false }
-
-       let limit = Int(Double(n).squareRoot())
-       for i in stride(from: 3, through: limit, by: 2) {
-           if n % i == 0 { return false }
-       }
-       return true
-}
-
-print(isPrime(17)) // true
-print(isPrime(25)) // false
+//func isPrime(_ n: Int) -> Bool {
+//    if n <= 1 { return false }
+//    if n == 2 { return true }
+//    if n % 2 == 0 { return false }
+//    
+//    let limit = Int(Double(n).squareRoot())
+//    for i in stride(from: 3, through: limit, by: 2) {
+//        if n % i == 0 { return false }
+//    }
+//    return true
+//}
+//
+//print(isPrime(17)) // true
+//print(isPrime(25)) // false
 
 
 // task_99
 
-func gcd(_ a: Int, _ b: Int) -> Int {
-    var a = a
-    var b = b
-    while b != 0 {
-        let temp = b
-        b = a % b
-        a = temp
-    }
-    return abs(a)
+//func gcd(_ a: Int, _ b: Int) -> Int {
+//    var a = a
+//    var b = b
+//    while b != 0 {
+//        let temp = b
+//        b = a % b
+//        a = temp
+//    }
+//    return abs(a)
+//}
+//
+//// Пример:
+//print(gcd(12, 18)) // 6
+//print(gcd(56, 42)) // 14
+
+
+// task_101
+
+func numArr (arg: [Int]){
+    let even = arg.filter{ $0 % 2 == 0}.sorted()
+    let odd = arg.filter{ $0 % 2 != 0}.sorted()
+    let result = even + odd
+    print(result)
 }
 
-// Пример:
-print(gcd(12, 18)) // 6
-print(gcd(56, 42)) // 14
+numArr(arg: [1,2,3,4,5,6,7,8,9,10])
+
+
+// task_102
+
+var arg = Int.random(in: Int.min...Int.max)
+
+func inoutRandomValue(_ arg: inout Int) -> Int {
+    return arg
+}
+
+let res = inoutRandomValue(&arg)
+print(res)
+
+
+// task_103
+
+
+func modifyShoppingList(list: inout [String]) -> String {
+    let element = "Телефон"
+    list.append(element)
+    let result = list.joined(separator: ", ")
+    return result
+}
+
+var arr = ["Ноутбук", "часы", "планшет"]
+let resultElement = modifyShoppingList(list: &arr)
+print("resultElement -> \(resultElement)")
