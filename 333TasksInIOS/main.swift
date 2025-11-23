@@ -1106,22 +1106,22 @@
 
 //func calculateExpression(_ expression: String) -> Double? {
 //    let parts = expression.split(separator: " ").map { String($0) }
-//    
+//
 //    // Проверяем, что ровно 3 части: "число", "оператор", "число"
 //    guard parts.count == 3 else {
 //        return nil
 //    }
-//    
+//
 //    let leftStr = parts[0]
 //    let op = parts[1]
 //    let rightStr = parts[2]
-//    
+//
 //    // Преобразуем строки в Double
 //    guard let left = Double(leftStr), let right = Double(rightStr) else {
 //        return nil
 //    }
-    
-    // Выполняем операцию
+
+// Выполняем операцию
 //    switch op {
 //    case "+":
 //        return left + right
@@ -1174,7 +1174,7 @@
 //    if n <= 1 { return false }
 //    if n == 2 { return true }
 //    if n % 2 == 0 { return false }
-//    
+//
 //    let limit = Int(Double(n).squareRoot())
 //    for i in stride(from: 3, through: limit, by: 2) {
 //        if n % i == 0 { return false }
@@ -1241,3 +1241,20 @@ func modifyShoppingList(list: inout [String]) -> String {
 var arr = ["Ноутбук", "часы", "планшет"]
 let resultElement = modifyShoppingList(list: &arr)
 print("resultElement -> \(resultElement)")
+
+
+// task_104
+
+func checkAuthorization(nameUser: String, password: String) -> Bool {
+    guard nameUser == "admin" && password == "password" else {
+        print("Ошибка авторизации")
+        return false
+    }
+
+    defer {
+        print("Закрытие сетевого соединения")
+    }
+
+    print("Отправка запроса на сервер")
+    return true
+}
