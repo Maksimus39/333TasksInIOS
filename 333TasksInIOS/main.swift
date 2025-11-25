@@ -1250,11 +1250,40 @@ func checkAuthorization(nameUser: String, password: String) -> Bool {
         print("Ошибка авторизации")
         return false
     }
-
+    
     defer {
         print("Закрытие сетевого соединения")
     }
-
+    
     print("Отправка запроса на сервер")
     return true
 }
+
+// task_105
+
+func calculateStatistic(arg: [Int]) -> (min: Int, max: Int, average: Double, count: Int)?{
+    guard !arg.isEmpty else {
+            return nil
+        }
+    
+    var average = 0.0
+    
+    for item in arg {
+        average += Double(item)
+    }
+    average = average/Double(arg.count)
+    
+    let argMin =  arg.min()!
+    let argMax =  arg.max()!
+    let argCount = arg.count
+    
+    return (min: argMin, max: argMax, average: average, count: argCount)
+}
+
+if let resultTurple = calculateStatistic(arg: [1,2,3,4,5,6,7,8,9,10]) {
+    print(resultTurple.min)
+    print(resultTurple.max)
+    print(resultTurple.count)
+    print(resultTurple.average)
+}
+   
