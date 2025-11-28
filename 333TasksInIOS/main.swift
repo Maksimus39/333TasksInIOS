@@ -1287,3 +1287,21 @@ if let resultTurple = calculateStatistic(arg: [1,2,3,4,5,6,7,8,9,10]) {
     print(resultTurple.average)
 }
    
+
+// task_106
+
+func calculateAverage(_ numbers: Double...) -> Double? {
+    guard !numbers.isEmpty else {
+        return nil
+    }
+    
+    let sum = numbers.reduce(0, +)
+    return sum / Double(numbers.count)
+}
+
+
+if let average = calculateAverage(1.0, 2.0, 3.0, 4.0, 5.0) {
+    print("Среднее арифметическое: \(average)")
+} else {
+    print("Нет данных для вычисления среднего арифметического.")
+}
