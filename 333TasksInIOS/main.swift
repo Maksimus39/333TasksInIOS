@@ -1305,3 +1305,71 @@ if let average = calculateAverage(1.0, 2.0, 3.0, 4.0, 5.0) {
 } else {
     print("Нет данных для вычисления среднего арифметического.")
 }
+
+// task_108
+enum creditCard {
+    case Visa
+    case Mastercard
+    case AmericamExpress
+}
+
+
+func bancCreditCard( card: creditCard) {
+    switch card {
+    case .Visa:
+        print("Выша банковская карта, \(creditCard.Visa)")
+    case .Mastercard:
+        print("Выша банковская карта, \(creditCard.Mastercard)")
+    case .AmericamExpress:
+        print("Выша банковская карта, \(creditCard.AmericamExpress)")
+    }
+}
+
+bancCreditCard(card: creditCard.AmericamExpress)
+
+
+// task_109
+
+enum gamePerson {
+    case Warrior
+    case Mage
+    case Archer
+}
+
+func characteristicPersonGame(person: gamePerson) {
+    switch person {
+    case .Warrior:
+        print("Это самый бронированный воин")
+    case .Mage:
+        print("Этот воин наделён магией")
+    case .Archer:
+        print("А это самый меткий воин")
+    }
+}
+
+characteristicPersonGame(person: .Warrior)
+
+
+// task_110
+
+enum Month: String {
+    case january = "January"
+    case february = "February"
+    case march = "March"
+    case april = "April"
+    case may = "May"
+    case june = "June"
+    case july = "July"
+    case august = "August"
+    case september = "September"
+    case october = "October"
+    case november = "November"
+    case december = "December"
+}
+
+func ageMonth(month: Month) {
+    print("Это месяц \(month.rawValue.lowercased())")
+}
+
+ageMonth(month: .april)
+
