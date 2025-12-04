@@ -1373,3 +1373,26 @@ func ageMonth(month: Month) {
 
 ageMonth(month: .april)
 
+
+// task_111
+
+enum categoryTicket: Int {
+    case VIP = 1
+    case General = 2
+    case Starting = 3
+}
+
+func programmingConferenc(category: categoryTicket){
+    switch category {
+    case .VIP:
+        print("Ваш код \(category.rawValue)")
+    case .General:
+        print("Ваш код \(category.rawValue)")
+    case .Starting:
+        print("Ваш код \(category.rawValue)")
+    }
+}
+
+programmingConferenc(category: .General)
+
+
