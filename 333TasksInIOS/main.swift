@@ -1396,3 +1396,175 @@ func programmingConferenc(category: categoryTicket){
 programmingConferenc(category: .General)
 
 
+// task_113
+
+enum TimePeriod {
+    case AncientTimes
+    case MiddleAges
+    case Renaissance
+}
+
+func chooseTimePeriod(caseEnum: TimePeriod) {
+    switch caseEnum {
+    case .AncientTimes:
+        print("В этом времени было зарождние человечества и Африка была колыбелью жизни")
+    case .MiddleAges:
+        print("Этот период известен нам феодализмом и крестовыми походами")
+    case .Renaissance:
+        print("Небывалый расцвет культуры и становления литературы живописи и скульптуры")
+    }
+}
+
+chooseTimePeriod(caseEnum: .AncientTimes)
+
+// task_114
+
+// MARK: - Меню
+enum MenuItem {
+    case coffee(hasMilk: Bool, hasSugar: Bool)
+    case tea(hasSugar: Bool)
+    case juice
+    case water(hasGas: Bool)
+    case sandwich(filling: Filling)
+    case cupcake
+    case applePie
+    
+    enum Filling {
+        case ham
+        case sausage
+        case chicken
+        case fish
+    }
+    
+    // Словарь с ценами
+    private static let prices: [String: Double] = [
+        "coffee": 120.0,
+        "tea": 80.0,
+        "juice": 150.0,
+        "water": 60.0,
+        "sandwich": 200.0,
+        "cupcake": 180.0,
+        "applePie": 220.0,
+        "ham": 50.0,
+        "sausage": 40.0,
+        "chicken": 60.0,
+        "fish": 70.0,
+        "milk": 20.0,
+        "sugar": 10.0,
+        "gas": 15.0
+    ]
+    
+    // Вычисляемое свойство для цены
+    var price: Double {
+        switch self {
+        case .coffee(let hasMilk, let hasSugar):
+            var total = Self.prices["coffee"]!
+            if hasMilk { total += Self.prices["milk"]! }
+            if hasSugar { total += Self.prices["sugar"]! }
+            return total
+            
+        case .tea(let hasSugar):
+            var total = Self.prices["tea"]!
+            if hasSugar { total += Self.prices["sugar"]! }
+            return total
+            
+        case .juice:
+            return Self.prices["juice"]!
+            
+        case .water(let hasGas):
+            var total = Self.prices["water"]!
+            if hasGas { total += Self.prices["gas"]! }
+            return total
+            
+        case .sandwich(let filling):
+            var total = Self.prices["sandwich"]!
+            switch filling {
+            case .ham: total += Self.prices["ham"]!
+            case .sausage: total += Self.prices["sausage"]!
+            case .chicken: total += Self.prices["chicken"]!
+            case .fish: total += Self.prices["fish"]!
+            }
+            return total
+            
+        case .cupcake:
+            return Self.prices["cupcake"]!
+            
+        case .applePie:
+            return Self.prices["applePie"]!
+        }
+    }
+    
+    // Описание блюда
+    var description: String {
+        switch self {
+        case .coffee(let hasMilk, let hasSugar):
+            return "Кофе \(hasMilk ? "с молоком" : "без молока") \(hasSugar ? "с сахаром" : "без сахара")"
+        case .tea(let hasSugar):
+            return "Чай \(hasSugar ? "с сахаром" : "без сахара")"
+        case .juice:
+            return "Сок"
+        case .water(let hasGas):
+            return "Вода \(hasGas ? "с газом" : "без газа")"
+        case .sandwich(let filling):
+            return "Сэндвич с \(filling.description)"
+        case .cupcake:
+            return "Капкейк"
+        case .applePie:
+            return "Яблочный пирог"
+        }
+    }
+}
+
+extension MenuItem.Filling {
+    var description: String {
+        switch self {
+        case .ham: return "ветчиной"
+        case .sausage: return "колбасой"
+        case .chicken: return "курицей"
+        case .fish: return "рыбой"
+        }
+    }
+}
+
+// MARK: - Заказ
+struct Order {
+    private var items: [MenuItem] = []
+    
+    mutating func add(_ item: MenuItem) {
+        items.append(item)
+    }
+    
+    var totalPrice: Double {
+        items.reduce(0) { $0 + $1.price }
+    }
+    
+    var description: String {
+        let orderDetails = items.map { "\($0.description) - \($0.price) руб." }.joined(separator: "\n")
+        return orderDetails + "\n\nИтого: \(totalPrice) руб."
+    }
+}
+
+// MARK: - Использование
+var order = Order()
+
+// Пример заказа
+order.add(.coffee(hasMilk: true, hasSugar: false))
+order.add(.sandwich(filling: .chicken))
+order.add(.juice)
+order.add(.applePie)
+
+print(order.description)
+
+
+// task_115
+
+enum WeatherCondition {
+    case sunny
+    case cloudy
+    case rain
+    case snow
+}
+
+func getWeatherForecast() -> WeatherCondition {
+    
+}
