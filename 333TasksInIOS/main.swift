@@ -103,6 +103,8 @@
 //let area = rectangle.width * rectangle.height
 //print("area -> \(area)")
 
+import Foundation
+
 
 
 
@@ -1263,8 +1265,8 @@ func checkAuthorization(nameUser: String, password: String) -> Bool {
 
 func calculateStatistic(arg: [Int]) -> (min: Int, max: Int, average: Double, count: Int)?{
     guard !arg.isEmpty else {
-            return nil
-        }
+        return nil
+    }
     
     var average = 0.0
     
@@ -1286,7 +1288,7 @@ if let resultTurple = calculateStatistic(arg: [1,2,3,4,5,6,7,8,9,10]) {
     print(resultTurple.count)
     print(resultTurple.average)
 }
-   
+
 
 // task_106
 
@@ -1557,14 +1559,70 @@ print(order.description)
 
 
 // task_115
+import Foundation
 
 enum WeatherCondition {
-    case sunny
-    case cloudy
-    case rain
-    case snow
+    case sunny (temperature: Int)
+    case cloudy (temperature: Int)
+    case rain (temperature: Int)
+    case show (temperature: Int)
+    
+    var description: String {
+        switch self {
+        case .sunny(let temp):
+            return "Солнечно с \(temp)°C тепла"
+        case .cloudy(let temp):
+            return "Облачно с \(temp)°C тепла"
+        case .rain(let temp):
+            return "Идёт дождь и на улице температура \(temp)°C тепла"
+        case .show(let temp):
+            return "Идет снег и на улице \(temp) °C тепла"
+        }
+    }
+    
+    var emoji: String {
+        switch self {
+        case .sunny: return "☀️"
+        case .cloudy: return "☁️"
+        case .rain: return "🌧️"
+        case .show: return "❄️"
+        }
+    }
 }
 
-func getWeatherForecast() -> WeatherCondition {
-    
+func generateWeatherReport(for conditions: [WeatherCondition]) -> String{
+    let date = DateFormatter().string(from: Date())
+       var report = "Погода на \(date):\n\n"
+       
+    for (index, condition) in conditions.enumerated() {
+           let dayName = getDayName(for: index)
+           report += "\(dayName): \(condition.emoji) \(condition.description)\n"
+       }
+       
+       return report
 }
+
+func getDayName(for index: Int) -> String {
+    switch index {
+    case 0: return "Сегодня"
+    case 1: return "Завтра"
+    case 2: return "Послезавтра"
+    default: return "День \(index + 1)"
+    }
+}
+
+// Пример использования
+let weather: [WeatherCondition] = [
+    .sunny(temperature: 29),
+    .cloudy(temperature: 22),
+    .rain(temperature: 18),
+    .show(temperature: -5)
+]
+
+let report = generateWeatherReport(for: weather)
+print(report)
+
+
+// task_116
+
+
