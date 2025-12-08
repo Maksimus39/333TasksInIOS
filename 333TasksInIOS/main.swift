@@ -1592,14 +1592,14 @@ enum WeatherCondition {
 
 func generateWeatherReport(for conditions: [WeatherCondition]) -> String{
     let date = DateFormatter().string(from: Date())
-       var report = "Погода на \(date):\n\n"
-       
+    var report = "Погода на \(date):\n\n"
+    
     for (index, condition) in conditions.enumerated() {
-           let dayName = getDayName(for: index)
-           report += "\(dayName): \(condition.emoji) \(condition.description)\n"
-       }
-       
-       return report
+        let dayName = getDayName(for: index)
+        report += "\(dayName): \(condition.emoji) \(condition.description)\n"
+    }
+    
+    return report
 }
 
 func getDayName(for index: Int) -> String {
@@ -1624,5 +1624,78 @@ print(report)
 
 
 // task_116
+enum listHairSalonServices {
+    case mensHaircut(price: Int)
+    case womensHaircut(price: Int)
+    case shaving(price: Int)
+    case painting(price: Int)
+    case depilation(price: Int)
+}
 
+func totalCost() -> Int {
+    var total = 0
+    
+    let hairSaloonServices: [listHairSalonServices] = [
+        .mensHaircut(price: 200),
+        .womensHaircut(price: 200),
+        .shaving(price: 150),
+        .shaving(price: 300),
+        .depilation(price: 90),
+    ]
+    
+    for service in hairSaloonServices {
+        switch service {
+        case .mensHaircut(let price):
+            total += price
+        case .womensHaircut(let price):
+            total += price
+        case .shaving(let price):
+            total += price
+        case .painting(let price):
+            total += price
+        case .depilation(let price):
+            total += price
+        }
+    }
+    return total
+}
+
+let serviceTotal = totalCost()
+print("Общая стоимость услуг в парикмахерской составит \(serviceTotal) рублей.")
+
+
+
+
+
+
+
+
+// task_117
+
+enum Transport {
+    case auto(weather: String)
+    case airplane(weather: String)
+    case train(weather: String)
+}
+
+func chooseTransport(for weather: String) -> Transport? {
+    switch weather {
+    case "Солнечно":
+        return .auto(weather: weather)
+    case "Дождь":
+        return .airplane(weather: weather)
+    case "Снег":
+        return .train(weather: weather)
+    default:
+        return nil // Если погода неизвестна
+    }
+}
+
+// Пример использования:
+let transport = chooseTransport(for: "Солнечно")
+if let selectedTransport = transport {
+    print("Подходящий транспорт: \(String(describing: selectedTransport))")
+} else {
+    print("Не удалось подобрать транспорт для такой погоды.")
+}
 
