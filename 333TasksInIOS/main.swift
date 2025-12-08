@@ -1639,7 +1639,7 @@ func totalCost() -> Int {
         .mensHaircut(price: 200),
         .womensHaircut(price: 200),
         .shaving(price: 150),
-        .shaving(price: 300),
+        .painting(price: 300),
         .depilation(price: 90),
     ]
     
