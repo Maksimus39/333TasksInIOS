@@ -158,3 +158,48 @@ func square(_ num: Int) -> Int {
 
 let resSquare = square(3)
 print(resSquare)
+
+
+// 8ku Ваша цель — вернуть таблицу умножения для числа, которое всегда является целым числом от 1 до 10.
+//Например, таблица умножения (строка) для числа == 5 выглядит следующим образом:
+//P. S. Ты можешь использовать \n в строке, чтобы перейти к следующей строке.
+//Примечание: между рядами следует добавлять новые строки, но в конце не должно быть следящей линии.
+//Если вы не уверены в формате, посмотрите примеры тестов.
+
+
+func multi_table(_ number: Int) -> String {
+    var result = ""
+       for i in 1...10 {
+           let product = i * number
+           result += "\(i) * \(number) = \(product)"
+           if i < 10 {
+               result += "\n"
+           }
+       }
+       return result
+}
+
+let multres = multi_table(5)
+print(multres)
+
+
+// 8 ku Имея массив целых чисел в виде строк и чисел, возвращаем сумму значений массива, как если бы все были числами
+//Верните ответ в виде номера.
+
+func sumMix(_ arr: [Any]) -> Int {
+    var sum = 0
+      
+      for item in arr {
+          if let intValue = item as? Int {
+              sum += intValue
+          } else if let stringValue = item as? String,
+                    let intValue = Int(stringValue) {
+              sum += intValue
+          }
+      }
+      
+      return sum
+}
+
+let resSumMix = sumMix([9, 3, "7", "3"])
+print(resSumMix)
