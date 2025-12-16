@@ -143,7 +143,7 @@ print(resSwitch)
 //Примечание: будут предоставлены только действительные входные данные.
 
 func booleanToString(_ b: Bool) -> String {
-  return "\(b)"
+    return "\(b)"
 }
 
 let resBoolToStr = booleanToString(false)
@@ -153,7 +153,7 @@ print(resBoolToStr)
 // 8 ku Теперь нужно написать функцию, которая берет аргумент и возвращает его квадрат.
 
 func square(_ num: Int) -> Int {
-  return num * num
+    return num * num
 }
 
 let resSquare = square(3)
@@ -169,14 +169,14 @@ print(resSquare)
 
 func multi_table(_ number: Int) -> String {
     var result = ""
-       for i in 1...10 {
-           let product = i * number
-           result += "\(i) * \(number) = \(product)"
-           if i < 10 {
-               result += "\n"
-           }
-       }
-       return result
+    for i in 1...10 {
+        let product = i * number
+        result += "\(i) * \(number) = \(product)"
+        if i < 10 {
+            result += "\n"
+        }
+    }
+    return result
 }
 
 let multres = multi_table(5)
@@ -188,18 +188,209 @@ print(multres)
 
 func sumMix(_ arr: [Any]) -> Int {
     var sum = 0
-      
-      for item in arr {
-          if let intValue = item as? Int {
-              sum += intValue
-          } else if let stringValue = item as? String,
-                    let intValue = Int(stringValue) {
-              sum += intValue
-          }
-      }
-      
-      return sum
+    
+    for item in arr {
+        if let intValue = item as? Int {
+            sum += intValue
+        } else if let stringValue = item as? String,
+                  let intValue = Int(stringValue) {
+            sum += intValue
+        }
+    }
+    
+    return sum
 }
 
 let resSumMix = sumMix([9, 3, "7", "3"])
 print(resSumMix)
+
+
+
+// 8 ku Если месяц задан целым числом от 1 до 12, верните, к какому кварталу года он относится как целое число.
+
+//Например: второй месяц (февраль) относится к первому кварталу; 6-й месяц (июнь)
+//относится ко второму кварталу; а 11-й месяц (ноябрь) относится к четвертому кварталу.
+
+func quarter(of month: Int) -> Int {
+    switch month {
+    case 1:
+        return 1
+    case 2:
+        return 1
+    case 3:
+        return 1
+    case 4:
+        return 2
+    case 5:
+        return 2
+    case 6:
+        return 2
+    case 7:
+        return 3
+    case 8:
+        return 3
+    case 9:
+        return 3
+    case 10:
+        return 4
+    case 11:
+        return 4
+    case 12:
+        return 4
+    default:
+        return 0
+    }
+    
+}
+
+let resMonth = quarter(of: 2)
+print("Это \(resMonth )-й квартал")
+
+
+// 8 ku Ваша цель — написать функцию, которая удаляет первые и последние символы строки. Вам дают один параметр — исходную строку.
+//Важно: ваша функция должна обрабатывать строки любой длины ≥ 2 символов. Для строк с ровно двумя символами возвращают пустую строку.
+// Требования
+//Входная строка всегда будет содержать как минимум 2 символа
+//Для строк с ровно 2 символами возвращается пустая строка
+//Для строк с 3 и более символами уберите первый и последний символы
+//Функция должна обрабатывать строки с буквами, цифрами и специальными символами
+//Тестовые случаи
+//Ваше решение будет протестировано на:
+//
+//Базовая функциональность с распространёнными словами
+//Краевые регистры с 2- и 3-символьными строками
+//Строки с числами и специальными персонажи
+//Случайные тестовые случаи разной длины
+
+
+func removeFirstAndLast(_ str: String) -> String {
+    if str.count > 2 {
+        let newStr = str.dropFirst(1).dropLast(1)
+        return String(newStr)
+    } else {
+        return ""
+    }
+}
+
+
+let resStr = removeFirstAndLast("Hello")
+print(resStr)
+
+
+// 8 ku Завершите метод, который принимает булево значение и возвращает строку 'Yes' для true или строку 'No' для false.
+
+func boolToWord(_ bool: Bool) -> String {
+    bool ? "Yes" : "No"
+}
+
+let resBoolToStr2 = boolToWord(true)
+print(resBoolToStr2)
+
+
+// 8 ku Имея случайное неотрицательное число, нужно
+//вернуть цифры этого числа внутри массива в обратном порядке.
+
+//Пример (вход => выход):
+//35231 => [1,3,2,5,3]
+//0 => [0]
+
+func digitize(_ num:Int) -> [Int] {
+    let numberString = String(num)
+    return numberString.reversed().map{Int(String($0))!}
+}
+
+let resDigitize = digitize(13253)
+print(resDigitize)
+
+
+// 8 ku Напишите программу, которая находит сумму каждого числа от 1 до num (оба включены). Число всегда будет положительным целым числом больше 0. Вашей функции нужно только вернуть результат, в примере ниже показано в скобках, как вы достигаете этого результата, и он не является его частью, см. примеры тестов.
+
+//Например, (Вход -> выход):
+//
+//2 -> 3 (1 + 2)
+//8 -> 36 (1 + 2 + 3 + 4 + 5 + 6 + 7 + 8)
+
+
+func summation(_ n: Int) -> Int {
+    var totalSum = 0
+    let range = 0...n
+    for numberSum in range {
+        totalSum += numberSum
+    }
+    return totalSum
+}
+
+let resSummation = summation(8)
+print(resSummation)
+
+
+// 8 ku Построим функцию, которая возвращает массив целых чисел от n до 1, где n>0.
+//Пример: n=5 --> [5,4,3,2,1]
+
+func reverseSeq(n: Int) -> [Int] {
+    return  Array((1...n).reversed())
+}
+
+let resReverseSeq = reverseSeq(n: 5)
+print(resReverseSeq)
+
+
+// 8 ku История:
+//Ты собираешься быстро готовить тосты, думаешь, что нужно сделать несколько кусочков тостов и один раз. Итак, вы стараетесь приготовить 6 кусочков тоста.
+//
+//Проблема:
+//Вы забыли посчитать количество тостов, которые положили туда, вы не знаете, положили ли ровно шесть кусков тоста в тостеры.
+//
+//Определите функцию, которая учитывает, сколько кусочков тоста вам нужно в тостерах. Хотя вам нужно больше или меньше, число всё равно будет положительным, а не отрицательным.
+//
+//Примеры:
+//Вы должны вернуть количество тостов, которые нужно положить (или вынести). В случае из 5 тостов всё равно можно положить 1:
+//
+//5 --> 1
+//А в случае 12 нужно на 6 тостов меньше (но не -6):
+//
+//12 --> 6
+//Удачи!
+
+
+func sixToast(_ num: Int) -> Int {
+    let res = num - 6
+    return abs(res)
+}
+
+let resSixToast = sixToast(3)
+print(resSixToast)
+
+
+// 8ku Выполните функцию так, чтобы она нашла среднее значение
+//из трёх переданных баллов и вернула значение буквы, связанное с этой оценкой.
+//
+//Числовой баллБуквенный балл
+//90 <= балл <= 100'A'
+//80 <= балл < 90'B'
+//70 <= балл < 80'C'
+//60 <= балл < 70'D'
+//0 <= балл < 60'F'
+//Все тестируемые значения варьируются от 0 до 100. Нет необходимости проверять отрицательные значения или значения выше 100.
+
+
+func getGrade(_ s1: Int, _ s2: Int, _ s3: Int) -> String {
+   let average = (s1 + s2 + s3) / 3
+    
+    if average >= 90 {
+          return "A"
+      } else if average >= 80 {
+          return "B"
+      } else if average >= 70 {
+          return "C"
+      } else if average >= 60 {
+          return "D"
+      } else {
+          return "F"
+      }
+}
+
+let resGrade = getGrade(80, 90, 70)
+print(resGrade)
+
+
