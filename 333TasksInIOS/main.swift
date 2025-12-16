@@ -1699,3 +1699,30 @@ if let selectedTransport = transport {
     print("Не удалось подобрать транспорт для такой погоды.")
 }
 
+
+// task_119
+
+enum Specialization {
+    case Developer(profession: String)
+    case Designer(profession: String)
+    case Manager(profession: String)
+}
+
+func chooseSpecialization(for profession: String) -> Specialization? {
+    switch profession {
+    case "Разработчик програмного обеспечения":
+        return .Developer(profession: profession)
+    case "Ландшафтный дизайнер":
+        return .Designer(profession: profession)
+    case "Менеджер проекта":
+        return .Manager(profession: profession)
+    default:
+        return nil
+    }
+}
+let proffi = chooseSpecialization(for: "Менеджер проекта")
+if let proffi {
+    print("Подходящая работа: \(String(describing: proffi))")
+} else {
+    print("Мне не удалось подобрать вам профессию")
+}
