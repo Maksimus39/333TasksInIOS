@@ -1208,460 +1208,460 @@ import Foundation
 
 // task_101
 
-func numArr (arg: [Int]){
-    let even = arg.filter{ $0 % 2 == 0}.sorted()
-    let odd = arg.filter{ $0 % 2 != 0}.sorted()
-    let result = even + odd
-    print(result)
-}
-
-numArr(arg: [1,2,3,4,5,6,7,8,9,10])
+//func numArr (arg: [Int]){
+//    let even = arg.filter{ $0 % 2 == 0}.sorted()
+//    let odd = arg.filter{ $0 % 2 != 0}.sorted()
+//    let result = even + odd
+//    print(result)
+//}
+//
+//numArr(arg: [1,2,3,4,5,6,7,8,9,10])
 
 
 // task_102
 
-var arg = Int.random(in: Int.min...Int.max)
-
-func inoutRandomValue(_ arg: inout Int) -> Int {
-    return arg
-}
-
-let res = inoutRandomValue(&arg)
-print(res)
+//var arg = Int.random(in: Int.min...Int.max)
+//
+//func inoutRandomValue(_ arg: inout Int) -> Int {
+//    return arg
+//}
+//
+//let res = inoutRandomValue(&arg)
+//print(res)
 
 
 // task_103
 
 
-func modifyShoppingList(list: inout [String]) -> String {
-    let element = "Телефон"
-    list.append(element)
-    let result = list.joined(separator: ", ")
-    return result
-}
-
-var arr = ["Ноутбук", "часы", "планшет"]
-let resultElement = modifyShoppingList(list: &arr)
-print("resultElement -> \(resultElement)")
+//func modifyShoppingList(list: inout [String]) -> String {
+//    let element = "Телефон"
+//    list.append(element)
+//    let result = list.joined(separator: ", ")
+//    return result
+//}
+//
+//var arr = ["Ноутбук", "часы", "планшет"]
+//let resultElement = modifyShoppingList(list: &arr)
+//print("resultElement -> \(resultElement)")
 
 
 // task_104
 
-func checkAuthorization(nameUser: String, password: String) -> Bool {
-    guard nameUser == "admin" && password == "password" else {
-        print("Ошибка авторизации")
-        return false
-    }
-    
-    defer {
-        print("Закрытие сетевого соединения")
-    }
-    
-    print("Отправка запроса на сервер")
-    return true
-}
+//func checkAuthorization(nameUser: String, password: String) -> Bool {
+//    guard nameUser == "admin" && password == "password" else {
+//        print("Ошибка авторизации")
+//        return false
+//    }
+//    
+//    defer {
+//        print("Закрытие сетевого соединения")
+//    }
+//    
+//    print("Отправка запроса на сервер")
+//    return true
+//}
 
 // task_105
 
-func calculateStatistic(arg: [Int]) -> (min: Int, max: Int, average: Double, count: Int)?{
-    guard !arg.isEmpty else {
-        return nil
-    }
-    
-    var average = 0.0
-    
-    for item in arg {
-        average += Double(item)
-    }
-    average = average/Double(arg.count)
-    
-    let argMin =  arg.min()!
-    let argMax =  arg.max()!
-    let argCount = arg.count
-    
-    return (min: argMin, max: argMax, average: average, count: argCount)
-}
-
-if let resultTurple = calculateStatistic(arg: [1,2,3,4,5,6,7,8,9,10]) {
-    print(resultTurple.min)
-    print(resultTurple.max)
-    print(resultTurple.count)
-    print(resultTurple.average)
-}
+//func calculateStatistic(arg: [Int]) -> (min: Int, max: Int, average: Double, count: Int)?{
+//    guard !arg.isEmpty else {
+//        return nil
+//    }
+//    
+//    var average = 0.0
+//    
+//    for item in arg {
+//        average += Double(item)
+//    }
+//    average = average/Double(arg.count)
+//    
+//    let argMin =  arg.min()!
+//    let argMax =  arg.max()!
+//    let argCount = arg.count
+//    
+//    return (min: argMin, max: argMax, average: average, count: argCount)
+//}
+//
+//if let resultTurple = calculateStatistic(arg: [1,2,3,4,5,6,7,8,9,10]) {
+//    print(resultTurple.min)
+//    print(resultTurple.max)
+//    print(resultTurple.count)
+//    print(resultTurple.average)
+//}
 
 
 // task_106
 
-func calculateAverage(_ numbers: Double...) -> Double? {
-    guard !numbers.isEmpty else {
-        return nil
-    }
-    
-    let sum = numbers.reduce(0, +)
-    return sum / Double(numbers.count)
-}
-
-
-if let average = calculateAverage(1.0, 2.0, 3.0, 4.0, 5.0) {
-    print("Среднее арифметическое: \(average)")
-} else {
-    print("Нет данных для вычисления среднего арифметического.")
-}
+//func calculateAverage(_ numbers: Double...) -> Double? {
+//    guard !numbers.isEmpty else {
+//        return nil
+//    }
+//    
+//    let sum = numbers.reduce(0, +)
+//    return sum / Double(numbers.count)
+//}
+//
+//
+//if let average = calculateAverage(1.0, 2.0, 3.0, 4.0, 5.0) {
+//    print("Среднее арифметическое: \(average)")
+//} else {
+//    print("Нет данных для вычисления среднего арифметического.")
+//}
 
 // task_108
-enum creditCard {
-    case Visa
-    case Mastercard
-    case AmericamExpress
-}
-
-
-func bancCreditCard( card: creditCard) {
-    switch card {
-    case .Visa:
-        print("Выша банковская карта, \(creditCard.Visa)")
-    case .Mastercard:
-        print("Выша банковская карта, \(creditCard.Mastercard)")
-    case .AmericamExpress:
-        print("Выша банковская карта, \(creditCard.AmericamExpress)")
-    }
-}
-
-bancCreditCard(card: creditCard.AmericamExpress)
+//enum creditCard {
+//    case Visa
+//    case Mastercard
+//    case AmericamExpress
+//}
+//
+//
+//func bancCreditCard( card: creditCard) {
+//    switch card {
+//    case .Visa:
+//        print("Выша банковская карта, \(creditCard.Visa)")
+//    case .Mastercard:
+//        print("Выша банковская карта, \(creditCard.Mastercard)")
+//    case .AmericamExpress:
+//        print("Выша банковская карта, \(creditCard.AmericamExpress)")
+//    }
+//}
+//
+//bancCreditCard(card: creditCard.AmericamExpress)
 
 
 // task_109
 
-enum gamePerson {
-    case Warrior
-    case Mage
-    case Archer
-}
-
-func characteristicPersonGame(person: gamePerson) {
-    switch person {
-    case .Warrior:
-        print("Это самый бронированный воин")
-    case .Mage:
-        print("Этот воин наделён магией")
-    case .Archer:
-        print("А это самый меткий воин")
-    }
-}
-
-characteristicPersonGame(person: .Warrior)
+//enum gamePerson {
+//    case Warrior
+//    case Mage
+//    case Archer
+//}
+//
+//func characteristicPersonGame(person: gamePerson) {
+//    switch person {
+//    case .Warrior:
+//        print("Это самый бронированный воин")
+//    case .Mage:
+//        print("Этот воин наделён магией")
+//    case .Archer:
+//        print("А это самый меткий воин")
+//    }
+//}
+//
+//characteristicPersonGame(person: .Warrior)
 
 
 // task_110
 
-enum Month: String {
-    case january = "January"
-    case february = "February"
-    case march = "March"
-    case april = "April"
-    case may = "May"
-    case june = "June"
-    case july = "July"
-    case august = "August"
-    case september = "September"
-    case october = "October"
-    case november = "November"
-    case december = "December"
-}
-
-func ageMonth(month: Month) {
-    print("Это месяц \(month.rawValue.lowercased())")
-}
-
-ageMonth(month: .april)
+//enum Month: String {
+//    case january = "January"
+//    case february = "February"
+//    case march = "March"
+//    case april = "April"
+//    case may = "May"
+//    case june = "June"
+//    case july = "July"
+//    case august = "August"
+//    case september = "September"
+//    case october = "October"
+//    case november = "November"
+//    case december = "December"
+//}
+//
+//func ageMonth(month: Month) {
+//    print("Это месяц \(month.rawValue.lowercased())")
+//}
+//
+//ageMonth(month: .april)
 
 
 // task_111
 
-enum categoryTicket: Int {
-    case VIP = 1
-    case General = 2
-    case Starting = 3
-}
-
-func programmingConferenc(category: categoryTicket){
-    switch category {
-    case .VIP:
-        print("Ваш код \(category.rawValue)")
-    case .General:
-        print("Ваш код \(category.rawValue)")
-    case .Starting:
-        print("Ваш код \(category.rawValue)")
-    }
-}
-
-programmingConferenc(category: .General)
+//enum categoryTicket: Int {
+//    case VIP = 1
+//    case General = 2
+//    case Starting = 3
+//}
+//
+//func programmingConferenc(category: categoryTicket){
+//    switch category {
+//    case .VIP:
+//        print("Ваш код \(category.rawValue)")
+//    case .General:
+//        print("Ваш код \(category.rawValue)")
+//    case .Starting:
+//        print("Ваш код \(category.rawValue)")
+//    }
+//}
+//
+//programmingConferenc(category: .General)
 
 
 // task_113
 
-enum TimePeriod {
-    case AncientTimes
-    case MiddleAges
-    case Renaissance
-}
-
-func chooseTimePeriod(caseEnum: TimePeriod) {
-    switch caseEnum {
-    case .AncientTimes:
-        print("В этом времени было зарождние человечества и Африка была колыбелью жизни")
-    case .MiddleAges:
-        print("Этот период известен нам феодализмом и крестовыми походами")
-    case .Renaissance:
-        print("Небывалый расцвет культуры и становления литературы живописи и скульптуры")
-    }
-}
-
-chooseTimePeriod(caseEnum: .AncientTimes)
+//enum TimePeriod {
+//    case AncientTimes
+//    case MiddleAges
+//    case Renaissance
+//}
+//
+//func chooseTimePeriod(caseEnum: TimePeriod) {
+//    switch caseEnum {
+//    case .AncientTimes:
+//        print("В этом времени было зарождние человечества и Африка была колыбелью жизни")
+//    case .MiddleAges:
+//        print("Этот период известен нам феодализмом и крестовыми походами")
+//    case .Renaissance:
+//        print("Небывалый расцвет культуры и становления литературы живописи и скульптуры")
+//    }
+//}
+//
+//chooseTimePeriod(caseEnum: .AncientTimes)
 
 // task_114
 
 // MARK: - Меню
-enum MenuItem {
-    case coffee(hasMilk: Bool, hasSugar: Bool)
-    case tea(hasSugar: Bool)
-    case juice
-    case water(hasGas: Bool)
-    case sandwich(filling: Filling)
-    case cupcake
-    case applePie
-    
-    enum Filling {
-        case ham
-        case sausage
-        case chicken
-        case fish
-    }
-    
-    // Словарь с ценами
-    private static let prices: [String: Double] = [
-        "coffee": 120.0,
-        "tea": 80.0,
-        "juice": 150.0,
-        "water": 60.0,
-        "sandwich": 200.0,
-        "cupcake": 180.0,
-        "applePie": 220.0,
-        "ham": 50.0,
-        "sausage": 40.0,
-        "chicken": 60.0,
-        "fish": 70.0,
-        "milk": 20.0,
-        "sugar": 10.0,
-        "gas": 15.0
-    ]
-    
-    // Вычисляемое свойство для цены
-    var price: Double {
-        switch self {
-        case .coffee(let hasMilk, let hasSugar):
-            var total = Self.prices["coffee"]!
-            if hasMilk { total += Self.prices["milk"]! }
-            if hasSugar { total += Self.prices["sugar"]! }
-            return total
-            
-        case .tea(let hasSugar):
-            var total = Self.prices["tea"]!
-            if hasSugar { total += Self.prices["sugar"]! }
-            return total
-            
-        case .juice:
-            return Self.prices["juice"]!
-            
-        case .water(let hasGas):
-            var total = Self.prices["water"]!
-            if hasGas { total += Self.prices["gas"]! }
-            return total
-            
-        case .sandwich(let filling):
-            var total = Self.prices["sandwich"]!
-            switch filling {
-            case .ham: total += Self.prices["ham"]!
-            case .sausage: total += Self.prices["sausage"]!
-            case .chicken: total += Self.prices["chicken"]!
-            case .fish: total += Self.prices["fish"]!
-            }
-            return total
-            
-        case .cupcake:
-            return Self.prices["cupcake"]!
-            
-        case .applePie:
-            return Self.prices["applePie"]!
-        }
-    }
-    
-    // Описание блюда
-    var description: String {
-        switch self {
-        case .coffee(let hasMilk, let hasSugar):
-            return "Кофе \(hasMilk ? "с молоком" : "без молока") \(hasSugar ? "с сахаром" : "без сахара")"
-        case .tea(let hasSugar):
-            return "Чай \(hasSugar ? "с сахаром" : "без сахара")"
-        case .juice:
-            return "Сок"
-        case .water(let hasGas):
-            return "Вода \(hasGas ? "с газом" : "без газа")"
-        case .sandwich(let filling):
-            return "Сэндвич с \(filling.description)"
-        case .cupcake:
-            return "Капкейк"
-        case .applePie:
-            return "Яблочный пирог"
-        }
-    }
-}
-
-extension MenuItem.Filling {
-    var description: String {
-        switch self {
-        case .ham: return "ветчиной"
-        case .sausage: return "колбасой"
-        case .chicken: return "курицей"
-        case .fish: return "рыбой"
-        }
-    }
-}
+//enum MenuItem {
+//    case coffee(hasMilk: Bool, hasSugar: Bool)
+//    case tea(hasSugar: Bool)
+//    case juice
+//    case water(hasGas: Bool)
+//    case sandwich(filling: Filling)
+//    case cupcake
+//    case applePie
+//    
+//    enum Filling {
+//        case ham
+//        case sausage
+//        case chicken
+//        case fish
+//    }
+//    
+//    // Словарь с ценами
+//    private static let prices: [String: Double] = [
+//        "coffee": 120.0,
+//        "tea": 80.0,
+//        "juice": 150.0,
+//        "water": 60.0,
+//        "sandwich": 200.0,
+//        "cupcake": 180.0,
+//        "applePie": 220.0,
+//        "ham": 50.0,
+//        "sausage": 40.0,
+//        "chicken": 60.0,
+//        "fish": 70.0,
+//        "milk": 20.0,
+//        "sugar": 10.0,
+//        "gas": 15.0
+//    ]
+//    
+//    // Вычисляемое свойство для цены
+//    var price: Double {
+//        switch self {
+//        case .coffee(let hasMilk, let hasSugar):
+//            var total = Self.prices["coffee"]!
+//            if hasMilk { total += Self.prices["milk"]! }
+//            if hasSugar { total += Self.prices["sugar"]! }
+//            return total
+//            
+//        case .tea(let hasSugar):
+//            var total = Self.prices["tea"]!
+//            if hasSugar { total += Self.prices["sugar"]! }
+//            return total
+//            
+//        case .juice:
+//            return Self.prices["juice"]!
+//            
+//        case .water(let hasGas):
+//            var total = Self.prices["water"]!
+//            if hasGas { total += Self.prices["gas"]! }
+//            return total
+//            
+//        case .sandwich(let filling):
+//            var total = Self.prices["sandwich"]!
+//            switch filling {
+//            case .ham: total += Self.prices["ham"]!
+//            case .sausage: total += Self.prices["sausage"]!
+//            case .chicken: total += Self.prices["chicken"]!
+//            case .fish: total += Self.prices["fish"]!
+//            }
+//            return total
+//            
+//        case .cupcake:
+//            return Self.prices["cupcake"]!
+//            
+//        case .applePie:
+//            return Self.prices["applePie"]!
+//        }
+//    }
+//    
+//    // Описание блюда
+//    var description: String {
+//        switch self {
+//        case .coffee(let hasMilk, let hasSugar):
+//            return "Кофе \(hasMilk ? "с молоком" : "без молока") \(hasSugar ? "с сахаром" : "без сахара")"
+//        case .tea(let hasSugar):
+//            return "Чай \(hasSugar ? "с сахаром" : "без сахара")"
+//        case .juice:
+//            return "Сок"
+//        case .water(let hasGas):
+//            return "Вода \(hasGas ? "с газом" : "без газа")"
+//        case .sandwich(let filling):
+//            return "Сэндвич с \(filling.description)"
+//        case .cupcake:
+//            return "Капкейк"
+//        case .applePie:
+//            return "Яблочный пирог"
+//        }
+//    }
+//}
+//
+//extension MenuItem.Filling {
+//    var description: String {
+//        switch self {
+//        case .ham: return "ветчиной"
+//        case .sausage: return "колбасой"
+//        case .chicken: return "курицей"
+//        case .fish: return "рыбой"
+//        }
+//    }
+//}
 
 // MARK: - Заказ
-struct Order {
-    private var items: [MenuItem] = []
-    
-    mutating func add(_ item: MenuItem) {
-        items.append(item)
-    }
-    
-    var totalPrice: Double {
-        items.reduce(0) { $0 + $1.price }
-    }
-    
-    var description: String {
-        let orderDetails = items.map { "\($0.description) - \($0.price) руб." }.joined(separator: "\n")
-        return orderDetails + "\n\nИтого: \(totalPrice) руб."
-    }
-}
-
-// MARK: - Использование
-var order = Order()
-
-// Пример заказа
-order.add(.coffee(hasMilk: true, hasSugar: false))
-order.add(.sandwich(filling: .chicken))
-order.add(.juice)
-order.add(.applePie)
-
-print(order.description)
+//struct Order {
+//    private var items: [MenuItem] = []
+//    
+//    mutating func add(_ item: MenuItem) {
+//        items.append(item)
+//    }
+//    
+//    var totalPrice: Double {
+//        items.reduce(0) { $0 + $1.price }
+//    }
+//    
+//    var description: String {
+//        let orderDetails = items.map { "\($0.description) - \($0.price) руб." }.joined(separator: "\n")
+//        return orderDetails + "\n\nИтого: \(totalPrice) руб."
+//    }
+//}
+//
+//// MARK: - Использование
+//var order = Order()
+//
+//// Пример заказа
+//order.add(.coffee(hasMilk: true, hasSugar: false))
+//order.add(.sandwich(filling: .chicken))
+//order.add(.juice)
+//order.add(.applePie)
+//
+//print(order.description)
 
 
 // task_115
-import Foundation
-
-enum WeatherCondition {
-    case sunny (temperature: Int)
-    case cloudy (temperature: Int)
-    case rain (temperature: Int)
-    case show (temperature: Int)
-    
-    var description: String {
-        switch self {
-        case .sunny(let temp):
-            return "Солнечно с \(temp)°C тепла"
-        case .cloudy(let temp):
-            return "Облачно с \(temp)°C тепла"
-        case .rain(let temp):
-            return "Идёт дождь и на улице температура \(temp)°C тепла"
-        case .show(let temp):
-            return "Идет снег и на улице \(temp) °C тепла"
-        }
-    }
-    
-    var emoji: String {
-        switch self {
-        case .sunny: return "☀️"
-        case .cloudy: return "☁️"
-        case .rain: return "🌧️"
-        case .show: return "❄️"
-        }
-    }
-}
-
-func generateWeatherReport(for conditions: [WeatherCondition]) -> String{
-    let date = DateFormatter().string(from: Date())
-    var report = "Погода на \(date):\n\n"
-    
-    for (index, condition) in conditions.enumerated() {
-        let dayName = getDayName(for: index)
-        report += "\(dayName): \(condition.emoji) \(condition.description)\n"
-    }
-    
-    return report
-}
-
-func getDayName(for index: Int) -> String {
-    switch index {
-    case 0: return "Сегодня"
-    case 1: return "Завтра"
-    case 2: return "Послезавтра"
-    default: return "День \(index + 1)"
-    }
-}
-
-// Пример использования
-let weather: [WeatherCondition] = [
-    .sunny(temperature: 29),
-    .cloudy(temperature: 22),
-    .rain(temperature: 18),
-    .show(temperature: -5)
-]
-
-let report = generateWeatherReport(for: weather)
-print(report)
+//import Foundation
+//
+//enum WeatherCondition {
+//    case sunny (temperature: Int)
+//    case cloudy (temperature: Int)
+//    case rain (temperature: Int)
+//    case show (temperature: Int)
+//    
+//    var description: String {
+//        switch self {
+//        case .sunny(let temp):
+//            return "Солнечно с \(temp)°C тепла"
+//        case .cloudy(let temp):
+//            return "Облачно с \(temp)°C тепла"
+//        case .rain(let temp):
+//            return "Идёт дождь и на улице температура \(temp)°C тепла"
+//        case .show(let temp):
+//            return "Идет снег и на улице \(temp) °C тепла"
+//        }
+//    }
+//    
+//    var emoji: String {
+//        switch self {
+//        case .sunny: return "☀️"
+//        case .cloudy: return "☁️"
+//        case .rain: return "🌧️"
+//        case .show: return "❄️"
+//        }
+//    }
+//}
+//
+//func generateWeatherReport(for conditions: [WeatherCondition]) -> String{
+//    let date = DateFormatter().string(from: Date())
+//    var report = "Погода на \(date):\n\n"
+//    
+//    for (index, condition) in conditions.enumerated() {
+//        let dayName = getDayName(for: index)
+//        report += "\(dayName): \(condition.emoji) \(condition.description)\n"
+//    }
+//    
+//    return report
+//}
+//
+//func getDayName(for index: Int) -> String {
+//    switch index {
+//    case 0: return "Сегодня"
+//    case 1: return "Завтра"
+//    case 2: return "Послезавтра"
+//    default: return "День \(index + 1)"
+//    }
+//}
+//
+//// Пример использования
+//let weather: [WeatherCondition] = [
+//    .sunny(temperature: 29),
+//    .cloudy(temperature: 22),
+//    .rain(temperature: 18),
+//    .show(temperature: -5)
+//]
+//
+//let report = generateWeatherReport(for: weather)
+//print(report)
 
 
 // task_116
-enum listHairSalonServices {
-    case mensHaircut(price: Int)
-    case womensHaircut(price: Int)
-    case shaving(price: Int)
-    case painting(price: Int)
-    case depilation(price: Int)
-}
-
-func totalCost() -> Int {
-    var total = 0
-    
-    let hairSaloonServices: [listHairSalonServices] = [
-        .mensHaircut(price: 200),
-        .womensHaircut(price: 200),
-        .shaving(price: 150),
-        .painting(price: 300),
-        .depilation(price: 90),
-    ]
-    
-    for service in hairSaloonServices {
-        switch service {
-        case .mensHaircut(let price):
-            total += price
-        case .womensHaircut(let price):
-            total += price
-        case .shaving(let price):
-            total += price
-        case .painting(let price):
-            total += price
-        case .depilation(let price):
-            total += price
-        }
-    }
-    return total
-}
-
-let serviceTotal = totalCost()
-print("Общая стоимость услуг в парикмахерской составит \(serviceTotal) рублей.")
+//enum listHairSalonServices {
+//    case mensHaircut(price: Int)
+//    case womensHaircut(price: Int)
+//    case shaving(price: Int)
+//    case painting(price: Int)
+//    case depilation(price: Int)
+//}
+//
+//func totalCost() -> Int {
+//    var total = 0
+//    
+//    let hairSaloonServices: [listHairSalonServices] = [
+//        .mensHaircut(price: 200),
+//        .womensHaircut(price: 200),
+//        .shaving(price: 150),
+//        .painting(price: 300),
+//        .depilation(price: 90),
+//    ]
+//    
+//    for service in hairSaloonServices {
+//        switch service {
+//        case .mensHaircut(let price):
+//            total += price
+//        case .womensHaircut(let price):
+//            total += price
+//        case .shaving(let price):
+//            total += price
+//        case .painting(let price):
+//            total += price
+//        case .depilation(let price):
+//            total += price
+//        }
+//    }
+//    return total
+//}
+//
+//let serviceTotal = totalCost()
+//print("Общая стоимость услуг в парикмахерской составит \(serviceTotal) рублей.")
 
 
 
@@ -1672,57 +1672,108 @@ print("Общая стоимость услуг в парикмахерской 
 
 // task_117
 
-enum Transport {
-    case auto(weather: String)
-    case airplane(weather: String)
-    case train(weather: String)
-}
-
-func chooseTransport(for weather: String) -> Transport? {
-    switch weather {
-    case "Солнечно":
-        return .auto(weather: weather)
-    case "Дождь":
-        return .airplane(weather: weather)
-    case "Снег":
-        return .train(weather: weather)
-    default:
-        return nil // Если погода неизвестна
-    }
-}
-
-// Пример использования:
-let transport = chooseTransport(for: "Солнечно")
-if let selectedTransport = transport {
-    print("Подходящий транспорт: \(String(describing: selectedTransport))")
-} else {
-    print("Не удалось подобрать транспорт для такой погоды.")
-}
+//enum Transport {
+//    case auto(weather: String)
+//    case airplane(weather: String)
+//    case train(weather: String)
+//}
+//
+//func chooseTransport(for weather: String) -> Transport? {
+//    switch weather {
+//    case "Солнечно":
+//        return .auto(weather: weather)
+//    case "Дождь":
+//        return .airplane(weather: weather)
+//    case "Снег":
+//        return .train(weather: weather)
+//    default:
+//        return nil // Если погода неизвестна
+//    }
+//}
+//
+//// Пример использования:
+//let transport = chooseTransport(for: "Солнечно")
+//if let selectedTransport = transport {
+//    print("Подходящий транспорт: \(String(describing: selectedTransport))")
+//} else {
+//    print("Не удалось подобрать транспорт для такой погоды.")
+//}
 
 
 // task_119
 
-enum Specialization {
-    case Developer(profession: String)
-    case Designer(profession: String)
-    case Manager(profession: String)
+//enum Specialization {
+//    case Developer(profession: String)
+//    case Designer(profession: String)
+//    case Manager(profession: String)
+//}
+//
+//func chooseSpecialization(for profession: String) -> Specialization? {
+//    switch profession {
+//    case "Разработчик програмного обеспечения":
+//        return .Developer(profession: profession)
+//    case "Ландшафтный дизайнер":
+//        return .Designer(profession: profession)
+//    case "Менеджер проекта":
+//        return .Manager(profession: profession)
+//    default:
+//        return nil
+//    }
+//}
+//let proffi = chooseSpecialization(for: "Менеджер проекта")
+//if let proffi {
+//    print("Подходящая работа: \(String(describing: proffi))")
+//} else {
+//    print("Мне не удалось подобрать вам профессию")
+//}
+
+// task_123
+
+struct Location {
+    var lattitude: Int
+    var longitude: Int
 }
 
-func chooseSpecialization(for profession: String) -> Specialization? {
-    switch profession {
-    case "Разработчик програмного обеспечения":
-        return .Developer(profession: profession)
-    case "Ландшафтный дизайнер":
-        return .Designer(profession: profession)
-    case "Менеджер проекта":
-        return .Manager(profession: profession)
-    default:
-        return nil
+
+class LocationTracker {
+    var lattitude: Int
+    var longitude: Int
+    
+    init(lattitude: Int, longitude: Int) {
+        self.lattitude = lattitude
+        self.longitude = longitude
     }
 }
-let proffi = chooseSpecialization(for: "Менеджер проекта")
-if let proffi {
-    print("Подходящая работа: \(String(describing: proffi))")
-} else {
-    print("Мне не удалось подобрать вам профессию")
+
+// struct
+var LocationStruct = Location(lattitude: 10, longitude: 10)
+//print("before -> \(LocationStruct)")
+
+// class
+var LocationClass = LocationTracker(lattitude: 10, longitude: 20)
+print("before -> \(LocationClass.lattitude)")
+
+LocationStruct.lattitude = 20
+LocationStruct.longitude = 20
+//print("after -> \(LocationStruct)")
+
+LocationClass.lattitude = 20
+LocationClass.longitude = 20
+print("after -> \(LocationClass.lattitude)")
+
+// у struct я через переменную беру все свойства а у class нужно через класс обратится к свойствам далее
+
+
+// task_124
+
+struct Task {
+    var title = "Стать IOS разработчиком"
+    var deadline = "12.12.2026"
+    var priority = "Высокий"
+    
+    var arr: [String] = []
+    
+    func sortTask(){
+        
+    }
 }
