@@ -1252,11 +1252,11 @@ import Foundation
 //        print("Ошибка авторизации")
 //        return false
 //    }
-//    
+//
 //    defer {
 //        print("Закрытие сетевого соединения")
 //    }
-//    
+//
 //    print("Отправка запроса на сервер")
 //    return true
 //}
@@ -1267,18 +1267,18 @@ import Foundation
 //    guard !arg.isEmpty else {
 //        return nil
 //    }
-//    
+//
 //    var average = 0.0
-//    
+//
 //    for item in arg {
 //        average += Double(item)
 //    }
 //    average = average/Double(arg.count)
-//    
+//
 //    let argMin =  arg.min()!
 //    let argMax =  arg.max()!
 //    let argCount = arg.count
-//    
+//
 //    return (min: argMin, max: argMax, average: average, count: argCount)
 //}
 //
@@ -1296,7 +1296,7 @@ import Foundation
 //    guard !numbers.isEmpty else {
 //        return nil
 //    }
-//    
+//
 //    let sum = numbers.reduce(0, +)
 //    return sum / Double(numbers.count)
 //}
@@ -1430,14 +1430,14 @@ import Foundation
 //    case sandwich(filling: Filling)
 //    case cupcake
 //    case applePie
-//    
+//
 //    enum Filling {
 //        case ham
 //        case sausage
 //        case chicken
 //        case fish
 //    }
-//    
+//
 //    // Словарь с ценами
 //    private static let prices: [String: Double] = [
 //        "coffee": 120.0,
@@ -1455,7 +1455,7 @@ import Foundation
 //        "sugar": 10.0,
 //        "gas": 15.0
 //    ]
-//    
+//
 //    // Вычисляемое свойство для цены
 //    var price: Double {
 //        switch self {
@@ -1464,20 +1464,20 @@ import Foundation
 //            if hasMilk { total += Self.prices["milk"]! }
 //            if hasSugar { total += Self.prices["sugar"]! }
 //            return total
-//            
+//
 //        case .tea(let hasSugar):
 //            var total = Self.prices["tea"]!
 //            if hasSugar { total += Self.prices["sugar"]! }
 //            return total
-//            
+//
 //        case .juice:
 //            return Self.prices["juice"]!
-//            
+//
 //        case .water(let hasGas):
 //            var total = Self.prices["water"]!
 //            if hasGas { total += Self.prices["gas"]! }
 //            return total
-//            
+//
 //        case .sandwich(let filling):
 //            var total = Self.prices["sandwich"]!
 //            switch filling {
@@ -1487,15 +1487,15 @@ import Foundation
 //            case .fish: total += Self.prices["fish"]!
 //            }
 //            return total
-//            
+//
 //        case .cupcake:
 //            return Self.prices["cupcake"]!
-//            
+//
 //        case .applePie:
 //            return Self.prices["applePie"]!
 //        }
 //    }
-//    
+//
 //    // Описание блюда
 //    var description: String {
 //        switch self {
@@ -1531,15 +1531,15 @@ import Foundation
 // MARK: - Заказ
 //struct Order {
 //    private var items: [MenuItem] = []
-//    
+//
 //    mutating func add(_ item: MenuItem) {
 //        items.append(item)
 //    }
-//    
+//
 //    var totalPrice: Double {
 //        items.reduce(0) { $0 + $1.price }
 //    }
-//    
+//
 //    var description: String {
 //        let orderDetails = items.map { "\($0.description) - \($0.price) руб." }.joined(separator: "\n")
 //        return orderDetails + "\n\nИтого: \(totalPrice) руб."
@@ -1566,7 +1566,7 @@ import Foundation
 //    case cloudy (temperature: Int)
 //    case rain (temperature: Int)
 //    case show (temperature: Int)
-//    
+//
 //    var description: String {
 //        switch self {
 //        case .sunny(let temp):
@@ -1579,7 +1579,7 @@ import Foundation
 //            return "Идет снег и на улице \(temp) °C тепла"
 //        }
 //    }
-//    
+//
 //    var emoji: String {
 //        switch self {
 //        case .sunny: return "☀️"
@@ -1593,12 +1593,12 @@ import Foundation
 //func generateWeatherReport(for conditions: [WeatherCondition]) -> String{
 //    let date = DateFormatter().string(from: Date())
 //    var report = "Погода на \(date):\n\n"
-//    
+//
 //    for (index, condition) in conditions.enumerated() {
 //        let dayName = getDayName(for: index)
 //        report += "\(dayName): \(condition.emoji) \(condition.description)\n"
 //    }
-//    
+//
 //    return report
 //}
 //
@@ -1634,7 +1634,7 @@ import Foundation
 //
 //func totalCost() -> Int {
 //    var total = 0
-//    
+//
 //    let hairSaloonServices: [listHairSalonServices] = [
 //        .mensHaircut(price: 200),
 //        .womensHaircut(price: 200),
@@ -1642,7 +1642,7 @@ import Foundation
 //        .painting(price: 300),
 //        .depilation(price: 90),
 //    ]
-//    
+//
 //    for service in hairSaloonServices {
 //        switch service {
 //        case .mensHaircut(let price):
@@ -1729,51 +1729,153 @@ import Foundation
 
 // task_123
 
-struct Location {
-    var lattitude: Int
-    var longitude: Int
-}
+//struct Location {
+//    var lattitude: Int
+//    var longitude: Int
+//}
+//
+//
+//class LocationTracker {
+//    var lattitude: Int
+//    var longitude: Int
+//
+//    init(lattitude: Int, longitude: Int) {
+//        self.lattitude = lattitude
+//        self.longitude = longitude
+//    }
+//}
 
-
-class LocationTracker {
-    var lattitude: Int
-    var longitude: Int
-    
-    init(lattitude: Int, longitude: Int) {
-        self.lattitude = lattitude
-        self.longitude = longitude
-    }
-}
-
-// struct
-var LocationStruct = Location(lattitude: 10, longitude: 10)
-//print("before -> \(LocationStruct)")
-
-// class
-var LocationClass = LocationTracker(lattitude: 10, longitude: 20)
-print("before -> \(LocationClass.lattitude)")
-
-LocationStruct.lattitude = 20
-LocationStruct.longitude = 20
-//print("after -> \(LocationStruct)")
-
-LocationClass.lattitude = 20
-LocationClass.longitude = 20
-print("after -> \(LocationClass.lattitude)")
+//// struct
+//var LocationStruct = Location(lattitude: 10, longitude: 10)
+////print("before -> \(LocationStruct)")
+//
+//// class
+//var LocationClass = LocationTracker(lattitude: 10, longitude: 20)
+//print("before -> \(LocationClass.lattitude)")
+//
+//LocationStruct.lattitude = 20
+//LocationStruct.longitude = 20
+////print("after -> \(LocationStruct)")
+//
+//LocationClass.lattitude = 20
+//LocationClass.longitude = 20
+//print("after -> \(LocationClass.lattitude)")
 
 // у struct я через переменную беру все свойства а у class нужно через класс обратится к свойствам далее
 
 
 // task_124
 
-struct Task {
-    var title = "Стать IOS разработчиком"
-    var deadline = "12.12.2026"
-    var priority = "Высокий"
-    
-    var arr: [String] = []
-    
-    func sortTask(){
-        
-    }
-}
+//struct Task {
+//    var title = "Стать IOS разработчиком"
+//    var deadline = "12.12.2026"
+//    var priority = "Высокий"
+//
+//    var arr: [String] = ["Swift", "UIKit", "SwiftUI", "CoreData", "Alamofire"]
+//
+//    func sortTask(){
+//
+//    }
+//}
+
+// ------------------------------------------------------------------------------------------------------------------------------
+// 8 ku
+
+//Имея непустой массив целых чисел, возвращаем результат умножения значений по порядку. Пример:
+//
+//[1, 2, 3, 4] => 1 * 2 * 3 * 4 = 24
+
+//func grow(_ arr: [Int]) -> Int {
+//    var item = 1
+//    for a in arr {
+//        item = item * a
+//    }
+//    return item
+//}
+//
+//let resGrow = grow([1, 2, 3, 4])
+//print(resGrow)
+
+
+// 8 ku
+//Вам дадут массив a и значение x. Всё, что нужно — проверить, содержит ли предоставленный массив это значение.
+//
+//Тип a и x может быть String или Int.
+//
+//Return true, если массив содержит значение, false если нет.
+
+//func check<T: Equatable>(_ a: [T], _ x: T) -> Bool {
+//    for el in a {
+//        if el == x {
+//            return true
+//        }
+//    }
+//    return false
+//}
+//
+//let findCheck = check(["t", "e", "s", "t"], "e")
+//print(findCheck)
+
+
+// 8 ku
+//Это конец учебного года, судьбоносный момент твоего школьного отчёта. Средние значения должны быть рассчитаны. Все студенты приходят к вам и просят рассчитать их средний показатель. Спокойно! Тебе просто нужно написать сценарий.
+//
+//Вернём среднее значения данного массива, округлённого вниз, до ближайшего целого числа.
+//
+//Массив никогда не будет пустым.
+
+
+//func getAverage(_ marks: [Int]) -> Int {
+//    var it = 0
+//    for el in marks {
+//        it = (it + el)
+//    }
+//    return it / marks.count
+//}
+//
+//let resGetAverage = getAverage([1,2,3,4,5,])
+//print("resGetAverage -> \(resGetAverage)")
+
+
+// 8 ku
+//Создайте функцию, которая принимает параметр, представляющий имя, и возвращает сообщение: «Здравствуйте, как у вас дела?»
+//
+//[Убедитесь, что вы набрали именно то, что я написал, иначе программа может не работать корректно]
+
+//func greet(_ name: String) -> String {
+//    return "Hello, \(name) how are you doing today?"
+//}
+//
+//let resGreet = greet("Blazej")
+//print(resGreet)
+
+
+// 8 ku
+//Заполните функцию квадратной суммы так, чтобы она поставила каждое число, прошедшее в неё, и затем суммировали результаты вместе.
+//
+//Например, для [1, 2, 2] он должен возвращать 9, потому что
+
+//func squareSum(_ vals: [Int]) -> Int {
+//    var acc = 0
+//    for elem in vals {
+//        let itemSquare = elem * elem
+//        acc += itemSquare
+//    }
+//    return acc
+//}
+//
+//let resSquareSum = squareSum([3, 4]) // 25
+//print(resSquareSum)
+
+
+// 8 ku
+//Создайте функцию, которая принимает 2 целых числа в виде строки в качестве входа и выводит сумму (также в виде строки):
+//
+//Пример: (Вход1, Вход2 -->Выход)
+
+//func sum_str(_ a:String, _ b:String) -> String {
+//    let someIntValue = (Int(a) ?? 0) + (Int(b) ?? 0)
+//    return String(someIntValue)}
+//
+//let resSumStr = sum_str("4", "5")
+//print(resSumStr)
