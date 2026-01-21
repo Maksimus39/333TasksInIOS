@@ -1892,12 +1892,12 @@ import Foundation
 //
 //Вход: 123456789 Выход: 987654321
 
-func descendingOrder(of number: Int) -> Int {
-    return Int(String(String(number).sorted(by: >))) ?? 0
-}
-
-let resDescendingOrder = descendingOrder(of: 145263)
-print(resDescendingOrder)
+//func descendingOrder(of number: Int) -> Int {
+//    return Int(String(String(number).sorted(by: >))) ?? 0
+//}
+//
+//let resDescendingOrder = descendingOrder(of: 145263)
+//print(resDescendingOrder)
 
 
 // 7 ku
@@ -1916,16 +1916,75 @@ print(resDescendingOrder)
 //НАСЛАЖДАЙТЕСЬ ПРОГРАММИРОВАНИЕМ :)
 
 
-func sumOfMinimums(_ numbers: [[Int]]) -> Int {
-    var item = 0
-    
-    let minimumsOfInnerArrays = numbers.compactMap { $0.min() }
-    
-    for i in minimumsOfInnerArrays {
-        item += i
-    }
-    return item
-}
+    //func sumOfMinimums(_ numbers: [[Int]]) -> Int {
+//    var item = 0
+//    
+//    let minimumsOfInnerArrays = numbers.compactMap { $0.min() }
+//    
+//    for i in minimumsOfInnerArrays {
+//        item += i
+//    }
+//    return item
+//}
+//
+//let resSumOfMinimums = sumOfMinimums([[2,8,5,4,3], [8,3,4,5,6]])
+//print(resSumOfMinimums)
 
-let resSumOfMinimums = sumOfMinimums([[2,8,5,4,3], [8,3,4,5,6]])
-print(resSumOfMinimums)
+
+//  ---------- Базовый оператор
+ 
+//var number = 5
+//number = 6
+//
+//var a = 5
+//var b = 3
+//
+//print(a + b)
+//print(a - b)
+//print(a * b)
+//print(a / b)
+//
+//
+//a = a + 1
+//print(a)
+//
+//a += 1
+//print(a)
+//
+//let d = 13 % 5
+//print("d -> \(d)")
+//
+//
+//a = 14
+//b = 8
+//
+//print(a > b)
+//print(a < b)
+//print(a == b)
+//print(a != b)
+//
+//
+//
+//var range = 7...10
+//print(range)
+//
+//for i in range {
+//    print("i -> \(i)")
+//}
+//print(range)
+//
+//
+//var time = 8
+//var temperature = 20
+//
+//if time <= 12 && temperature >= 16 {
+//    print("Хорошо, можно выйти на работу")
+//}
+//
+//if time <= 12 || temperature >= 16 {
+//    print("Хорошо, можно выйти на работу")
+//}
+//
+//var x = -16
+//var y = x % 3
+//print(y)
