@@ -1916,11 +1916,11 @@ import Foundation
 //НАСЛАЖДАЙТЕСЬ ПРОГРАММИРОВАНИЕМ :)
 
 
-    //func sumOfMinimums(_ numbers: [[Int]]) -> Int {
+//func sumOfMinimums(_ numbers: [[Int]]) -> Int {
 //    var item = 0
-//    
+//
 //    let minimumsOfInnerArrays = numbers.compactMap { $0.min() }
-//    
+//
 //    for i in minimumsOfInnerArrays {
 //        item += i
 //    }
@@ -1932,7 +1932,7 @@ import Foundation
 
 
 //  ---------- Базовый оператор
- 
+
 //var number = 5
 //number = 6
 //
@@ -1988,3 +1988,49 @@ import Foundation
 //var x = -16
 //var y = x % 3
 //print(y)
+
+
+// Действия со строками
+
+//let name = "Tim"
+//let surname = "Cook"
+//
+//// Конкатенация
+//
+//var fullName = name + " " + surname
+//print("fullName -> \(fullName)")
+//
+//var hello = "Hello my name is "
+//var present = hello + fullName
+//print(present)
+//
+//
+//// интерполяция
+//
+//let information = "Tim Cook is the CEO of Apple"
+//print("information -> \(information)")
+//
+//
+//fullName = "Bob Johnson"
+//let newInformation = "\(fullName) is the CEO of Apple"
+//print("newInformation -> \(newInformation)")
+//
+//
+//let a = 5
+//let b = 6
+//
+//let informationSum = "The sum of  a and b is \(a + b)"
+//print(informationSum)
+//
+//
+//let multiThreadString = """
+//Some text
+//Some text
+//Some text
+//Some text
+//Some text
+//Some text
+//"""
+//
+//print("multiThreadString -> \(multiThreadString)")
+
