@@ -2034,3 +2034,46 @@ import Foundation
 //
 //print("multiThreadString -> \(multiThreadString)")
 
+// -------------------------------------------------- if ----------------------------------------
+
+//var number = 5
+//
+//if number > 2 {
+//    print("the condition is true")
+//}
+//
+//
+//number = 0
+//if number >= 2 {
+//    print("The first condition is true")
+//} else if number == 1 {
+//    print("The second condition is true")
+//}
+//
+//
+//number = 0
+//if number >= 2 {
+//    print("The first condition is true")
+//} else if number == 1 {
+//    print("The second condition is true")
+//} else {
+//    print("The condition were false")
+//}
+//
+//
+//// Составной оператор
+//number = 5
+//
+//if number > 2 && number < 5 {
+//    print("The true \(number)")
+//} else {
+//    print("The false \(number)")
+//}
+//
+//
+//// ternation
+//
+//number = 99
+//number > 100
+//? print("true")
+//: print("false")
