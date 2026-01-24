@@ -2077,3 +2077,71 @@ import Foundation
 //number > 100
 //? print("true")
 //: print("false")
+
+
+// switch
+
+//var animal = "Cat"
+//
+//switch animal {
+//case "Cat":
+//    print("This is Cat \(10 + 10) years old")
+//case "Dog":
+//    print("This is Dog")
+//default:
+//    print("This is another animal")
+//}
+
+
+// array
+
+//let integers = [1, 2, 3]
+//
+//let newInegers = [Int]()
+//var numbers: [Int] = []
+//
+//numbers = [1, 2, 3]
+//numbers += [4, 5, 6]
+//
+//numbers += [7, 8]
+//print("numbers -> \(numbers)")
+//
+//numbers.append(9)
+//print("numbers -> \(numbers)")
+//
+//
+//numbers.insert(0, at: 0)
+//print("numbers -> \(numbers)")
+//
+//numbers.insert(11, at: 0)
+//print("numbers -> \(numbers)")
+//
+//
+//var newArr = integers + numbers
+//print("newArr -> \(newArr)")
+//print(newArr.count)
+//
+//let lastNumbers = newArr.removeLast()
+//print("lastNumbers -> \(lastNumbers)")
+//
+//print("newArr -> \(newArr)")
+//
+//
+//newArr.remove(at: 2)
+//print("newArr -> \(newArr)")
+//
+//
+//// множества
+//
+//var someString: Set<String> = []
+//print("someString -> \(someString)")
+//
+//someString = ["a", "b", "c"]
+//print("someString -> \(someString)")
+//print(type(of: someString))
+//
+//let resA = someString.contains("a")
+//print("resA -> \(resA)")
+//
+//let sort = someString.sorted()
+//print(sort)
