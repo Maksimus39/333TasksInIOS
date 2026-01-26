@@ -2145,3 +2145,46 @@ import Foundation
 //
 //let sort = someString.sorted()
 //print(sort)
+
+
+
+// ------- Словарь ------------------
+
+//var stringDictionary = Dictionary<String, String>()
+//print("stringDictionary -> \(stringDictionary)")
+//
+//var anotherStringDictionary: [String: String] = [:]
+//print("anotherStringDictionary -> \(anotherStringDictionary)")
+//
+//anotherStringDictionary["man"] = "Maksim"
+//print("anotherStringDictionary -> \(anotherStringDictionary)")
+//anotherStringDictionary["gerl"] = "Larisa"
+//anotherStringDictionary["son_1"] = "Andrey"
+//anotherStringDictionary["son_2"] = "Bogdan"
+//print("anotherStringDictionary -> \(anotherStringDictionary)")
+//
+//
+//
+//anotherStringDictionary["man"] = "Maks"
+//print("anotherStringDictionary -> \(anotherStringDictionary)")
+//
+//anotherStringDictionary["hobby"] = "IT"
+//print("anotherStringDictionary -> \(anotherStringDictionary)")
+//
+//
+//let resRemove =  anotherStringDictionary.removeValue(forKey: "hobby")
+//print(resRemove ?? "" )
+//
+//
+//print(anotherStringDictionary.count)
+//print(anotherStringDictionary.isEmpty)
+//
+//let newName = anotherStringDictionary.updateValue("Larison", forKey: "gerl")
+//print(newName ?? "") // <- тут будет старое имя
+//
+//print("anotherStringDictionary -> \(anotherStringDictionary)") // <- а в словаре оно уже обновится
+
+
+// for in
+
+
