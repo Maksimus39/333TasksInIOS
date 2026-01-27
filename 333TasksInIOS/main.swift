@@ -2187,4 +2187,31 @@ import Foundation
 
 // for in
 
+var lover = -10
+var upper = 10
 
+for counter in lover...upper {
+    print("counter -> \(counter)")
+}
+
+
+let minakovFamily = ["Maksim" : 42, "Larisa" : 39, "Andrey" : 12, "Bogdan" : 8]
+
+for (name, age) in minakovFamily {
+    print("The name \(name) is \(age) years old.")
+}
+
+
+for name in minakovFamily.keys {
+    print("name -> \(name)")
+}
+
+
+for age in minakovFamily.values {
+    print("age -> \(age)")
+}
+
+
+for character in "Hello" {
+    print("character -> \(character.lowercased())")
+}
