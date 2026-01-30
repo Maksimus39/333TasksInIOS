@@ -2187,31 +2187,95 @@ import Foundation
 
 // for in
 
-var lover = -10
-var upper = 10
+//var lover = -10
+//var upper = 10
+//
+//for counter in lover...upper {
+//    print("counter -> \(counter)")
+//}
+//
+//
+//let minakovFamily = ["Maksim" : 42, "Larisa" : 39, "Andrey" : 12, "Bogdan" : 8]
+//
+//for (name, age) in minakovFamily {
+//    print("The name \(name) is \(age) years old.")
+//}
+//
+//
+//for name in minakovFamily.keys {
+//    print("name -> \(name)")
+//}
+//
+//
+//for age in minakovFamily.values {
+//    print("age -> \(age)")
+//}
+//
+//
+//for character in "Hello" {
+//    print("character -> \(character.lowercased())")
+//}
 
-for counter in lover...upper {
-    print("counter -> \(counter)")
-}
 
 
-let minakovFamily = ["Maksim" : 42, "Larisa" : 39, "Andrey" : 12, "Bogdan" : 8]
 
-for (name, age) in minakovFamily {
-    print("The name \(name) is \(age) years old.")
-}
+// while repeat - while
+
+//var counter = 5
+//
+//while counter > 0 {
+//    print("The counter is \(counter)")
+//    counter -= 1
+//}
+//
+//
+//
+//// repeat while
+//var counterTwo = 10
+//
+//repeat {
+//    print("The counter is \(counterTwo)")
+//    counterTwo -= 1
+//} while counterTwo > 0
+//
+//
+//
+//var priceIphone = 1000.00
+//
+//repeat {
+//    print("Count iphone \(priceIphone)")
+//    priceIphone /= 3
+//} while priceIphone > 0
 
 
-for name in minakovFamily.keys {
-    print("name -> \(name)")
-}
 
+// turples
 
-for age in minakovFamily.values {
-    print("age -> \(age)")
-}
-
-
-for character in "Hello" {
-    print("character -> \(character.lowercased())")
-}
+//let first = 1
+//let second = 2
+//let third = 3
+//
+//let turples = (first, second, third)
+//print("turples -> \(turples)")
+//print("turples -> \(turples.0)")
+//print("turples -> \(turples.1)")
+//print("turples -> \(turples.2)")
+//
+//
+//let person = ("Maksim", "Minakov", "IOS developer")
+//print("person -> \(person)")
+//
+//
+//
+//let (name, surname, profession) = person
+//print(name)
+//print(surname)
+//print(profession)
+//
+//print(person)
+//
+//
+//let personTwo = (name: "Larisa", surname: "Minakova")
+//print("personTwo -> \(personTwo)")
+//print("personTwo -> \(personTwo.name)")
+//print("personTwo -> \(personTwo.surname)")
