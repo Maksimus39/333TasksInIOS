@@ -2279,3 +2279,48 @@ import Foundation
 //print("personTwo -> \(personTwo)")
 //print("personTwo -> \(personTwo.name)")
 //print("personTwo -> \(personTwo.surname)")
+
+
+// function
+
+func tellAboutMe(){
+    print("Hello i am a function")
+}
+
+tellAboutMe()
+
+
+func nameOfFunc() -> String {
+    "Hi im a function too!"
+}
+
+let resFunc = nameOfFunc()
+print("resFunc -> \(resFunc)")
+
+
+func sumOfTwoNumbers(_ first: Int, _ second: Int) -> Int {
+    first + second
+}
+
+let resInt = sumOfTwoNumbers(5, 10)
+print("resInt -> \(resInt)")
+
+
+// closures
+
+let someName = {(name: String, surname: String) -> () in
+    print(name + " " + surname)
+}
+
+someName("Maksim", "Minakov")
+
+
+func tellMeYourName(name: String, surmame: String, closure: (String, String) -> ()) {
+    closure(name, surmame)
+}
+
+
+tellMeYourName(name: "Larisa", surmame: "Minakova", closure: someName)
+
+
+tellMeYourName(name: "Andrey", surmame: "Minakov", closure: {print ($0 + " " + $1)})
