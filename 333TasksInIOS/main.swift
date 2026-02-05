@@ -2329,3 +2329,60 @@ import Foundation
 // optional
 
 
+// class
+
+//class Student {
+//    var name: String
+//    var surname: String
+//    var age: Int
+//    
+//    var fullName: String {
+//        name + " " + surname
+//    }
+//    
+//    func studi() -> String {
+//        "I`m studi right now"
+//    }
+//    
+//    init(name: String, surname: String, age: Int) {
+//        self.name = name
+//        self.surname = surname
+//        self.age = age
+//    }
+//}
+//
+//let student = Student(name: "Larisa", surname: "Minakova", age: 39)
+//print(student.fullName)
+//print(student.studi())
+//
+//// -------------- protocol
+//
+//protocol Scholl {
+//   func student() -> String
+//}
+// 
+//typealias TypeAll = Student & Scholl
+//
+//class SchoolChild: TypeAll {
+//    private  let schoolNumber: Int
+//    
+//    init(name: String, surname: String, age: Int, schoolNumber: Int) {
+//        self.schoolNumber = schoolNumber
+//        super.init(name: name, surname: surname, age: age)
+//    }
+//    
+//    override func studi() -> String {
+//        "I`m i work NLMK \(schoolNumber)"
+//    }
+//    
+//    func student() -> String {
+//        "I`am student, my name is \(name)"
+//    }
+//}
+//
+//
+//let school = SchoolChild(name: "Maksim", surname: "Minakov", age: 42, schoolNumber: 54)
+//print("school -> \(school.studi())")
+//print("school -> \(school.fullName)")
+//print("schoolz -> \(school.studi())")
+//print(school.student())
