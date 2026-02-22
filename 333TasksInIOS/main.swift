@@ -2335,15 +2335,15 @@ import Foundation
 //    var name: String
 //    var surname: String
 //    var age: Int
-//    
+//
 //    var fullName: String {
 //        name + " " + surname
 //    }
-//    
+//
 //    func studi() -> String {
 //        "I`m studi right now"
 //    }
-//    
+//
 //    init(name: String, surname: String, age: Int) {
 //        self.name = name
 //        self.surname = surname
@@ -2360,21 +2360,21 @@ import Foundation
 //protocol Scholl {
 //   func student() -> String
 //}
-// 
+//
 //typealias TypeAll = Student & Scholl
 //
 //class SchoolChild: TypeAll {
 //    private  let schoolNumber: Int
-//    
+//
 //    init(name: String, surname: String, age: Int, schoolNumber: Int) {
 //        self.schoolNumber = schoolNumber
 //        super.init(name: name, surname: surname, age: age)
 //    }
-//    
+//
 //    override func studi() -> String {
 //        "I`m i work NLMK \(schoolNumber)"
 //    }
-//    
+//
 //    func student() -> String {
 //        "I`am student, my name is \(name)"
 //    }
@@ -2386,3 +2386,23 @@ import Foundation
 //print("school -> \(school.fullName)")
 //print("schoolz -> \(school.studi())")
 //print(school.student())
+
+
+// --------------- 8 ku
+// Возвращает N-е четное число
+
+//Пример (Ввод --> Вывод)
+//
+//1 --> 0 (первое четное число — 0)
+//3 --> 4 (третье четное число — 4 (0, 2, 4))
+//100 --> 198
+//1298734 --> 2597466
+//Ввод не будет равен 0.
+
+
+//func nthEven(_ n: Int) -> Int {
+//    (n - 1) * 2
+//}
+//
+//let resInt = nthEven(8)
+//print("resInt -> \(resInt)")
