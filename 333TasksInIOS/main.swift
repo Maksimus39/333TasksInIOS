@@ -2406,3 +2406,24 @@ import Foundation
 //
 //let resInt = nthEven(8)
 //print("resInt -> \(resInt)")
+
+
+
+// 8 ku
+// Вы пишете код для управления светофорами в вашем городе. Вам нужна функция, которая будет обрабатывать каждое изменение состояния светофора: зеленый, желтый, красный, а затем снова зеленый.
+
+//Завершите функцию, которая принимает в качестве аргумента строку, представляющую текущее состояние светофора, и возвращает строку, представляющую состояние, в которое должен переключиться светофор.
+//
+//Например, когда на входе зеленый свет, на выходе должен быть желтый.
+
+//func update_light(_ current: String) -> String {
+//    switch current {
+//    case "red": return "green"
+//    case "yellow": return "red"
+//    case "green": return "yellow"
+//    default: return "red"
+//    }
+//}
+//
+//let resUpdateLight = update_light("yellow")
+//print("resUpdateLight -> \(resUpdateLight)")
