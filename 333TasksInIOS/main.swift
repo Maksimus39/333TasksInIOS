@@ -2427,3 +2427,18 @@ import Foundation
 //
 //let resUpdateLight = update_light("yellow")
 //print("resUpdateLight -> \(resUpdateLight)")
+
+
+// 8 ku
+// Завершите решение так, чтобы оно переворачивало переданную ему строку.
+
+//'world' => 'dlrow'
+//'word' => 'drow'
+
+
+func reverse(_ str: String) -> String {
+    String(str.reversed())
+}
+
+let resReverse = reverse("word")
+print("resReverse -> \(resReverse)")
