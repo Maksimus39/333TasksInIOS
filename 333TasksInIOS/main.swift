@@ -2436,9 +2436,913 @@ import Foundation
 //'word' => 'drow'
 
 
-func reverse(_ str: String) -> String {
-    String(str.reversed())
-}
+//func reverse(_ str: String) -> String {
+//    String(str.reversed())
+//}
+//
+//let resReverse = reverse("word")
+//print("resReverse -> \(resReverse)")
 
-let resReverse = reverse("word")
-print("resReverse -> \(resReverse)")
+
+//Для отладки используйте XCode или online компиллятор http://online.swiftplayground.run
+//Результат выведите в print
+
+//let first = 10*2
+//let second = 20
+//
+//let result = first == second //вставьте нужный оператор сравения вместо ?
+//
+//print(result)
+
+
+//Для отладки используйте XCode или online компиллятор http://online.swiftplayground.run
+//Результат выведите в print
+
+//Произведите извлечение опционала (конструкции if let..., ??, !)
+//let optional: Int? = 10
+//
+////пишите код здесь
+//if let optional {
+//    print(optional)
+//}
+//print(optional)
+
+
+//Для отладки используйте XCode или online компиллятор http://online.swiftplayground.run
+//readLine() не работает в Online. Для отладки input задайте обычной строкой пр. "10 20"
+//Результат выведите в print
+
+
+// ---------------------------------------------- LeetCode -----------------------------------
+
+//Дан массив целых чисел nums и целое число target. Верните индексы этих двух чисел, сумма которых равнаtarget .
+//
+//Можно предположить, что для каждого входного значения существует ровно одно решение , и нельзя использовать один и тот же элемент дважды.
+//
+//Вы можете вернуть ответ в любом порядке.
+//
+// 
+//
+//Пример 1:
+//
+//Входные данные: nums = [2,7,11,15], target = 9
+// Выходные данные: [0,1]
+// Пояснение: Поскольку nums[0] + nums[1] == 9, мы возвращаем [0, 1].
+//Пример 2:
+//
+//Входные данные: nums = [3,2,4], target = 6
+// Выходные данные: [1,2]
+//Пример 3:
+//
+//Входные данные: nums = [3,3], target = 6
+// Выходные данные: [0,1]
+
+
+//class Solution {
+//    func twoSum(_ nums: [Int], _ target: Int) -> [Int] {
+//        var dict = [Int: Int]()
+//        
+//        for (i, num) in nums.enumerated() {
+//            let complement = target - num
+//            
+//            if let index = dict[complement] {
+//                return [index, i]
+//            }
+//            
+//            dict[num] = i
+//        }
+//        
+//        return []
+//    }
+//}
+//
+//let res = Solution()
+//let result = res.twoSum([3, 3], 6)
+//print(result)
+
+
+
+// ---------------------- Современный синтаксис Swift6 -------------------------------------------------------
+
+// let & var
+
+import Foundation
+
+// ============================================================================
+// MARK: - БЛОК 1: Базовое объявление (1-50)
+// ============================================================================
+
+// 1. Объявите константу для хранения вашего имени
+// let myName: String = "Maksim"
+// print("myName -> \(myName)")
+
+// 2. Объявите переменную для хранения вашего возраста
+// var myAge: Int = 42
+// print("myAge -> \(myAge)")
+
+// 3. Объявите константу для числа Пи (3.14)
+// let pi = 3.14
+// print("pi -> \(pi)")
+
+// 4. Объявите переменную для текущего года
+// var currentYear = 2026
+// print("currentYear -> \(currentYear)")
+
+// 5. Объявите константу для названия вашего города
+// let myCity: String = "Грязи"
+// print(myCity)
+
+// 6. Объявите переменную для количества братьев и сестер
+// var myBrotherAndDauthers = 10
+// print(myBrotherAndDauthers)
+
+// 7. Объявите константу для вашего номера телефона (как строку)
+// let myPhoneNumber: String = "89005918911"
+// print(myPhoneNumber)
+
+// 8. Объявите переменную для вашего веса (может меняться)
+// let myWeight: Double = 89.1
+// print(myWeight)
+
+// 9. Объявите константу для даты рождения (как строку)
+// let myYearBirth: String = "26.08.1983"
+// print(myYearBirth)
+
+// 10. Объявите переменную для текущего баланса на карте
+// let myBallanceBank: Double = 200100.9
+// print(myBallanceBank)
+
+// 11. Объявите константу для названия любимого фильма
+// let myFavoriteCinema: String = "Terminator - 2"
+// print(myFavoriteCinema)
+
+// 12. Объявите переменную для количества пройденных километров сегодня
+// var myRunToday: Double = 4.81
+// print(myRunToday)
+
+// 13. Объявите константу для валюты вашей страны (код, например "RUB")
+// let myCurrentMoneyRussia: String = "RUB"
+// print(myCurrentMoneyRussia)
+
+// 14. Объявите переменную для температуры на улице
+// let currentTemperature: Int = 2
+// print(currentTemperature)
+
+// 15. Объявите константу для вашего email адреса
+// let myEmail: String = "maksim.minakov.83@mail.ru"
+// print(myEmail)
+
+// 16. Объявите переменную для уровня заряда батареи (в процентах)
+// let myCurrentBatteryChangeTelephone: Int = 38
+// print(myCurrentBatteryChangeTelephone)
+
+// 17. Объявите константу для модели вашего телефона
+// let myPhone: String = "iPhone SE2"
+// print(myPhone)
+
+// 18. Объявите переменную для количества сообщений в чате
+// var currentMessage: String = "100200"
+// print(currentMessage)
+
+// 19. Объявите константу для названия вашей профессии
+// let myProfession: String = "Помошник машиниста"
+// print(myProfession)
+
+// 20. Объявите переменную для времени в пути до работы (в минутах)
+// var timeInWork: Int = 64
+// print(timeInWork)
+
+// 21. Объявите константу для названия улицы, где вы живете
+// let myCityLive: String = "Народная стройка"
+// print(myCityLive)
+
+// 22. Объявите переменную для количества выпитых стаканов воды
+// let currentWaterGlass: Int = 9
+// print(currentWaterGlass)
+
+// 23. Объявите константу для вашего роста (в см)
+// let myHeight: Int = 173
+// print(myHeight)
+
+// 24. Объявите переменную для текущей скорости интернета
+// var currentSpeadInthernet: Double = 71.20
+// print(currentSpeadInthernet)
+
+// 25. Объявите константу для названия операционной системы
+// let myOS: String = "macOs"
+// print(myOS)
+
+// 26. Объявите переменную для количества открытых вкладок в браузере
+// var currentOpenTab: Int = 3
+// print(currentOpenTab)
+
+// 27. Объявите константу для серийного номера устройства
+// let serialNumber: Int = 1234567890
+// print(serialNumber)
+
+// 28. Объявите переменную для громкости звука (0-100)
+// var volume: Int = 53
+// print(volume)
+
+// 29. Объявите константу для названия вашего питомца
+// let myAnimals: String = "Нет животного"
+// print(myAnimals)
+
+// 30. Объявите переменную для возраста вашего питомца
+// var myAnimalsAge: Int? = nil
+
+// 31. Объявите константу для цвета ваших глаз
+// let myColor: String = "серо - голубые"
+// print(myColor)
+
+// 32. Объявите переменную для количества шагов за сегодня
+// var currentNumberSteap: Int = 6581
+// print(currentNumberSteap)
+
+// 33. Объявите константу для названия вашего университета
+// let myUniversity: String = "LGPTU"
+// print(myUniversity)
+
+// 34. Объявите переменную для среднего балла в дипломе
+// let myVariablesCurrentDiplom: Double = 3.85
+// print(myVariablesCurrentDiplom)
+
+// 35. Объявите константу для номера группы или класса
+// let currentLearnGroup: String = "S981"
+// print(currentLearnGroup)
+
+// 36. Объявите переменную для количества часов сна прошлой ночью
+// var mySon: Int = 4
+// print(mySon)
+
+// 37. Объявите константу для названия любимой книги
+// let myFavoriteBook: String = "Swift6))"
+// print(myFavoriteBook)
+
+// 38. Объявите переменную для количества прочитанных страниц сегодня
+// var myBookReadCurrent: Int = 20
+// print(myBookReadCurrent)
+
+// 39. Объявите константу для названия любимой песни
+// var myfavoriteSong: String = "Beautifal child"
+// print(myfavoriteSong)
+
+// 40. Объявите переменную для длительности прослушивания музыки (мин)
+// var musicHours: Int = 120
+// print(musicHours)
+
+// 41. Объявите константу для названия кофейни рядом с домом
+// let coffeInHouse: String = "Americano"
+// print(coffeInHouse)
+
+// 42. Объявите переменную для стоимости чашки кофе
+// var currentMoneyCoffePrice: Double = 50.0
+// print(currentMoneyCoffePrice)
+
+// 43. Объявите константу для названия бренда одежды
+// let myClothesBrand: String = "Adidas"
+// print(myClothesBrand)
+
+// 44. Объявите переменную для размера одежды (числовое значение)
+// var myClotherBrandSize: Int = 52
+// print(myClotherBrandSize)
+
+// 45. Объявите константу для названия спортивного клуба
+// let sportClub: String = "Run"
+// print(sportClub)
+
+// 46. Объявите переменную для количества тренировок в неделю
+// var sportTreningCount: Int = 2
+// print(sportTreningCount)
+
+// 47. Объявите константу для названия языка программирования
+// let myFavoriteLanguageProgramming: String = "Swift"
+// print(myFavoriteLanguageProgramming)
+
+// 48. Объявите переменную для количества написанных строк кода
+// var numberCountLinesCode: Int = 10000
+// print(numberCountLinesCode)
+
+// 49. Объявите константу для названия редактора кода
+// let nameTextEditor: String = "xCode"
+// print(nameTextEditor)
+
+// 50. Объявите переменную для количества ошибок в коде
+// var numberErrorLinesCode: Int = 100
+// print(numberErrorLinesCode)
+
+// ============================================================================
+// MARK: - БЛОК 2: Выбор между let и var (51-100)
+// ============================================================================
+
+// 51. Объявите сущность для хранения ID пользователя (не меняется)
+// let userId: String = UUID().uuidString
+// print(userId)
+
+// 52. Объявите сущность для хранения статуса онлайн/офлайн (меняется)
+// var statusUser: Bool = true
+// print(statusUser)
+
+// 53. Объявите сущность для хранения версии приложения (не меняется для релиза)
+// let versionProgramm: Double = 1.0
+// print(versionProgramm)
+
+// 54. Объявите сущность для хранения количества лайков (меняется)
+// var likeCount: Int = 1
+// print(likeCount)
+
+// 55. Объявите сущность для хранения URL аватарки (может обновиться)
+// var urlAfatarProfile: String = "https://example.com/avatar.jpg  "
+// print(urlAfatarProfile)
+
+// 56. Объявите сущность для хранения даты регистрации (не меняется)
+// let registerDate: Date = Date()
+// print(registerDate)
+
+// 57. Объявите сущность для хранения последнего времени входа (меняется)
+// var timeLastLogin: Date = Date()
+// print(timeLastLogin)
+
+// 58. Объявите сущность для хранения названия тарифного плана (редко меняется, но можно var)
+// var planName: String = "Premium"
+// print(planName)
+
+// 59. Объявите сущность для хранения остатка дней подписки (меняется)
+// var dayCountPlan: Int = 30
+// print(dayCountPlan)
+
+// 60. Объявите сущность для хранения промокода (не меняется после применения)
+// let codePromo: String = "Sale2026"
+// print(codePromo)
+
+// 61. Объявите сущность для хранения текущей скидки (может измениться)
+// var salePercent: Double = 10.0
+// print(salePercent)
+
+// 62. Объявите сущность для хранения итоговой суммы заказа (считается)
+// var currentPriceProduct: Double = 10.4
+// print(currentPriceProduct)
+
+// 63. Объявите сущность для хранения адреса доставки (может измениться)
+// var currentCity: String = "Народная стройка д14 кв14"
+// print(currentCity)
+
+// 64. Объявите сущность для хранения номера заказа (не меняется)
+// let numberPozition: Int = 1
+// print(numberPozition)
+
+// 65. Объявите сущность для хранения статуса доставки (меняется)
+// var statusPosition: String = "В пути"
+// print(statusPosition)
+
+// 66. Объявите сущность для хранения имени курьера (назначается)
+// let nameCurrentCourier: String = "Петр Петров"
+// print(nameCurrentCourier)
+
+// 67. Объявите сущность для хранения телефона курьера (не меняется)
+// let numberPhoneCourier: Int = 89005918911
+// print(numberPhoneCourier)
+
+// 68. Объявите сущность для хранения координаты широты (может обновляться GPS)
+// var gpsPosition: String = "55.755824, 37.617628"
+// print(gpsPosition)
+
+// 69. Объявите сущность для хранения координаты долготы (может обновляться GPS)
+// var gpsPosition2: String = "11.576466, 43.125131"
+// print(gpsPosition2)
+
+// 70. Объявите сущность для хранения названия страны (не меняется)
+// let currentPosition: String = "Russia"
+// print(currentPosition)
+
+// 71. Объявите сущность для хранения текущего языка интерфейса (меняется пользователем)
+// var languageInterface: String = "eng"
+// print(languageInterface)
+
+// 72. Объявите сущность для хранения размера шрифта (меняется в настройках)
+// var sizeFonts: String = "10"
+// print(sizeFonts)
+
+// 73. Объявите сущность для хранения включен ли темный режим (меняется)
+// var isDarkMode: Bool = false
+// print(isDarkMode)
+
+// 74. Объявите сущность для хранения токена авторизации (обновляется)
+// var tocenAutorization: String = "123456789"
+// print(tocenAutorization)
+
+// 75. Объявите сущность для хранения срока действия токена (не меняется для текущего)
+// let tocenLifeCicle: Int = 10
+// print(tocenLifeCicle)
+
+// 76. Объявите сущность для хранения количества попыток ввода пароля (меняется)
+// var countInputPassword: Int = 5
+// print(countInputPassword)
+
+// 77. Объявите сущность для хранения заблокирован ли аккаунт (меняется)
+// var profileIsBlocked: Bool = false
+// print(profileIsBlocked)
+
+// 78. Объявите сущность для хранения даты блокировки (устанавливается раз)
+// let dateBlock: Date = Date()
+// print(dateBlock)
+
+// 79. Объявите сущность для хранения причины блокировки (текст, не меняется)
+// let blockedSeason: String = "мат"
+// print(blockedSeason)
+
+// 80. Объявите сущность для хранения email поддержки (константа)
+// let emailSupport: String = "support@example.com"
+// print(emailSupport)
+
+// 81. Объявите сущность для хранения номера поддержки (константа)
+// let numberSupport: Int = 8900111333
+// print(numberSupport)
+
+// 82. Объявите сущность для хранения ссылки на документацию (константа)
+// let linksDocumentation: String = "https://example.com/docs  "
+// print(linksDocumentation)
+
+// 83. Объявите сущность для хранения текущего экрана приложения (меняется)
+// var currentViewApp: Int = 1
+// print(currentViewApp)
+
+// 84. Объявите сущность для хранения заголовка текущего экрана (меняется)
+// var titleViewCurrent: String = "Главная"
+// print(titleViewCurrent)
+
+// 85. Объявите сущность для хранения иконки текущего экрана (константа для экрана)
+// let iconViewCurrent: String = "🏠"
+// print(iconViewCurrent)
+
+// 86. Объявите сущность для хранения прогресса загрузки (0-100, меняется)
+// var progressBar: Int = 50
+// print(progressBar)
+
+// 87. Объявите сущность для хранения общего размера файла (не меняется)
+// let appSize: Int = 102400000
+// print(appSize)
+
+// 88. Объявите сущность для хранения скорости скачивания (меняется)
+// var speedDownload: Int = 1000000
+// print(speedDownload)
+
+// 89. Объявите сущность для хранения оставшегося времени (меняется)
+// var timeDownload: Int = 3600
+// print(timeDownload)
+
+// 90. Объявите сущность для хранения названия файла (не меняется)
+// let titleFile: String = "titleFile"
+// print(titleFile)
+
+// 91. Объявите сущность для хранения расширения файла (не меняется)
+// let fileExtension: String = "txt"
+// print(fileExtension)
+
+// 92. Объявите сущность для хранения пути к файлу (может измениться)
+// var filePath: String = "pathFile"
+// print(filePath)
+
+// 93. Объявите сущность для хранения даты создания файла (не меняется)
+// let dateCreateFile: String = "7.03.2026"
+// print(dateCreateFile)
+
+// 94. Объявите сущность для хранения даты изменения файла (меняется)
+// var dateUpdateFile: String = "7.03.2026"
+// print(dateUpdateFile)
+
+// 95. Объявите сущность для хранения автора файла (не меняется)
+// let authorFile: String = "Александр Чаусов"
+// print(authorFile)
+
+// 96. Объявите сущность для хранения прав доступа (могут меняться)
+// var accessFile: String = "Чтение/Запись"
+// print(accessFile)
+
+// 97. Объявите сущность для хранения пароля от Wi-Fi (константа для сети)
+// let passwordWifi: String = "10101010"
+// print(passwordWifi)
+
+// 98. Объявите сущность для хранения названия сети Wi-Fi (константа)
+// let nameWifi: String = "nameWifi"
+// print(nameWifi)
+
+// 99. Объявите сущность для хранения уровня сигнала (меняется)
+// var levelSignal: Int = 70
+// print(levelSignal)
+
+// 100. Объявите сущность для хранения IP адреса устройства (может меняться)
+// var ipAddress: String = "10101010101010101010101100101"
+// print(ipAddress)
+
+// ============================================================================
+// MARK: - БЛОК 3: Именование переменных (CamelCase) (101-150)
+// ============================================================================
+
+// 101. Исправьте имя: user_name (сделайте по стандарту Swift)
+// var userSwift: String? = "Александр"
+// print(userSwift ?? "")
+
+// 102. Исправьте имя: UserName (сделайте по стандарту Swift для переменной)
+// var userName: String = "Maksim"
+// print(userName)
+
+// 103. Исправьте имя: USERAGE (сделайте читаемым)
+// var userAge: Int = 39
+// print(userAge)
+
+// 104. Исправьте имя: my-var (уберите дефис)
+// var myVar: String = "Hello World!"
+// print(myVar)
+
+// 105. Исправьте имя: 1stPlace (цифра не может быть в начале)
+// var stPlace1: String = "First"
+// print(stPlace1)
+
+// 106. Объявите переменную: общее количество пользователей
+// var countUserCurrent: Int = 2
+// print(countUserCurrent)
+
+// 107. Объявите переменную: максимальная допустимая скорость
+// var maxSpeed: Int = 90
+// print(maxSpeed)
+
+// 108. Объявите переменную: минимальная сумма пополнения
+// var minCurrentSumm: Int = 10
+// print(minCurrentSumm)
+
+// 109. Объявите переменную: текущая дата и время
+// var currentDateAndTime: Date = Date()
+// print(currentDateAndTime)
+
+// 110. Объявите переменную: идентификатор устройства
+// var idDevice: String = "macBook"
+// print(idDevice)
+
+// 111. Объявите переменную: включены ли уведомления
+// var isNotificationEnabled: Bool = true
+// print(isNotificationEnabled)
+
+// 112. Объявите переменную: количество ошибок при загрузке
+// var currentErrorCoundIsLoaded: Int = 0
+// print(currentErrorCoundIsLoaded)
+
+// 113. Объявите переменную: путь к домашней директории
+// var pathHomeDirectory: String = "/"
+// print(pathHomeDirectory)
+
+// 114. Объявите переменную: название компании разработчика
+// var companyDeveloper: String = "Apple"
+// print(companyDeveloper)
+
+// 115. Объявите переменную: версия операционной системы
+// var versionOs: String = "26.3"
+// print(versionOs)
+
+// 116. Объявите переменную: доступный объем памяти
+// var memoryCount: Int = 8
+// print(memoryCount)
+
+// 117. Объявите переменную: использованный объем памяти
+// var currentMemoryCount: Int = 6
+// print(currentMemoryCount)
+
+// 118. Объявите переменную: процент использования процессора
+// var percentMemoryCount: Int = 75
+// print(percentMemoryCount)
+
+// 119. Объявите переменную: температура процессора
+// var temperatureProcessur: Int = 78
+// print(temperatureProcessur)
+
+// 120. Объявите переменную: скорость вращения вентилятора
+// var speedRotationVentilator: Int = 1200
+// print(speedRotationVentilator)
+
+// 121. Объявите переменную: уровень яркости экрана
+// var viewLight: Int = 89
+// print(viewLight)
+
+// 122. Объявите переменную: время до автоблокировки
+// let timeIsBlocked: TimeZone = .current
+// print(timeIsBlocked)
+
+// 123. Объявите переменную: название рингтона
+// var nameSongRingtone: String = "qwerty"
+// print(nameSongRingtone)
+
+// 124. Объявите переменную: включен ли режим полета
+// var isFlight: Bool = false
+// print(isFlight)
+
+// 125. Объявите переменную: включен ли Bluetooth
+// var isBlothous: Bool = true
+// print(isBlothous)
+
+// 126. Объявите переменную: подключенные устройства Bluetooth
+// var isConnectedDevices: [String] = ["qwerty", "asdfg"]
+// print(isConnectedDevices)
+
+// 127. Объявите переменную: текущий режим энергосбережения
+// var currentEnergy: Int = 50
+// print(currentEnergy)
+
+// 128. Объявите переменную: остаток времени работы батареи
+// var timeBattery: Int = 100
+// print(timeBattery)
+
+// 129. Объявите переменную: количество циклов зарядки
+// var cicleChangeBattery: Int = 100
+// print(cicleChangeBattery)
+
+// 130. Объявите переменную: состояние здоровья батареи
+// var currentBatteryHealth: Int = 100
+// print(currentBatteryHealth)
+
+// 131. Объявите переменную: название оператора связи
+// let nameOperator: String = "qwerty"
+// print(nameOperator)
+
+// 132. Объявите переменную: уровень сигнала сотовой связи
+// var signalMobile: Int = 100
+// print(signalMobile)
+
+// 133. Объявите переменную: тип сети (4G, 5G, LTE)
+// var typeSignalMobile: String = "lte"
+// print(typeSignalMobile)
+
+// 134. Объявите переменную: количество переданных данных
+// var dateCountData: Double = 1002000
+// print(dateCountData)
+
+// 135. Объявите переменную: количество полученных данных
+// var dateUpload: Double = 200400
+// print(dateUpload)
+
+// 136. Объявите переменную: лимит трафика на месяц
+// let limitTraffic: Double = 1000000
+// print(limitTraffic)
+
+// 137. Объявите переменную: остаток трафика на месяц
+// var trafficCount: Double = 1000000
+// print(trafficCount)
+
+// 138. Объявите переменную: дата сброса трафика
+// let dataResetTraffic: String = "10.01.2021"
+// print(dataResetTraffic)
+
+// 139. Объявите переменную: стоимость дополнительного гигабайта
+// var priceGb: Int = 10
+// print(priceGb)
+
+// 140. Объявите переменную: номер лицевого счета
+// var numberLZ: Int = 101010
+// print(numberLZ)
+
+// 141. Объявите переменную: текущий тарифный план
+// var currentTarifePlain: String = "current"
+// print(currentTarifePlain)
+
+// 142. Объявите переменную: дата подключения тарифа
+// var dataOnTarife: String = "10.01.2021"
+// print(dataOnTarife)
+
+// 143. Объявите переменную: список подключенных услуг
+// var listPrice: String = "internet,tv,tv_box"
+// print(listPrice)
+
+// 144. Объявите переменную: стоимость подписки в месяц
+// var priceTarifeMounth: Double = 10.0
+// print(priceTarifeMounth)
+
+// 145. Объявите переменную: дата следующего списания
+// var dateNextPrice: Date = Date()
+// print(dateNextPrice)
+
+// 146. Объявите переменную: способ оплаты по умолчанию
+// var pricePay: String = "Cart"
+// print(pricePay)
+
+// 147. Объявите переменную: последние 4 цифры карты
+// var downFourCart: String = "1234"
+// print(downFourCart)
+
+// 148. Объявите переменную: срок действия карты
+// var cardLifeCicle: String = "10.10.2027"
+// print(cardLifeCicle)
+
+// 149. Объявите переменную: имя держателя карты
+// var nameCurrentUserCard: String = "Maksim Minakov"
+// print(nameCurrentUserCard)
+
+// 150. Объявите переменную: банк эмитент карты
+// var bankEmitentCard: String = "Alfa"
+// print(bankEmitentCard)
+
+// ============================================================================
+// MARK: - БЛОК 4: Явное указание типа vs Вывод типа (151-200)
+// ============================================================================
+
+// 151. Объявите константу строки с явным указанием типа
+// let stroke: String = "Max"
+// print(stroke)
+
+// 152. Объявите константу строки без указания типа (вывод)
+// let line = "String"
+// print(line)
+
+// 153. Объявите переменную целого числа с явным указанием типа
+// var intVariable: Int = 1000
+// print(intVariable)
+
+// 154. Объявите переменную целого числа без указания типа
+// var intCount = 5
+// print(intCount)
+
+// 155. Объявите константу числа с плавающей точкой с явным типом
+// let intDouble: Double = 1.2
+// print(intDouble)
+
+// 156. Объявите константу числа с плавающей точкой без явного типа
+// let intDoubleNoType = 3.0
+// print(intDoubleNoType)
+
+// 157. Объявите переменную булевого значения с явным типом
+// var isBool: Bool = true
+// print(isBool)
+
+// 158. Объявите переменную булевого значения без явного типа
+// var isBoolNoType = false
+// print(isBoolNoType)
+
+// 159. Объявите константу, где тип должен быть Double, а не Float
+// let constDouble: Double = 3.14
+// print(constDouble)
+
+// 160. Объявите переменную, где тип должен быть Int, а не Double
+// var intVariableNotDouble: Int = 4
+// print(intVariableNotDouble)
+
+// 161. Объявите константу с типом String, содержащую число
+// let strNumber: String = "1"
+// print(strNumber)
+
+// 162. Объявите переменную с типом Int, содержащую 0
+// var zeroInt: Int = 0
+// print(zeroInt)
+
+// 163. Объявите константу с типом Bool, значение true
+// let trueTypeBool: Bool = true
+// print(trueTypeBool)
+
+// 164. Объявите переменную с типом Bool, значение false
+// var falseTypeBool: Bool = false
+// print(falseTypeBool)
+
+// 165. Объявите переменную, инициализированную результатом сложения (тип Int)
+// var sumInt: Int = 1 + 2
+// print(sumInt)
+
+// 166. Объявите переменную, инициализированную результатом деления (тип Double)
+// var deviderDouble: Double = 10.0 / 5.0
+// print(deviderDouble)
+
+// 167. Объявите константу, явно указав тип Any (для понимания)
+// let numberAny: Any = 10
+// print(type(of: numberAny))
+
+// 168. Объявите переменную, явно указав тип String? (опционал, просто объявление)
+// var optionalString: String?
+// print(optionalString ?? "sdf")
+
+// 169. Объявите константу с явным типом, но значением nil (опционал)
+// let optionalNil: String? = nil
+// print(optionalNil ?? "dfggh")
+
+// 170. Объявите переменную без типа, присвоив строку "Hello"
+// var helloNoType = "Hello"
+// print(helloNoType)
+
+// 171. Объявите переменную без типа, присвоив число 100
+// var numberNoType = 100
+// print(numberNoType)
+
+// 172. Объявите переменную без типа, присвоив число 3.14
+// var piNoType = 3.14
+// print(piNoType)
+
+// 173. Объявите переменную без типа, присвоив false
+// var variableBoolNoType = false
+// print(variableBoolNoType)
+
+// 174. Объявите константу с явным типом Int, значение 42
+// let numberInt: Int = 42
+// print(numberInt)
+
+// 175. Объявите константу с явным типом String, значение "Swift"
+// let strokeString: String = "Swift"
+// print(strokeString)
+
+// 176. Объявите переменную с явным типом Double, значение 0.0
+// var variableDouble: Double = 0.0
+// print(variableDouble)
+
+// 177. Объявите переменную с явным типом Bool, значение true
+// var variableBoolType: Bool = true
+// print(variableBoolType)
+
+// 178. Попробуйте объявить переменную без значения (ошибка, изучите почему)
+// var variableNoValue = "Отсутствует аннотация типа в шаблоне"
+// print(variableNoValue)
+
+// 179. Объявите переменную с типом Int, присвойте 10, потом 20
+// var intValue = 10
+// intValue = 20
+// print(intValue)
+
+// 180. Объявите константу с типом Int, присвойте 10 (попытка изменить вызовет ошибку)
+// let notVariableInt = 10
+// notVariableInt = 11
+// print(notVariableInt)
+
+// 181. Объявите переменную с явным типом String, пустая строка
+// var strokeZeroVariable: String = ""
+// print(strokeZeroVariable)
+
+// 182. Объявите константу с явным типом Double, число Пи
+// let piDouble: Double = .pi
+// print(piDouble)
+
+// 183. Объявите переменную с выводом типа, очень длинное число
+// var typeOfLongInt = 1234567880
+// print(type(of: typeOfLongInt))
+
+// 184. Объявите константу с выводом типа, короткий текст
+// let textString = "air"
+// print(type(of: textString))
+
+// 185. Объявите переменную с явным типом, значение совпадает с типом
+// var textString2: String = "String"
+// print(textString2)
+
+// 186. Объявите переменную с явным типом, значение не совпадает (ошибка)
+// var variableString: String = 1
+// print(variableString)
+
+// 187. Объявите константу, используя вывод типа для числа
+// print(type(of: 3))
+
+// 188. Объявите константу, используя вывод типа для текста
+// print(type(of: "Swift"))
+
+// 189. Объявите переменную, используя вывод типа для логического значения
+// print(type(of: true))
+
+// 190. Объявите переменную, используя явный тип для логического значения
+// print(type(of: Bool()))
+
+// 191. Сравните объявление с явным типом и без (визуально)
+// let variable: String = "Maksim"
+// let variableNotType = "Maksim"
+// print(variable == variableNotType)
+
+// 192. Объявите переменную типа Int8 (малое число)
+// var variableInt8: Int8 = 4
+// print(variableInt8)
+
+// 193. Объявите переменную типа UInt (беззнаковое)
+// var variableUInt: UInt = 4
+// print(variableUInt)
+
+// 194. Объявите константу типа String, содержащую эмодзи
+// let strEmodz: String = "😀"
+// print(strEmodz)
+
+// 195. Объявите переменную типа Double, отрицательное число
+// var variableDoubleMinusNumber: Double = -3.14
+// print(variableDoubleMinusNumber)
+
+// 196. Объявите константу типа Bool, результат сравнения 5 > 3
+// let boolCompare: Bool = 5 > 3
+// print(boolCompare)
+
+// 197. Объявите переменную типа Int, результат 10 + 5
+// var sumInt105: Int = 10 + 5
+// print(sumInt105)
+
+// 198. Объявите константу типа String, конкатенация "A" + "B"
+// let sumAB: String = "A" + "B"
+// print(sumAB)
+
+// 199. Объявите переменную типа Double, деление 10 / 3
+// let deviderDouble103: Double = 10 / 3
+// print(deviderDouble103)
+
+// 200. Объявите константу типа Int, умножение 4 * 4
+// let multiplyInt44: Int = 4 * 4
+// print(multiplyInt44)
+
+// ============================================================================
+// MARK: - БЛОК 5: Реальные сценарии iOS разработки (201-250)
+// ============================================================================
+// ... задачи 201-300 остаются без изменений, так как решения ещё не добавлены
