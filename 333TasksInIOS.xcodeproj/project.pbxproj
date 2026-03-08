@@ -19,7 +19,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		85CCEE3A2E97AFE50037D702 /* 333TasksInIOS */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = 333TasksInIOS; sourceTree = BUILT_PRODUCTS_DIR; };
+		85CCEE3A2E97AFE50037D702 /* 333TasksInIOS */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; name = 333TasksInIOS; path = /Users/application/learnSwift/333TasksInIOS/build/Debug/333TasksInIOS; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -45,16 +45,7 @@
 			isa = PBXGroup;
 			children = (
 				85CCEE3C2E97AFE50037D702 /* 333TasksInIOS */,
-				85CCEE3B2E97AFE50037D702 /* Products */,
 			);
-			sourceTree = "<group>";
-		};
-		85CCEE3B2E97AFE50037D702 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				85CCEE3A2E97AFE50037D702 /* 333TasksInIOS */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -107,7 +98,7 @@
 			mainGroup = 85CCEE312E97AFE50037D702;
 			minimizedProjectReferenceProxies = 1;
 			preferredProjectObjectVersion = 77;
-			productRefGroup = 85CCEE3B2E97AFE50037D702 /* Products */;
+			productRefGroup = 85CCEE312E97AFE50037D702;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
