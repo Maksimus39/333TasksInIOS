@@ -2481,7 +2481,7 @@ import Foundation
 //
 //Вы можете вернуть ответ в любом порядке.
 //
-// 
+//
 //
 //Пример 1:
 //
@@ -2501,17 +2501,17 @@ import Foundation
 //class Solution {
 //    func twoSum(_ nums: [Int], _ target: Int) -> [Int] {
 //        var dict = [Int: Int]()
-//        
+//
 //        for (i, num) in nums.enumerated() {
 //            let complement = target - num
-//            
+//
 //            if let index = dict[complement] {
 //                return [index, i]
 //            }
-//            
+//
 //            dict[num] = i
 //        }
-//        
+//
 //        return []
 //    }
 //}
@@ -3781,241 +3781,134 @@ import Foundation
 
 // ============================================================================
 
-
 // ============================================================================
 // MARK: - БЛОК 1: Создание и интерполяция (1-10)
 // ============================================================================
 
 // 1. Объявите константу строки с вашим именем
-let myName = "Maksim"
-print(myName)
-
+// let myName = "Maksim"
+// print(myName)
 
 // 2. Объявите переменную строки с вашим городом
-var myCity = "Lipeck"
-print(myCity)
-
+// var myCity = "Lipeck"
+// print(myCity)
 
 // 3. Создайте пустую строку двумя разными способами
-var strZero: String = ""
-var strOne: String = String()
-
+// var strZero: String = ""
+// var strOne: String = String()
 
 // 4. Объедините "Hello" и "World" через оператор + (с пробелом)
-let hello = "Hello"
-let world = "World"
-let helloWorld = hello + " " + world
-print(helloWorld)
-
+// let hello = "Hello"
+// let world = "World"
+// let helloWorld = hello + " " + world
+// print(helloWorld)
 
 // 5. Добавьте "!" к строке "Swift" используя оператор +=
-var sw = "Swift"
-sw += "!"
-print(sw)
-
+// var sw = "Swift"
+// sw += "!"
+// print(sw)
 
 // 6. Создайте строку через интерполяцию: "Мне X лет" (где X — переменная age: Int)
-var age = 42
-print("Мне \(age) года")
-
+// var age = 42
+// print("Мне \(age) года")
 
 // 7. Создайте мультилайн-строку (на 3 строки) используя три кавычки """
-var multLine = """
-    multLine
-    """
-print(multLine)
+// var multLine = """
+//     Первая строка
+//     Вторая строка
+//     Третья строка
+//     """
+// print(multLine)
 
-
-// 8. Создайте строку с кавычками внутри: Он сказал "Привет"
-print("Он сказал `Привет`")
-
+// 8. ✅ ИСПРАВЛЕНО: Экранирование кавычек через \"
+// print("Он сказал \"Привет\"")
 
 // 9. Создайте raw string (сырую строку) с обратным слэшем \ без экранирования
-print(#"Я сырая строка"#)
+// print(#"Путь C:\User\Files"#)
 
-
-// 10. Преобразуйте число 42 в строку (используя .description или String())
-var num = 42
-print(String(num))
-print(type(of: num))
-
+// 10. Преобразуйте число 42 в строку
+// var num = 42
+// print(String(num))
+// print(type(of: num))
 
 // ============================================================================
 // MARK: - БЛОК 2: Доступ к символам и итерация (11-20)
 // ============================================================================
 
-// 11. Объявите строку "Swift" и получите первый символ (свойство first)
-var swift = "Swift"
-let s = swift.first
-print(s ?? "s")
+// 11. Первый символ
+// var swift = "Swift"
+// let s = swift.first
+// print(s ?? "s")
 
+// 12. Последний символ
+// var lastString = "Programming"
+// let prS = lastString.last
+// print(prS ?? "g")
 
-// 12. Получите последний символ строки "Programming" (свойство last)
-var lastString = "Programming"
-let prS = lastString.last
-print(prS ?? "g")
+// 13. Цикл for-in
+// var simbol = "Hello"
+// for char in simbol {
+//     print(char)
+// }
 
+// 14. Символ по индексу 2
+// var simbol2 = "Swift"
+// let index2 = simbol2.index(simbol2.startIndex, offsetBy: 2)
+// let s2 = simbol2[index2]
+// print("s2 -> \(s2)")
 
-// 13. Выведите все символы строки "Hello" в цикле for-in
-var simbol = "Hello"
+// 15. Массив [Character]
+// var arrayApple = "Apple"
+// var charArray = Array(arrayApple)
+// print(charArray)
 
-for s in simbol {
-    print(s)
-}
+// 16. Массив обратно в String
+// print(String(charArray))
 
+// 17. Количество символов
+// var strCount = "Hello World"
+// print(strCount.count)
 
-// 14. Получите символ по индексу 2 в строке "Swift" (используя index(_:offsetBy:))
-var simbol2 = "Swift"
-var res2 = simbol.index(simbol.startIndex, offsetBy: 2)
-let s2 = simbol2[res2]
-print("s2 -> \(s2)")
+// 18. Проверка на пустоту (переименовали переменную, чтобы не путать с булевым типом)
+// var isEmptyStr = "Swift"
+// print(isEmptyStr.isEmpty)
 
+// 19. startIndex и endIndex
+// let startEndIndex = "Test"
+// print(startEndIndex.startIndex)
+// print(startEndIndex.endIndex)
 
-// 15. Создайте массив [Character] из строки "Apple"
-var arrayApple = "Apple"
-var charArray = Array(arrayApple)
-print(charArray)
-
-
-// 16. Преобразуйте массив [Character] ['S', 'w', 'i', 'f', 't'] обратно в String
-print(String(charArray))
-
-
-
-// 17. Получите количество символов в строке "Hello World" (свойство count)
-var strCount = "Hello World"
-print(strCount.count)
-
-
-// 18. Проверьте, пустая ли строка (свойство isEmpty)
-var isEmpty = "Swift"
-print(isEmpty.isEmpty)
-
-
-
-// 19. Получите startIndex и endIndex строки "Test"
-let startEndIndex = "Test"
-print(startEndIndex.startIndex)
-print(startEndIndex.endIndex)
-
-
-// 20. Сдвиньте startIndex строки "Swift" на 2 позиции вперёд (index(_:offsetBy:))
-let indexStart = "Swift"
-let index2 = indexStart.index(indexStart.startIndex, offsetBy: 2)
-print(index2)
-
+// 20. Сдвиг индекса
+// let indexStart = "Swift"
+// let shiftedIndex = indexStart.index(indexStart.startIndex, offsetBy: 2)
+// print(shiftedIndex)
 
 // ============================================================================
 // MARK: - БЛОК 3: Substring и диапазоны (21-30)
 // ============================================================================
 
-// 21. Получите подстроку "Swift" из "Hello Swift World" через диапазон индексов
-var indexRange = "Hello Swift World"
-let subString = indexRange[indexRange.index(indexRange.startIndex, offsetBy: 6)..<indexRange.index(indexRange.startIndex, offsetBy: 11)]
-print(subString)
+// 21. Подстрока "Swift" из "Hello Swift World"
+// let indexRange = "Hello Swift World"
+// let startIdx = indexRange.index(indexRange.startIndex, offsetBy: 6)
+// let endIdx = indexRange.index(indexRange.startIndex, offsetBy: 11)
+// let subString = indexRange[startIdx..<endIdx]
+// print(subString)
 
+// 22. Первые 3 символа
+// var prg = "Programming"
+// let resSimbol = prg[prg.startIndex..<prg.index(prg.startIndex, offsetBy: 3)]
+// print(resSimbol)
 
+// 23. ✅ ИСПРАВЛЕНО: Последние 4 символа (универсальный способ .suffix)
+// var lastSymbol = "SwiftLang"
+// let resLastSymbol = lastSymbol.suffix(4)
+// print("resLastSymbol -> \(resLastSymbol)")
 
-// 22. Получите первые 3 символа строки "Programming"
-var prg = "Programming"
-let resSimbol = prg[prg.index(prg.startIndex, offsetBy: 0)..<prg.index(prg.startIndex, offsetBy: 3)]
-print(resSimbol)
+// 24. Подстрока от 2 до 5
+// let indexString = "Hello World"
+// let subStringIndex = indexString[indexString.index(indexString.startIndex, offsetBy: 2)..<indexString.index(indexString.startIndex, offsetBy: 5)]
+// print(subStringIndex)
 
-
-// 23. Получите последние 4 символа строки "SwiftLang"
-var lastSymbol = "SwiftLang"
-let resLastSymbol = lastSymbol[lastSymbol.index(lastSymbol.startIndex, offsetBy: 5)..<lastSymbol.index(lastSymbol.startIndex, offsetBy: 9)]
-print("resLastSymbol -> \(resLastSymbol)")
-
-
-
-// 24. Извлеките подстроку от индекса 2 до 5 (не включая 5) из "Hello World"
-
-
-
-// 25. Преобразуйте Substring обратно в String (явная инициализация)
-// 26. Получите подстроку до первого пробела в "John Doe"
-// 27. Получите подстроку после символа "@" в "user@example.com"
-// 28. Разделите строку "1,2,3,4,5" по запятой (метод components(separatedBy:))
-// 29. Объедините массив ["A", "B", "C"] в одну строку через дефис (joined)
-// 30. Получите первые 5 символов строки, только если она длиннее 5 символов
-
-// ============================================================================
-// MARK: - БЛОК 4: Методы изменения и форматирования (31-40)
-// ============================================================================
-
-// 31. Преобразуйте строку "hello" в верхний регистр (uppercased)
-// 32. Преобразуйте строку "SWIFT" в нижний регистр (lowercased)
-// 33. Преобразуйте "hello world" так, чтобы каждое слово начиналось с заглавной (capitalized)
-// 34. Удалите пробелы в начале и конце строки "  Hello  " (trimmingCharacters)
-// 35. Удалите только пробелы в начале строки "  Hello" (prefix)
-// 36. Удалите только пробелы в конце строки "Hello  " (suffix)
-// 37. Замените все пробелы на подчёркивания в "Hello World Test" (replacingOccurrences)
-// 38. Замените первое вхождение "cat" на "dog" в "I have a cat and a cat" (range + replacing)
-// 39. Удалите все цифры из строки "abc123def456" (filter)
-// 40. Повторите строку "Ha" 5 раз (оператор * для String)
-
-// ============================================================================
-// MARK: - БЛОК 5: Поиск, сравнение и продвинутые операции (41-50)
-// ============================================================================
-
-// 41. Проверьте, содержит ли "Hello World" подстроку "World" (contains)
-// 42. Проверьте, начинается ли "Swift Programming" с "Swift" (hasPrefix)
-// 43. Проверьте, заканчивается ли "file.swift" на ".swift" (hasSuffix)
-// 44. Найдите индекс первого вхождения "o" в "Hello" (firstIndex(of:))
-// 45. Найдите диапазон подстроки "World" в "Hello World" (range(of:))
-// 46. Сравните "Swift" и "swift" без учёта регистра (caseInsensitiveCompare)
-// 47. Подсчитайте количество вхождений буквы "l" в "Hello World"
-// 48. Разбейте "one,two,three" по запятой и получите количество элементов
-// 49. Создайте строку с эмодзи "👨‍👩‍👦" и получите её count (обратите внимание на результат)
-// 50. Отсортируйте символы строки "swift" в алфавитном порядке (sorted + String)
-
-// ============================================================================
-// MARK: - ПРИМЕРЫ РЕШЕНИЙ (для первых задач)
-// ============================================================================
-
-// Задача 1:
-// let myName = "Максим"
-
-// Задача 4:
-// let greeting = "Hello" + " " + "World"
-// print(greeting)
-
-// Задача 6:
-// let age = 25
-// let info = "Мне \(age) лет"
-// print(info)
-
-// Задача 11:
-// let str = "Swift"
-// let firstChar = str.first // Optional("S")
-
-// Задача 31:
-// let lower = "hello"
-// let upper = lower.uppercased() // "HELLO"
-
-// ============================================================================
-// MARK: - ПОДСКАЗКИ ДЛЯ СЛОЖНЫХ ЗАДАЧ
-// ============================================================================
-
-// Задача 14 (доступ по индексу):
-// let str = "Swift"
-// let index = str.index(str.startIndex, offsetBy: 2)
-// let char = str[index] // "i"
-
-// Задача 27 (после @):
-// let email = "user@example.com"
-// if let atIndex = email.firstIndex(of: "@") {
-//     let afterAt = email[email.index(after: atIndex)...]
-//     let result = String(afterAt) // "example.com"
-// }
-
-// Задача 49 (эмодзи и count):
-// let emoji = "👨‍👩‍👦" // Семья: это 1 графема, но несколько Unicode scalar
-// print(emoji.count) // Может быть не то, что вы ожидаете!
-
-// Задача 50 (сортировка):
-// let str = "swift"
-// let sorted = String(str.sorted()) // "fistw"
-
-// ============================================================================
+// 25. Substring в String (явная конвертация)
+// let greeting = "Maksim"
+// let sub = greeting.prefix(
