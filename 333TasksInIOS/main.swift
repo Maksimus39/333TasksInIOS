@@ -3912,3 +3912,278 @@ import Foundation
 // 25. Substring в String (явная конвертация)
 // let greeting = "Maksim"
 // let sub = greeting.prefix(
+
+
+// ----------------------------- Типы коллекций ------------------
+
+// ============================================================================
+// MARK: - БЛОК 1: Массивы (Array) - Создание и доступ (1-12)
+// ============================================================================
+
+// 1. Объявите пустой массив строк для хранения имен
+// var nameArr: [String] = []
+// print(nameArr)
+
+
+// 2. Объявите массив Int с числами [1, 2, 3, 4, 5]
+// var intArr = [1, 2, 3, 4, 5]
+// print(intArr)
+
+
+// 3. Создайте массив Double через вывод типа (не указывая тип явно)
+// var doubleArr = [1.1, 2.2, 3.3, 4.4, 5.5]
+// print(doubleArr)
+
+
+// 4. Добавьте элемент "Maksim" в конец массива имен (метод append)
+// var name: String = "Maksim"
+// var names: [String] = ["Oleg", "Andrey", "Sasha"]
+// names.append(name)
+// print(names)
+
+
+// 5. Вставьте число 10 на позицию с индексом 0 в массив чисел (insert)
+// var intNum = 10
+// var intArrNumber = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+// intArrNumber.insert(intNum, at: 0)
+// print(intArrNumber)
+
+
+// 6. Получите первый элемент массива чисел (свойство first)
+// let firstIndex: Int = intArrNumber.first ?? 0
+// print("firstIndex -> \(firstIndex)")
+
+
+// 7. Получите последний элемент массива (свойство last)
+// var arrLast: [Int] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+// let lastIndex = arrLast.last
+// print(lastIndex ?? 0)
+
+
+// 8. Проверьте, пуст ли массив (свойство isEmpty)
+// var isEmptyArrString = ["Maksim"]
+// let isArrEmty = isEmptyArrString.isEmpty
+// print(isArrEmty)
+
+
+// 9. Узнайте количество элементов в массиве (свойство count)
+// let countIntNumber = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+// let countElement = countIntNumber.count
+// print(countElement)
+
+
+// 10. Измените элемент по индексу 2 на значение 100
+// var indexArray = [1, 2, 3, 4, 5, 6]
+// indexArray[2] = 100
+// print(indexArray)
+
+
+// 11. Удалите последний элемент массива (метод removeLast)
+// var removeArrInt = [1, 2, 3, 4, 5, 6]
+// let remIndex = removeArrInt.removeLast()
+// print(remIndex)
+
+
+// 12. Удалите элемент по конкретному индексу (метод remove(at:))
+// var removeIndex2: [Int] = [1, 2, 3, 4, 5, 6]
+// removeIndex2.remove(at: 2)
+// print(removeIndex2)
+
+
+// ============================================================================
+// MARK: - БЛОК 2: Массивы - Операции и фильтрация (13-22)
+// ============================================================================
+
+// 13. Объедините два массива [1, 2] и [3, 4] в один (оператор +)
+// var oneArr = [1, 2]
+// var twoArr = [3, 4]
+// var threeArr = oneArr + twoArr
+// print(threeArr)
+
+
+// 14. Найдите индекс числа 3 в массиве (метод firstIndex(of:))
+// var indexThreeArr = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+// let findIndex = indexThreeArr.firstIndex(of: 3)
+// print(findIndex ?? 0)
+
+
+// 15. Проверьте, содержит ли массив число 5 (метод contains)
+// var containsArr = [5]
+// let findContains = containsArr.contains(5)
+// print(findContains)
+
+
+// 16. Отсортируйте массив чисел [5, 1, 9, 2] по возрастанию (метод sorted)
+// var sortArrNum = [5, 1, 9, 2]
+// let sortNum = sortArrNum.sorted()
+// print(sortNum)
+
+
+// 17. Отсортируйте массив строк ["B", "A", "C"] в обратном порядке
+// var sortCharacterArr = ["B", "A", "C"]
+// let sortCharacter = sortCharacterArr.sorted(by: <)
+// print(sortCharacter)
+
+
+// 18. Переверните массив местами "на месте" (метод reverse)
+// var reverseArr = [1, 2, 3, 4, 5, 6]
+// reverseArr.reverse()
+// print(reverseArr)
+
+
+// 19. Создайте новый массив, где все числа умножены на 2 (метод map)
+// var mapTwoArr = [1, 2, 3, 4, 5, 6, 7]
+// let resMap = mapTwoArr.map{ $0 * 2 }
+// print(resMap)
+
+
+// 20. Оставьте в новом массиве только четные числа из [1, 2, 3, 4, 5, 6] (метод filter)
+// var filterIndexArr = [1, 2, 3, 4, 5, 6]
+// let resFilter = filterIndexArr.filter{$0.isMultiple(of: 2)}
+// print(resFilter)
+
+
+// 21. Найдите сумму всех элементов массива (метод reduce)
+// var reduceArr = [1, 2, 3, 4, 5, 6]
+// let sumReduceArr = reduceArr.reduce(0, +)
+// print(sumReduceArr)
+
+
+// 22. Преобразуйте массив чисел [1, 2, 3] в массив строк ["1", "2", "3"] (map + String)
+// var intArrToStr = [1, 2, 3]
+// let resStr = intArrToStr.map(\.description)
+// print(resStr)
+
+
+// ============================================================================
+// MARK: - БЛОК 3: Множества (Set) - Уникальность (23-32)
+// ============================================================================
+
+// 23. Объявите пустое множество строк (укажите тип явно, т.к. оно пустое)
+// var zeroSet = Set<String>()
+// print(zeroSet)
+// print(type(of: zeroSet))
+
+
+// 24. Создайте множество из массива [1, 2, 2, 3, 3, 3]. Сколько элементов осталось?
+// var arr = [1, 2, 2, 3, 3, 3]
+// let setFromArr = Set(arr)
+// print(setFromArr)
+
+
+// 25. Добавьте элемент "Swift" в множество
+// var swiftSerAppend = Set<String>()
+// let resSwiftAppend = swiftSerAppend.insert("Swift")
+// print(resSwiftAppend)
+
+
+// 26. Попробуйте добавить "Swift" еще раз. Что произошло? (Проверьте count)
+// let twoSet = swiftSerAppend.insert("Swift")
+// print(swiftSerAppend.count)
+
+
+// 27. Удалите элемент из множества (метод remove)
+// var arr2 = [1, 2, 2, 3, 3, 3]
+// var setFromArr2 = Set(arr2)
+// print(setFromArr2.remove(3) ?? 3)
+
+
+// 28. Проверьте, содержит ли множество элемент (метод contains)
+// var setArr = [4]
+// var setContains = Set<Int>(setArr)
+// print(setContains.contains(4))
+
+
+// 29. Создайте два множества: setA = [1, 2, 3], setB = [3, 4, 5]
+// var setA = Set([1, 2, 3])
+// var setB = Set([3, 4, 5])
+
+// 30. Найдите пересечение множеств (общие элементы) (метод intersection)
+// var setC = setA.intersection(setB)
+// print(setC)
+
+
+// 31. Найдите объединение множеств (все уникальные элементы) (метод union)
+// var setD = setA.union(setB)
+// print(setD)
+
+
+// 32. Найдите разность множеств (элементы из A, которых нет в B) (метод subtracting)
+// let setE = setA.subtracting(setB)
+// print(setE)
+
+
+// ============================================================================
+// MARK: - БЛОК 4: Словари (Dictionary) - Ключ-Значение (33-42)
+// ============================================================================
+
+// 33. Объявите пустой словарь [String: Int] для хранения оценок
+// var zeroDictionary = [String: Int]()
+
+
+// 34. Создайте словарь с данными: ["name": "Maksim", "age": 42, "city": "Lipeck"]
+// var myDictionary:[String: Any]  = ["name": "Maksim", "age": 42, "city": "Lipeck"]
+// print(myDictionary)
+
+
+// 35. Добавьте новую пару ключ-значение: "job" -> "Developer"
+// myDictionary["job"] = "Developer"
+// print(myDictionary)
+
+
+// 36. Измените значение по ключу "age" на 43
+// myDictionary["age"] = 43
+// print(myDictionary)
+
+
+// 37. Получите значение по ключу "city". Что вернется, если ключа нет? (Optional)
+// print(myDictionary["city"] ?? " ")
+
+
+// 38. Удалите пару по ключу "city" (присвоив nil или метод removeValue)
+// myDictionary["city"] = nil
+// print(myDictionary)
+
+
+// 39. Получите массив всех ключей словаря (свойство keys)
+// let keysDictionary = myDictionary.keys
+// print(keysDictionary)
+
+
+// 40. Получите массив всех значений словаря (свойство values)
+// let valuesDictionary = myDictionary.values
+// print(valuesDictionary)
+
+
+// 41. Переберите словарь в цикле for-in, выводя ключ и значение
+// for (keys, values) in myDictionary {
+//     print("Ключ: \(keys), Значение: \(values)")
+// }
+
+
+// 42. Проверьте, есть ли ключ "name" в словаре (метод contains(key:))
+// let findName = myDictionary.keys.contains("name")
+// print(findName)
+
+
+// ============================================================================
+// MARK: - БЛОК 5: Продвинутые операции и Комбинирование (43-50)
+// ============================================================================
+
+// 43. Дан массив пользователей: ["Anna", "Bob", "Anna", "Max"]. Удалите дубликаты (через Set)
+// var nameArrString = ["Anna", "Bob", "Anna", "Max"]
+// let setResult = Set(nameArrString)
+// print(setResult)
+
+
+// 44. Дан словарь цен: ["Apple": 100, "Banana": 50]. Увеличьте все цены на 10% (mapValues)
+// var priceDict: [String: Int] = ["Apple": 100, "Banana": 50]
+// let resultPriceDict = priceDict.mapValues { $0 + $0 / 10 }
+// print(resultPriceDict)
+
+
+// 45. Отфильтруйте словарь, оставив только товары дороже 60 (filter)
+// let filterDict = priceDict.filter{ $0.value > 60}
+// print(filterDict)
+
+
