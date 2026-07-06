@@ -4187,3 +4187,21 @@ import Foundation
 // print(filterDict)
 
 
+// CODEWARS
+
+
+// 8 kui
+// Вам даны два внутренних угла (в градусах) треугольника.
+//Напишите функцию, которая возвращает третий угол.
+//Примечание: будут проверяться только положительные целые числа.
+
+//func otherAngle(a: Int, b: Int) -> Int {
+//  var res = 180
+//    
+//  res = res - (a + b)
+//  return res
+//}
+//
+//
+//let resThree = otherAngle(a: 33, b: 33)
+//print("resThree -> \(resThree)")
