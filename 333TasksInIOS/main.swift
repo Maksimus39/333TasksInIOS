@@ -4230,3 +4230,54 @@ import Foundation
 //
 //let first = firstNonConsecutive([1,2,3,4,6,7,8])
 //print("first -> \(first)")
+
+
+
+// 8 kui
+
+//Напишите функцию, которая проверяет, делится ли число n на два числа — x и y.
+//Все входные данные — положительные числа (не равные нулю).
+
+//func isDivisible(_ n: Int, _ x: Int, _ y: Int) -> Bool {
+//    n % x == 0 && n % y == 0 ? true : false
+//}
+//
+//
+//let diveder = isDivisible(12, 3, 4)
+//print("diveder -> \(diveder)")
+
+
+
+
+// 8 kui
+
+//Пиши код как можно быстрее! Нужно удвоить целое число и вернуть результат.
+
+
+//func doubleInteger(_ num: Int) -> Int {
+//    num * 2
+//}
+//
+//let num = doubleInteger(189)
+//print("num -> \(num)")
+
+
+
+// 8 kui
+
+//Примечание: эта задача (ката) вдохновлена ​​задачей «Convert a Number to a String!» (Преобразование числа в строку). Попробуйте решить и её.
+//Описание
+//Нам нужна функция, способная преобразовать строку в число. Какие способы решения этой задачи вам известны?
+//Примечание: не волнуйтесь, на вход всегда будут поступать строки, и каждая из них будет представлять собой корректное целое число.
+
+
+//func stringToNumber(_ string:String) -> Int {
+//    return Int(string)!
+//}
+//
+//
+//let strToNum = stringToNumber("123")
+//print("strToNum -> \(strToNum)")
+
+
+
