@@ -4332,3 +4332,20 @@ import Foundation
 //
 //let resRepeatStr = repeatStr(13, "Hello")
 //print("resRepeatStr -> \(resRepeatStr)")
+
+
+
+// 8 kui
+
+//Дан массив целых чисел; верните новый массив, в котором каждое значение удвоено.
+//Например:
+//[1, 2, 3] --> [2, 4, 6]
+
+
+//func maps(a : Array<Int>) -> Array<Int> {
+//    let multArr = a.map{$0 + $0}
+//    return multArr
+//}
+//
+//let resMaps = maps(a: [1, 2, 3])
+//print("resMaps -> \(resMaps)")
