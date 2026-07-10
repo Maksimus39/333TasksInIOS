@@ -4312,3 +4312,23 @@ import Foundation
 //
 //let resBMI = bmi(50, 1.80)
 //print("resBMI -> \(resBMI)")
+
+
+
+// 8 kui
+
+//Напишите функцию, которая принимает в качестве параметров неотрицательное целое число n и строку s,
+//а возвращает строку, состоящую из s, повторенной ровно n раз.
+
+//let result = String(repeating: text, count: count)
+
+//func repeatStr(_ n: Int, _ string: String) -> String {
+//    var result = ""
+//    for _ in 0..<n {
+//        result += string
+//    }
+//    return result
+//}
+//
+//let resRepeatStr = repeatStr(13, "Hello")
+//print("resRepeatStr -> \(resRepeatStr)")
