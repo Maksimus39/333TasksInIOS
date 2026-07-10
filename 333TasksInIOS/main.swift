@@ -4281,3 +4281,34 @@ import Foundation
 
 
 
+// 8 kui
+
+//Напишите функцию `bmi`, которая вычисляет индекс массы тела (ИМТ = вес / рост²).
+//если ИМТ <= 18.5, вернуть "Underweight"
+//если ИМТ <= 25.0, вернуть "Normal"
+//если ИМТ <= 30.0, вернуть "Overweight"
+//если ИМТ > 30, вернуть "Obese"
+
+
+//func bmi(_ weight: Int, _ height: Double) -> String {
+//   let imt = Double(weight) / ( height * height )
+//    
+//    let underweight: Range<Double> = 0..<18.5
+//    let normal: Range<Double> = 18.5..<25.0
+//    let overweight: Range<Double> = 25.0..<30.0
+//    
+//    switch imt {
+//    case underweight:
+//        return "Underweight"
+//    case normal:
+//        return "Normal"
+//    case overweight:
+//        return "Overweight"
+//    default:
+//        return "Obese"
+//    }
+//}
+//
+//
+//let resBMI = bmi(50, 1.80)
+//print("resBMI -> \(resBMI)")
