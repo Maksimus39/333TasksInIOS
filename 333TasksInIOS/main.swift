@@ -4292,11 +4292,11 @@ import Foundation
 
 //func bmi(_ weight: Int, _ height: Double) -> String {
 //   let imt = Double(weight) / ( height * height )
-//    
+//
 //    let underweight: Range<Double> = 0..<18.5
 //    let normal: Range<Double> = 18.5..<25.0
 //    let overweight: Range<Double> = 25.0..<30.0
-//    
+//
 //    switch imt {
 //    case underweight:
 //        return "Underweight"
@@ -4349,3 +4349,21 @@ import Foundation
 //
 //let resMaps = maps(a: [1, 2, 3])
 //print("resMaps -> \(resMaps)")
+
+
+
+// 8 kui
+
+//Введение
+//Первое столетие охватывает период с 1-го года до 100-го года включительно, второе столетие — с 101-го года до 200-го года включительно и т. д.
+//Задание
+//Дано название года, укажите столетие, к которому он относится.
+
+
+
+//func century(_ year: Int) -> Int {
+//    return (year - 1) / 100 + 1
+//}
+//
+//let resYear = century(1983)
+//print("resYear -> \(resYear)")
