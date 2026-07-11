@@ -4371,34 +4371,34 @@ import Foundation
 
 // экземпляр класса
 
-class Car {
-    var model: String = "BMW"
-    
-}
-
-var car = Car()
-var car2 = Car()
-
-
-print(car === car2)              // false - это разные объекты в памяти
-print(car.model == car2.model)   // true - ссылаются на одно свойство
-
-car.model = "Audi"
-
-print(car.model == car2.model)
-
-print(car.model)
-print(car2.model)
-
-
-class Bus: Car {
-    var modelBus: String = "Icarus"
-    
-    
-}
-
-let modelBus = Bus().modelBus
-print("modelBus -> \(modelBus)")
+//class Car {
+//    var model: String = "BMW"
+//    
+//}
+//
+//var car = Car()
+//var car2 = Car()
+//
+//
+//print(car === car2)              // false - это разные объекты в памяти
+//print(car.model == car2.model)   // true - ссылаются на одно свойство
+//
+//car.model = "Audi"
+//
+//print(car.model == car2.model)
+//
+//print(car.model)
+//print(car2.model)
+//
+//
+//class Bus: Car {
+//    var modelBus: String = "Icarus"
+//    
+//    
+//}
+//
+//let modelBus = Bus().modelBus
+//print("modelBus -> \(modelBus)")
 
 
 
@@ -4467,10 +4467,10 @@ print("modelBus -> \(modelBus)")
 // ----------------------------------------------------------------------------
 // РЕШЕНИЕ:
 
-let name = "Maks"
-var age = 43
-let description = "Меня зовут \(name), мне \(age) лет"
-print(description)
+//let name = "Maks"
+//var age = 43
+//let description = "Меня зовут \(name), мне \(age) лет"
+//print(description)
 
 
 
@@ -4482,11 +4482,11 @@ print(description)
 // если возраст >= 18, и `false` в противном случае. Используйте тернарный оператор.
 // ----------------------------------------------------------------------------
 // РЕШЕНИЕ:
-func canBuyAlcohol(age: Int) -> Bool {
-    age >= 18 ? true : false
-}
-
-print(canBuyAlcohol(age: 43))
+//func canBuyAlcohol(age: Int) -> Bool {
+//    age >= 18 ? true : false
+//}
+//
+//print(canBuyAlcohol(age: 43))
 
 
 
@@ -4502,11 +4502,11 @@ print(canBuyAlcohol(age: 43))
 // ----------------------------------------------------------------------------
 // РЕШЕНИЕ:
 
-var arrNum = [10, 20, 30, 40, 50]
-arrNum.append(60)
-arrNum.removeFirst()
-let sumArrNum = arrNum.reduce(0) { $0 + $1 }
-print(sumArrNum)
+//var arrNum = [10, 20, 30, 40, 50]
+//arrNum.append(60)
+//arrNum.removeFirst()
+//let sumArrNum = arrNum.reduce(0) { $0 + $1 }
+//print(sumArrNum)
 
 
 
@@ -4521,13 +4521,13 @@ print(sumArrNum)
 // ----------------------------------------------------------------------------
 // РЕШЕНИЕ:
 
-func isPalindrome(_ string: String) -> Bool {
-    let cleaned = string.lowercased().filter { $0.isLetter || $0.isNumber }
-    return cleaned == String(cleaned.reversed())
-}
-
-let resIsPalindrome = isPalindrome("maks")
-print(resIsPalindrome)
+//func isPalindrome(_ string: String) -> Bool {
+//    let cleaned = string.lowercased().filter { $0.isLetter || $0.isNumber }
+//    return cleaned == String(cleaned.reversed())
+//}
+//
+//let resIsPalindrome = isPalindrome("maks")
+//print(resIsPalindrome)
 
 
 
@@ -4541,9 +4541,9 @@ print(resIsPalindrome)
 // ----------------------------------------------------------------------------
 // РЕШЕНИЕ:
 
-var middleName: String? = nil
-let displayName = middleName ?? "Не указано"
-print("displayName -> \(displayName)")
+//var middleName: String? = nil
+//let displayName = middleName ?? "Не указано"
+//print("displayName -> \(displayName)")
 
 
 
@@ -4558,11 +4558,11 @@ print("displayName -> \(displayName)")
 // - Все уникальные элементы из обоих массивов (объединение)
 // ----------------------------------------------------------------------------
 // РЕШЕНИЕ:
-var arrOne = [1, 2, 3, 4, 5]
-var arrTwo = [4, 5, 6, 7, 8]
-let arrThree = arrOne + arrTwo
-let setArr = Set(arrThree)
-print(setArr)
+//var arrOne = [1, 2, 3, 4, 5]
+//var arrTwo = [4, 5, 6, 7, 8]
+//let arrThree = arrOne + arrTwo
+//let setArr = Set(arrThree)
+//print(setArr)
 
 
 
@@ -4579,17 +4579,17 @@ print(setArr)
 // ----------------------------------------------------------------------------
 // РЕШЕНИЕ:
 
-var dictionary: [String:Int] = [
-    "Анна": 5, "Петр": 4, "Мария": 3
-]
-print(dictionary)
-dictionary["Иван"] = 4
-dictionary["Мария"] = 5
-
-for (key, value) in dictionary {
-    print(key, value)
-}
-print(dictionary)
+//var dictionary: [String:Int] = [
+//    "Анна": 5, "Петр": 4, "Мария": 3
+//]
+//print(dictionary)
+//dictionary["Иван"] = 4
+//dictionary["Мария"] = 5
+//
+//for (key, value) in dictionary {
+//    print(key, value)
+//}
+//print(dictionary)
 
 
 
@@ -4608,17 +4608,17 @@ print(dictionary)
 // ----------------------------------------------------------------------------
 // РЕШЕНИЕ:
 
-func minMaxAverage(_ numbers: [Int]) -> (min: Int, max: Int, average: Double)? {
-    if numbers.isEmpty {
-        return nil
-    }
-    let min = numbers.min()!
-    let max = numbers.max()!
-    let average = Double(numbers.reduce(0, +)) / Double(numbers.count)
-    return (min, max, average)
-}
-
-print(minMaxAverage([1, 2, 3, 4, 5]) as Any)
+//func minMaxAverage(_ numbers: [Int]) -> (min: Int, max: Int, average: Double)? {
+//    if numbers.isEmpty {
+//        return nil
+//    }
+//    let min = numbers.min()!
+//    let max = numbers.max()!
+//    let average = Double(numbers.reduce(0, +)) / Double(numbers.count)
+//    return (min, max, average)
+//}
+//
+//print(minMaxAverage([1, 2, 3, 4, 5]) as Any)
 
 
 
@@ -4633,24 +4633,24 @@ print(minMaxAverage([1, 2, 3, 4, 5]) as Any)
 // ----------------------------------------------------------------------------
 // РЕШЕНИЕ:
 
-enum Season { case winter, spring, summer, autumn }
-
-func getMonths(season: Season) -> [String] {
-        switch season {
-        case .winter:
-            return ["Декабрь", "Январь", "Февраль"]
-            case .spring:
-            return ["Март", "Апрель", "Май"]
-        case .summer:
-            return ["Июнь", "Июль", "Август"]
-        case .autumn:
-            return ["Сентябрь", "Октябрь", "Ноябрь"]
-    }
-}
-
-let str = getMonths(season: .winter)
-print("str -> \(str)")
-
+//enum Season { case winter, spring, summer, autumn }
+//
+//func getMonths(season: Season) -> [String] {
+//        switch season {
+//        case .winter:
+//            return ["Декабрь", "Январь", "Февраль"]
+//            case .spring:
+//            return ["Март", "Апрель", "Май"]
+//        case .summer:
+//            return ["Июнь", "Июль", "Август"]
+//        case .autumn:
+//            return ["Сентябрь", "Октябрь", "Ноябрь"]
+//    }
+//}
+//
+//let str = getMonths(season: .winter)
+//print("str -> \(str)")
+//
 
 
 
@@ -4666,35 +4666,35 @@ print("str -> \(str)")
 // ----------------------------------------------------------------------------
 // РЕШЕНИЕ:
 
-class Animal {
-    var name: String
-    
-    init(name: String) {
-        self.name = name
-    }
-   
-    func makeSound() -> String {
-        "..."
-    }
-}
+//class Animal {
+//    var name: String
+//    
+//    init(name: String) {
+//        self.name = name
+//    }
+//   
+//    func makeSound() -> String {
+//        "..."
+//    }
+//}
 
-class Dog: Animal {
-    override func makeSound() -> String {
-        "Гав!"
-    }
-}
-
-class Cat: Animal {
-    override func makeSound() -> String {
-        "Мяу!"
-    }
-}
-
-let dog = Dog(name: "red")
-let cat = Cat(name: "barsik")
-
-print(dog.makeSound())
-print(cat.makeSound())
+//class Dog: Animal {
+//    override func makeSound() -> String {
+//        "Гав!"
+//    }
+//}
+//
+//class Cat: Animal {
+//    override func makeSound() -> String {
+//        "Мяу!"
+//    }
+//}
+//
+//let dog = Dog(name: "red")
+//let cat = Cat(name: "barsik")
+//
+//print(dog.makeSound())
+//print(cat.makeSound())
 
 
 
@@ -4710,10 +4710,10 @@ print(cat.makeSound())
 // ----------------------------------------------------------------------------
 // РЕШЕНИЕ:
 
-let arrInt:[Int] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-let resArr = arrInt.filter { $0 % 2 == 0 }.map { $0 * 3 }.reduce(0) { $0 + $1 }
-    
-print(resArr)
+//let arrInt:[Int] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+//let resArr = arrInt.filter { $0 % 2 == 0 }.map { $0 * 3 }.reduce(0) { $0 + $1 }
+//    
+//print(resArr)
 
    
 
@@ -4732,19 +4732,19 @@ print(resArr)
 // ----------------------------------------------------------------------------
 // РЕШЕНИЕ:
 
-struct Point {
-    let x: Double
-    let y: Double
-    
-    func distance(to point: Point) -> Double {
-        sqrt(pow(point.x - x, 2) + pow(point.y - y, 2))
-    }
-}
-
-let point1 = Point(x: 1, y: 2)
-let point2 = Point(x: 4, y: 6)
-
-print(point1.distance(to: point2))
+//struct Point {
+//    let x: Double
+//    let y: Double
+//    
+//    func distance(to point: Point) -> Double {
+//        sqrt(pow(point.x - x, 2) + pow(point.y - y, 2))
+//    }
+//}
+//
+//let point1 = Point(x: 1, y: 2)
+//let point2 = Point(x: 4, y: 6)
+//
+//print(point1.distance(to: point2))
 
 
 
@@ -4761,16 +4761,16 @@ print(point1.distance(to: point2))
 // ----------------------------------------------------------------------------
 // РЕШЕНИЕ:
 
-func processUser(name: String?, age: Int?) -> String {
-    guard let name = name else { return "Имя не указано" }
-    
-    guard let age = age else { return "Возраст не указан"}
-       
-    return "Привет \(name)! Тебе \(age) лет."
-}
-
-let resGuard = processUser(name: nil, age: nil)
-print(resGuard)
+//func processUser(name: String?, age: Int?) -> String {
+//    guard let name = name else { return "Имя не указано" }
+//    
+//    guard let age = age else { return "Возраст не указан"}
+//       
+//    return "Привет \(name)! Тебе \(age) лет."
+//}
+//
+//let resGuard = processUser(name: nil, age: nil)
+//print(resGuard)
 
 
 
@@ -4786,9 +4786,9 @@ print(resGuard)
 // ----------------------------------------------------------------------------
 // РЕШЕНИЕ:
 
-let arrString = ["apple", "banana", "cherry", "date", "elderberry"]
-let res = arrString.filter { $0.count > 5 }.sorted { $0.count > $1.count }.joined(separator: ", ")
-print("res -> \(res)")
+//let arrString = ["apple", "banana", "cherry", "date", "elderberry"]
+//let res = arrString.filter { $0.count > 5 }.sorted { $0.count > $1.count }.joined(separator: ", ")
+//print("res -> \(res)")
 
 
 
@@ -4831,23 +4831,98 @@ print("res -> \(res)")
 
 
 
-class BancAccount {
+//class BancAccount {
+//    var accountBalance: Float = 0
+//    var accountNumber: Int = 0
+//    
+//    
+//    func displayBalance() {
+//        print("Номер ->: \(accountNumber)")
+//        print("Текущий балланс -> : \(accountBalance)")
+//    }
+//     
+//    class func getMaxBalance() -> Float {
+//        return 100000.00
+//    }
+//}
+//
+//var account1: BancAccount = BancAccount()
+//account1.displayBalance()
+//
+//let maxBallanse = BancAccount.getMaxBalance()
+//print(maxBallanse)
+
+
+
+// Инициализация и деинициализация класса
+
+
+class BankAccount {
     var accountBalance: Float = 0
     var accountNumber: Int = 0
     
-    
-    func displayBalance() {
-        print("Номер ->: \(accountNumber)")
-        print("Текущий балланс -> : \(accountBalance)")
+    init(accountBalance: Float, accountNumber: Int) {
+        self.accountBalance = accountBalance
+        self.accountNumber = accountNumber
     }
-     
-    class func getMaxBalance() -> Float {
-        return 100000.00
+    
+    deinit {
+            print("🗑️ Счет \(accountNumber) удален из памяти")
+        }
+    
+    func displayBallance() {
+        print("Ваш балланс -> : \(accountBalance)")
+        print("Ваш лицевой счёт -> : \(accountNumber)")
     }
 }
 
-var account1: BancAccount = BancAccount()
-account1.displayBalance()
+var accountBallance: BankAccount? = BankAccount(accountBalance: 12_999.49, accountNumber: 26081983)
+accountBallance?.displayBallance()
 
-let maxBallanse = BancAccount.getMaxBalance()
-print(maxBallanse)
+
+accountBallance = nil
+
+
+
+// self
+
+class Car {
+    var model: String = "audi"
+    
+    func myCar () {
+        self.model = "bmv"
+    }
+}
+
+let car = Car()
+print(car.model) // audi
+car.myCar()
+print(car.model) // bmv
+
+
+// protocol class
+
+protocol MessageBuilder {
+    var name: String { get }
+    func buildMessage () -> String
+}
+
+
+class MyClass: MessageBuilder {
+    let name: String
+    
+    init(name: String) {
+        self.name = name
+    }
+    
+    func buildMessage() -> String {
+        "Привет, " + name + " Александрович!"
+    }
+}
+
+let protocolTest = MyClass(name: "Maksim")
+print(protocolTest.buildMessage())
+
+
+
+// Непрозрачные типы возвращаемых значений
