@@ -4857,72 +4857,91 @@ import Foundation
 // Инициализация и деинициализация класса
 
 
-class BankAccount {
-    var accountBalance: Float = 0
-    var accountNumber: Int = 0
-    
-    init(accountBalance: Float, accountNumber: Int) {
-        self.accountBalance = accountBalance
-        self.accountNumber = accountNumber
-    }
-    
-    deinit {
-            print("🗑️ Счет \(accountNumber) удален из памяти")
-        }
-    
-    func displayBallance() {
-        print("Ваш балланс -> : \(accountBalance)")
-        print("Ваш лицевой счёт -> : \(accountNumber)")
-    }
-}
-
-var accountBallance: BankAccount? = BankAccount(accountBalance: 12_999.49, accountNumber: 26081983)
-accountBallance?.displayBallance()
-
-
-accountBallance = nil
+//class BankAccount {
+//    var accountBalance: Float = 0
+//    var accountNumber: Int = 0
+//    
+//    init(accountBalance: Float, accountNumber: Int) {
+//        self.accountBalance = accountBalance
+//        self.accountNumber = accountNumber
+//    }
+//    
+//    deinit {
+//            print("🗑️ Счет \(accountNumber) удален из памяти")
+//        }
+//    
+//    func displayBallance() {
+//        print("Ваш балланс -> : \(accountBalance)")
+//        print("Ваш лицевой счёт -> : \(accountNumber)")
+//    }
+//}
+//
+//var accountBallance: BankAccount? = BankAccount(accountBalance: 12_999.49, accountNumber: 26081983)
+//accountBallance?.displayBallance()
+//
+//
+//accountBallance = nil
 
 
 
 // self
 
-class Car {
-    var model: String = "audi"
-    
-    func myCar () {
-        self.model = "bmv"
-    }
-}
-
-let car = Car()
-print(car.model) // audi
-car.myCar()
-print(car.model) // bmv
-
-
-// protocol class
-
-protocol MessageBuilder {
-    var name: String { get }
-    func buildMessage () -> String
-}
-
-
-class MyClass: MessageBuilder {
-    let name: String
-    
-    init(name: String) {
-        self.name = name
-    }
-    
-    func buildMessage() -> String {
-        "Привет, " + name + " Александрович!"
-    }
-}
-
-let protocolTest = MyClass(name: "Maksim")
-print(protocolTest.buildMessage())
+//class Car {
+//    var model: String = "audi"
+//    
+//    func myCar () {
+//        self.model = "bmv"
+//    }
+//}
+//
+//let car = Car()
+//print(car.model) // audi
+//car.myCar()
+//print(car.model) // bmv
+//
+//
+//// protocol class
+//
+//protocol MessageBuilder {
+//    var name: String { get }
+//    func buildMessage () -> String
+//}
+//
+//
+//class MyClass: MessageBuilder {
+//    let name: String
+//    
+//    init(name: String) {
+//        self.name = name
+//    }
+//    
+//    func buildMessage() -> String {
+//        "Привет, " + name + " Александрович!"
+//    }
+//}
+//
+//let protocolTest = MyClass(name: "Maksim")
+//print(protocolTest.buildMessage())
 
 
 
 // Непрозрачные типы возвращаемых значений
+
+func doubleFuncType(value: Int)  -> Int { // тут указан т.н корректный тип
+    return value * 2
+}
+
+let resultInt = doubleFuncType(value: 10)
+print("resultInt -> \(resultInt)")
+
+
+func doubleFuncTypeTwo(value: Int) -> some Equatable { // а тут главное чтобы наши данные соответствовали протоколу Equatable
+                                                        // или какомуто нашему написанному протоколу
+    return value * 2
+}
+
+let resultIntTwo = doubleFuncTypeTwo(value: 10)
+print("resultIntTwo -> \(resultIntTwo)")
+
+
+
