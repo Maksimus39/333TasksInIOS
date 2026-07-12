@@ -4927,21 +4927,39 @@ import Foundation
 
 // Непрозрачные типы возвращаемых значений
 
-func doubleFuncType(value: Int)  -> Int { // тут указан т.н корректный тип
-    return value * 2
+//func doubleFuncType(value: Int)  -> Int { // тут указан т.н корректный тип
+//    return value * 2
+//}
+//
+//let resultInt = doubleFuncType(value: 10)
+//print("resultInt -> \(resultInt)")
+//
+//
+//func doubleFuncTypeTwo(value: Int) -> some Equatable { // а тут главное чтобы наши данные соответствовали протоколу Equatable
+//                                                        // или какомуто нашему написанному протоколу
+//    return value * 2
+//}
+//
+//let resultIntTwo = doubleFuncTypeTwo(value: 10)
+//print("resultIntTwo -> \(resultIntTwo)")
+
+
+
+// Наследования классы подклассы
+
+
+class BancAccount {
+    var accountBalance: Float
+    var accountNumber: Int
+    
+    init(accountBalance: Float, accountNumber: Int) {
+        self.accountBalance = accountBalance
+        self.accountNumber = accountNumber
+    }
+    
+    func displayBalance() {
+        print("Номер ")
+    }
 }
-
-let resultInt = doubleFuncType(value: 10)
-print("resultInt -> \(resultInt)")
-
-
-func doubleFuncTypeTwo(value: Int) -> some Equatable { // а тут главное чтобы наши данные соответствовали протоколу Equatable
-                                                        // или какомуто нашему написанному протоколу
-    return value * 2
-}
-
-let resultIntTwo = doubleFuncTypeTwo(value: 10)
-print("resultIntTwo -> \(resultIntTwo)")
-
 
 
