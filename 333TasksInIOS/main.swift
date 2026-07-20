@@ -4373,7 +4373,7 @@ import Foundation
 
 //class Car {
 //    var model: String = "BMW"
-//    
+//
 //}
 //
 //var car = Car()
@@ -4393,8 +4393,8 @@ import Foundation
 //
 //class Bus: Car {
 //    var modelBus: String = "Icarus"
-//    
-//    
+//
+//
 //}
 //
 //let modelBus = Bus().modelBus
@@ -4405,7 +4405,7 @@ import Foundation
 // ------------------------------
 //class People {
 //    var name: String
-//    
+//
 //    init(name: String) {
 //        self.name = name
 //    }
@@ -4418,7 +4418,7 @@ import Foundation
 //
 //class PeopleWoman: People {
 //    let nameWoman: String
-//    
+//
 //    init(nameWoman: String, people: String) {
 //        self.nameWoman = nameWoman
 //        super.init(name: people)
@@ -4440,7 +4440,7 @@ import Foundation
 //class UIController: Button {
 //    var titleController: String = "Autentification"
 //
-//    
+//
 //    override init() {
 //        super.init()
 //        self.title = "Login"
@@ -4668,11 +4668,11 @@ import Foundation
 
 //class Animal {
 //    var name: String
-//    
+//
 //    init(name: String) {
 //        self.name = name
 //    }
-//   
+//
 //    func makeSound() -> String {
 //        "..."
 //    }
@@ -4712,10 +4712,10 @@ import Foundation
 
 //let arrInt:[Int] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 //let resArr = arrInt.filter { $0 % 2 == 0 }.map { $0 * 3 }.reduce(0) { $0 + $1 }
-//    
+//
 //print(resArr)
 
-   
+
 
 
 
@@ -4735,7 +4735,7 @@ import Foundation
 //struct Point {
 //    let x: Double
 //    let y: Double
-//    
+//
 //    func distance(to point: Point) -> Double {
 //        sqrt(pow(point.x - x, 2) + pow(point.y - y, 2))
 //    }
@@ -4763,9 +4763,9 @@ import Foundation
 
 //func processUser(name: String?, age: Int?) -> String {
 //    guard let name = name else { return "Имя не указано" }
-//    
+//
 //    guard let age = age else { return "Возраст не указан"}
-//       
+//
 //    return "Привет \(name)! Тебе \(age) лет."
 //}
 //
@@ -4834,13 +4834,13 @@ import Foundation
 //class BancAccount {
 //    var accountBalance: Float = 0
 //    var accountNumber: Int = 0
-//    
-//    
+//
+//
 //    func displayBalance() {
 //        print("Номер ->: \(accountNumber)")
 //        print("Текущий балланс -> : \(accountBalance)")
 //    }
-//     
+//
 //    class func getMaxBalance() -> Float {
 //        return 100000.00
 //    }
@@ -4860,16 +4860,16 @@ import Foundation
 //class BankAccount {
 //    var accountBalance: Float = 0
 //    var accountNumber: Int = 0
-//    
+//
 //    init(accountBalance: Float, accountNumber: Int) {
 //        self.accountBalance = accountBalance
 //        self.accountNumber = accountNumber
 //    }
-//    
+//
 //    deinit {
 //            print("🗑️ Счет \(accountNumber) удален из памяти")
 //        }
-//    
+//
 //    func displayBallance() {
 //        print("Ваш балланс -> : \(accountBalance)")
 //        print("Ваш лицевой счёт -> : \(accountNumber)")
@@ -4888,7 +4888,7 @@ import Foundation
 
 //class Car {
 //    var model: String = "audi"
-//    
+//
 //    func myCar () {
 //        self.model = "bmv"
 //    }
@@ -4910,11 +4910,11 @@ import Foundation
 //
 //class MyClass: MessageBuilder {
 //    let name: String
-//    
+//
 //    init(name: String) {
 //        self.name = name
 //    }
-//    
+//
 //    func buildMessage() -> String {
 //        "Привет, " + name + " Александрович!"
 //    }
@@ -4948,18 +4948,291 @@ import Foundation
 // Наследования классы подклассы
 
 
-class BancAccount {
-    var accountBalance: Float
-    var accountNumber: Int
-    
-    init(accountBalance: Float, accountNumber: Int) {
-        self.accountBalance = accountBalance
-        self.accountNumber = accountNumber
+//class BancAccount {
+//    var accountBalance: Float
+//    var accountNumber: Int
+//
+//    init(accountBalance: Float, accountNumber: Int) {
+//        self.accountBalance = accountBalance
+//        self.accountNumber = accountNumber
+//    }
+//
+//    func displayBalance() {
+//        print("Номер балланса \(accountNumber)")
+//        print("Текущий балланс \(accountBalance)")
+//    }
+//}
+
+// ---->>>
+
+//class SavingAccount: BancAccount {
+//    var interestRate: Float = 0.03
+//
+//    init(number: Int, balance: Float, rate: Float) {
+//        self.interestRate = rate
+//        super.init(accountBalance: balance, accountNumber: number)
+//    }
+//
+//    func calculateInterest() -> Float {
+//        return interestRate * accountBalance
+//    }
+//
+//    override func displayBalance() {
+//        print("-------------------------------")
+//        print("Номер балланса \(accountNumber)")
+//        print("Текущий балланс \(accountBalance)")
+//        print("Процентная ставка: \(interestRate)")
+//
+//        super.displayBalance()
+//    }
+//}
+//
+//
+//let balance = BancAccount(accountBalance: 10000, accountNumber: 1983)
+//balance.displayBalance()
+//
+//let savingBalance = SavingAccount(number: 1, balance: 10, rate: 5)
+//let sum = savingBalance.calculateInterest()
+//print(sum)
+//
+//
+//savingBalance.displayBalance()
+
+
+
+// Расширения классов
+
+
+//extension Double {
+//    var squared: Double {
+//        return self * self
+//    }
+//
+//    var cubed: Double {
+//        return self * self * self
+//    }
+//}
+//
+//let result: Double = 83.204
+//print("\(result.squared)")
+//print("\(result.cubed)")
+
+
+
+// Структуры перечисления
+
+//struct SampleStruct {
+//    var name: String
+//
+//    init(name: String) {
+//        self.name = name
+//    }
+//
+//    func buildHelloMsq() {
+//       print("Привет, " + name)
+//    }
+//}
+
+//var str = SampleStruct(name: "Maks")
+//str.buildHelloMsq()
+//
+//var str2 = str
+//str2.name = "Larisa"
+//
+//print(str.name)
+//print(str2.name)
+//
+//
+//// работа с коллекциями
+//
+//var arr = [String]()
+//arr.append("Maksim")
+//print(arr.count)
+//print(arr.isEmpty)
+//
+//// словарь
+//
+//var bookDict: [String: String] = [
+//    "100-432312" : "Harry Poter"
+//]
+//
+//print(bookDict["100-432312"] as Any)
+
+
+// обработка ошибок
+
+//enum FileTransferError: Error {
+//    case noConnection
+//    case lowBandWidth
+//    case fileNotFound
+//}
+//
+//func fileTransfer(connectionOK: Bool, connectionSpeed: Int, fileFound: Bool) throws {
+//    guard connectionOK else {
+//        throw FileTransferError.noConnection
+//    }
+//
+//    guard connectionSpeed > 30 else {
+//        throw FileTransferError.lowBandWidth
+//    }
+//
+//    guard fileFound else {
+//        throw FileTransferError.fileNotFound
+//    }
+//
+//    print("Файл успешно передаётся...")
+//}
+
+
+// 7 kui
+
+//Найдите сумму внутренних углов (в градусах) простого n-угольника. N больше 2.
+
+//func angle(_ n: Int) -> Int {
+//    let temp: Int = 180
+//    let squared: Int = 2
+//    
+//    return (n - squared) * temp
+//}
+//
+//let res = angle(4)
+//print(res)
+
+
+// 7 kui
+
+//Задача
+//Даны делитель (divisor) и верхняя граница (bound). Найдите наибольшее целое число N, удовлетворяющее следующим условиям:
+//
+//Условия:
+//N делится на divisor без остатка
+//
+//N меньше или равно bound
+//
+//N больше 0.
+//
+//Примечания
+//Параметры (divisor, bound), передаваемые функции, — только положительные числа.
+//Гарантируется, что такое число N существует.
+//Примеры входных и выходных данных
+//divisor = 2, bound = 7 ==> результат: 6
+//Пояснение:
+//6 делится на 2, 6 меньше или равно 7, и 6 > 0.
+
+
+//func maxMultiple(_ d: Int, _ b: Int) -> Int {
+//    return (b / d) * d
+//}
+//
+//
+//
+//print((maxMultiple(2, 7), 6))
+//print(maxMultiple(3, 10), 9)
+//print(maxMultiple(7, 17), 14)
+//print(maxMultiple(10, 50), 50)
+//print(maxMultiple(37, 200), 185)
+//print(maxMultiple(7, 100), 98)
+
+
+
+// 7 kui
+
+//На фабрике принтер печатает этикетки для коробок. Для определенного типа коробок принтер использует цвета, которые для простоты обозначены буквами от «a» до «m».
+//
+//Используемые принтером цвета фиксируются в управляющей строке. Например, «хорошая» управляющая строка может выглядеть так: `aaabbbbhaijjjm` (это означает, что принтер использовал цвет «a» три раза, цвет «b» — четыре раза, цвет «h» — один раз, затем снова «a» — один раз и так далее).
+//
+//Иногда возникают проблемы (например, нехватка краски или технический сбой), и формируется «плохая» управляющая строка — например, `aaaxbbbbyyhwawiwjjjwwm`, содержащая буквы, выходящие за пределы диапазона от «a» до «m».
+//
+//Вам необходимо написать функцию `printer_error`, которая принимает строку и возвращает показатель ошибок принтера в виде строки, представляющей собой дробь: в числителе указывается количество ошибок, а в знаменателе — общая длина управляющей строки. Сокращать дробь не нужно.
+//
+//Длина строки составляет не менее одного символа; строка содержит только буквы латинского алфавита (от «a» до «z»).
+//
+//Примеры:
+//s="aaabbbbhaijjjm"
+//printer_error(s) => "0/14"
+//
+//s="aaaxbbbbyyhwawiwjjjwwm"
+//printer_error(s) => "8/22"
+
+//func printerError(_ s: String) -> String {
+//    let error = s.filter { el in
+//        el > "m"
+//    }.count
+//    return "\(error)/\(s.count)"
+//}
+//
+//
+//let res = printerError("aaaxbbbbyyhwawiwjjjwwm")
+//print(res)
+
+
+
+
+// 7 kui
+
+//Создайте функцию `add(n)` (или `Add(n)`), которая возвращает функцию, всегда прибавляющую `n` к любому числу.
+//
+//Примечание для Java: тип возвращаемого значения и методы не указаны, чтобы задача была немного сложнее.
+//
+//addOne = add(1)
+//addOne(3) // 4
+
+
+//func add(_ n: Int) -> ((Int) -> Int) {
+//    return { $0 + n }
+//}
+//
+//let res = add(1)
+//print(res)
+
+
+
+// 7kui
+
+//Напишите функцию `oddOne`, которая принимает на вход массив целых чисел (`[Int]`) и возвращает индекс единственного нечетного числа.
+//
+//Функция должна корректно работать с массивами, содержащими отрицательные числа. Если в массиве нет нечетных чисел, функция должна возвращать `nil`.
+//
+//Примеры:
+//
+//oddOne([2,4,6,7,10]) // => 3
+//oddOne([2,16,98,10,13,78]) // => 4
+//oddOne([4,-8,98,-12,-7,90,100]) // => 4
+//oddOne([2,4,6,8]) // => nil
+
+//func oddOne(_ arr: [Int]) -> Int? {
+//    for i in arr.indices {
+//       if arr[i] % 2 != 0 {
+//            return i
+//        }
+//    }
+//    return nil
+//}
+//
+//
+//let res = oddOne([2,4,6,7,10]) // 3
+//print(res)
+
+
+// 7 kui
+//Просто: имея строку слов, верните длину самого короткого слова (или слов).
+//
+//Строка никогда не будет пустой, и вам не нужно учитывать разные типы данных.
+
+
+func find_short(_ str: String) -> Int {
+    let worlds = str.components(separatedBy: " ")
+    if let shortestWord = worlds.min(by: { $0.description.count < $1.description.count }) {
+        print("Самое короткое слово: \(shortestWord)")
+        return Int(shortestWord.description.count)
     }
-    
-    func displayBalance() {
-        print("Номер ")
-    }
+    return Int()
 }
+
+
+let lenght = find_short("Let's travel abroad shall we")
+print(lenght)
+
+//  return str.components(separatedBy: " ").map { $0.count }.min() ?? 0
 
 
