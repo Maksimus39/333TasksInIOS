@@ -5220,19 +5220,159 @@ import Foundation
 //Строка никогда не будет пустой, и вам не нужно учитывать разные типы данных.
 
 
-func find_short(_ str: String) -> Int {
-    let worlds = str.components(separatedBy: " ")
-    if let shortestWord = worlds.min(by: { $0.description.count < $1.description.count }) {
-        print("Самое короткое слово: \(shortestWord)")
-        return Int(shortestWord.description.count)
-    }
-    return Int()
-}
-
-
-let lenght = find_short("Let's travel abroad shall we")
-print(lenght)
+//func find_short(_ str: String) -> Int {
+//    let worlds = str.components(separatedBy: " ")
+//    if let shortestWord = worlds.min(by: { $0.description.count < $1.description.count }) {
+//        print("Самое короткое слово: \(shortestWord)")
+//        return Int(shortestWord.description.count)
+//    }
+//    return Int()
+//}
+//
+//
+//let lenght = find_short("Let's travel abroad shall we")
+//print(lenght)
 
 //  return str.components(separatedBy: " ").map { $0.count }.min() ?? 0
 
+import Cocoa
+// day one переменные константы строки и числа
 
+// checpoint 1
+
+//let celsius: Int = 21
+//
+//let farenheit: Int = ((celsius * 9) / 5) + 32
+//print(farenheit)
+
+
+// 7 kui
+
+//Реализуйте функцию, которая принимает 3 целых значения a, b, c. Функция должна возвращать true, если треугольник можно построить со сторонами заданной длины, и false в любом другом случае.
+//
+//(В данном случае все треугольники должны иметь площадь поверхности больше 0, чтобы быть принятыми).
+//
+//Примеры:
+//
+//Вход -> Выход
+//1,2,2 -> true
+//4,2,3 -> true
+//2,2,2 -> true
+//1,2,3 -> false
+//-5,1,3 -> false
+//0,2,3 -> false
+//1,2,9 -> false
+
+
+//func isTriangle(_ a: Int, _ b: Int, _ c: Int) -> Bool {
+//    return a > 0 && b > 0 && c > 0 && a + b > c && a + c > b && b + c > a
+//}
+//
+//let resIsTriangle = isTriangle(1, 2, 9)
+//print(resIsTriangle)
+
+
+
+//Помните треугольник из шаров в бильярде? Чтобы выстроить классический треугольник (из 5 рядов), нужно 15 шаров. Из 3 шаров можно сложить треугольник в 2 ряда и так далее.
+//
+//Примеры:
+//
+//pyramid(1) == 1
+//
+//pyramid(3) == 2
+//
+//pyramid(6) == 3
+//
+//pyramid(10) == 4
+//
+//pyramid(15) == 5
+//
+//Напишите функцию, которая принимает количество шаров (≥ 1) и вычисляет, сколько рядов можно выстроить в таком треугольнике.
+
+
+//func pyramid(_ balls: Int) -> Int {
+//    var remaining = balls
+//    var level = 0
+//    
+//    // пока хватает шаров на следующий уровень
+//    while remaining >= level + 1 {
+//        level += 1
+//        remaining -= level
+//    }
+//    
+//    return level
+//}
+//
+//
+//let p = pyramid(15)
+//print(p)
+
+
+
+// 7 kui
+
+//Напишите функцию, которая возвращает сумму двух наименьших положительных чисел из массива, содержащего не менее четырех положительных целых чисел. На вход будут подаваться только положительные целые числа (числа с плавающей запятой или неположительные целые числа исключены).
+//
+//Например, для массива [19, 5, 42, 2, 77] результатом должно быть число 7.
+//
+//Для массива [10, 343445353, 3453445, 3453545353453] результатом должно быть число 3453455.
+
+
+//func sumOfTwoSmallestIntegersIn(_ array: [Int]) -> Int {
+//    var min1 = Int.max
+//    var min2 = Int.max
+//    
+//    for i in array {
+//        if i < min1 {
+//            min2 = min1
+//            print("min2 -> \(min2)")
+//            min1 = i
+//            print("min1 -> \(min1)")
+//        } else if i < min2  {
+//            min2 = i
+//            print("min2 -> \(min2)")
+//        }
+//    }
+//    
+//    return min1 + min2
+//    
+////    let sort = array.sorted()
+////     return sort[0] + sort[1]
+//    
+//    
+//    // return array.sorted()[0...1].reduce(0, +)
+//
+//}
+
+
+//let res = sumOfTwoSmallestIntegersIn([5, 8, 12, 18, 22])
+//print("res -> \(res)")
+
+
+
+// 7 kui
+
+//На этот раз — никаких историй и теорий. Приведенные ниже примеры показывают, как написать функцию `accum`:
+//
+//Примеры:
+//accum("abcd") -> "A-Bb-Ccc-Dddd"
+//accum("RqaEzty") -> "R-Qq-Aaa-Eeee-Zzzzz-Tttttt-Yyyyyyy"
+//accum("cwAt") -> "C-Ww-Aaa-Tttt"
+//Параметром функции `accum` является строка, содержащая только буквы латинского алфавита (a–z и A–Z).
+
+
+//func accum(_ s: String) -> String {
+//    var result: [String] = []
+//    
+//    for (index, char) in s.enumerated() {
+//        let ch = char.uppercased()
+//        let minChr = String(repeating: char.lowercased(), count: index)
+//        let res = ch + minChr
+//        result.append(res)
+//    }
+//    return result.joined(separator: "-")
+//}
+//
+//
+//let str = accum("abcdtyhfdbnjkbvghcfgcj")
+//print(str)
