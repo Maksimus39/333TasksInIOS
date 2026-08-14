@@ -19,7 +19,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		856688862FFED9110013031C /* 333TasksInIOS */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; name = 333TasksInIOS; path = /Users/application/IOS/333TasksInIOS/build/Debug/333TasksInIOS; sourceTree = "<absolute>"; };
+		858AC05A300D4CE800BF58B8 /* 333TasksInIOS */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = 333TasksInIOS; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -45,6 +45,7 @@
 			isa = PBXGroup;
 			children = (
 				85CCEE3C2E97AFE50037D702 /* 333TasksInIOS */,
+				858AC05A300D4CE800BF58B8 /* 333TasksInIOS */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,7 +71,7 @@
 			packageProductDependencies = (
 			);
 			productName = 333TasksInIOS;
-			productReference = 856688862FFED9110013031C /* 333TasksInIOS */;
+			productReference = 858AC05A300D4CE800BF58B8 /* 333TasksInIOS */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
